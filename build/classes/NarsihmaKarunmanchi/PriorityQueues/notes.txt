@@ -1,0 +1,21 @@
+Main Priority Queue Operations
+
+1) Insert(Key,data): Inserts data with key to the priority queue. Elements are ordered based on key
+
+2) Delete Min/ Delete Max: Remove and return the element with the smallest / largest key
+
+3) Get Minumum /Get Maximum: Return the element with the smallest/ largest key
+
+Auxilary Priority Queues Operations
+
+1) kth- Smallest / Kth -Largest: Returns the kth Smallest / Kth Largest key in priority queue.
+2) Size: Returns the number of elements in priority queue
+3) Heap Sort: Sorts the elements in the priority queue based on priority
+
+Applications 
+1) Data Compression : Huffman Coding algorithm
+2) Shortest Path algorithm : Dijkstra's Algorithm
+3) Minimum Spanning tree algorithm : Prim's Algorithm
+4) Event - Driven Simulation: Customers in a line
+5) Selection problem : Finding kth smallest element. 
+
