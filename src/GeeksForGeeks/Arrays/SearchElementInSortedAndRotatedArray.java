@@ -17,8 +17,6 @@ Element to Search = 1
  */
 package GeeksForGeeks.Arrays;
 
-import java.util.Arrays;
-
 /**
  *
  * @author srivemul
