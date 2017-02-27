@@ -48,8 +48,7 @@ public class MedianOfTwoSortedArrays {
                 m2 = ar2[0];
                 break;
             } /*Below is to handle case where all elements of ar2[] are
-          smaller than smallest(or first) element of ar1[]*/ 
-            else if (j == n) {
+          smaller than smallest(or first) element of ar1[]*/ else if (j == n) {
                 m1 = m2;
                 m2 = ar1[0];
                 break;
