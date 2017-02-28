@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package GeeksForGeeks.Arrays;
-
+import java.lang.Comparable;
+import java.util.Comparator;
 /**
  *
  * @author srivemul
