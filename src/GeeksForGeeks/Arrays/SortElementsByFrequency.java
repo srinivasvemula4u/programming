@@ -64,16 +64,18 @@ public class SortElementsByFrequency {
         ElementValueComparator valueCompartor = new ElementValueComparator();
         Collections.sort(arrList, valueCompartor);
         arrList.get(0).frequency = 1;
-        //   Iterator<Element> itr = arrList.iterator();
-        System.out.println(arrList);
+        // System.out.println(arrList);
         for (int i = 1; i < n; i++) {
             if (arrList.get(i).val == arrList.get(i - 1).val) {
                 Element obj1 = arrList.get(i), obj2 = arrList.get(i - 1);
-                obj1.frequency += (obj2.frequency + 1);
                 /* Set count of previous element as -1 , we are
                doing this because we'll again sort on the
                basis of counts (if counts are equal than on
                the basis of index)*/
+                obj1.frequency += (obj2.frequency + 1);
+                /* Retain the first index (Remember first index
+               is always present in the first duplicate we
+               used stable sort. */
                 obj1.index = obj2.index;
                 // arrList.get(i).frequency += arrList.get(i-1).frequency + 1;
                 arrList.set(i, obj1);
@@ -93,9 +95,9 @@ public class SortElementsByFrequency {
         for (int i = 0; i < n; i++) {
             int frequency = arrList.get(i).frequency;
             if (frequency != -1) {
-               for(int j =0; j < frequency; j++) {
-                   arr[index++] = arrList.get(i).val;
-               }
+                for (int j = 0; j < frequency; j++) {
+                    arr[index++] = arrList.get(i).val;
+                }
             }
         }
     }
@@ -104,7 +106,7 @@ public class SortElementsByFrequency {
 
         int[] arr = {2, 5, 2, 6, -1, 9999999, 5, 8, 8, 8};
         sortElementsByFrequency(arr);
-        for(int val : arr) {
+        for (int val : arr) {
             System.out.print(val + " ");
         }
         System.out.println();
