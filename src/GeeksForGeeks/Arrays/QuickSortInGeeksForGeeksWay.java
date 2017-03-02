@@ -23,7 +23,7 @@ public class QuickSortInGeeksForGeeksWay {
         System.out.println();
     }
     public static void quickSort(int[] arr) {
-        int n = arr.length-1;
+        int n = arr.length;
         quicksort(arr,0,n-1);
     }
 
@@ -41,17 +41,17 @@ public class QuickSortInGeeksForGeeksWay {
        for(int j = si; j <= ei -1; j++) {
            if( arr[j] <= x) {
                i++;
-               swap(arr[i],arr[j]);
+               swap(arr,i,j);
            }
        }
-       swap(arr[i+1],arr[ei]);
+       swap(arr,i+1,ei);
        return i+1;
     }
 
-    private static void swap(int x, int y) {
-       int temp = x;
-       x = y;
-       y = x;
+    private static void swap(int[] arr,int i, int j) {
+       int temp = arr[i];
+       arr[i] = arr[j];
+        arr[j] = temp;
     }
     
 }
