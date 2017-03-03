@@ -17,6 +17,8 @@ public class FindMaxMinUsingMinimumComparsions {
     public static void main(String[] args) {
         int[] arr = {1000, 11, 445, 1, 330, 3000};
         getMinMax(arr);
+        Pair pair = getMinMax(arr, 0, arr.length-1);
+        System.out.println(pair.min + " " + pair.max);
     }
 
     private static void getMinMax(int[] arr) {
@@ -33,16 +35,57 @@ public class FindMaxMinUsingMinimumComparsions {
             return;
         }
         int min = arr[0], max = arr[0];
-        for(int i = 1 ; i < n; i++) {
-            if( arr[i] > max ) {
+        for (int i = 1; i < n; i++) {
+            if (arr[i] > max) {
                 max = arr[i];
-            }
-            else if( arr[i] < min) {
+            } else if (arr[i] < min) {
                 min = arr[i];
             }
         }
-         System.out.println(min + " " + max);
-        
+        System.out.println(min + " " + max);
+
     }
 
+    private static class Pair {
+
+        int min;
+        int max;
+    }
+
+    private static Pair getMinMax(int[] arr, int low, int high) {
+        Pair minMax = new Pair();
+        Pair mml = new Pair();
+        Pair mmr = new Pair();
+        if (low == high) {
+            minMax.min = arr[low];
+            minMax.max = arr[low];
+            return minMax;
+        }
+        if (high == low + 1) {
+            if (arr[low] > arr[high]) {
+                minMax.min = arr[high];
+                minMax.max = arr[low];
+            } else {
+                minMax.min = arr[low];
+                minMax.max = arr[high];
+            }
+            return minMax;
+        }
+        int mid = (low + high) / 2;
+        mml = getMinMax(arr, low, mid);
+        mmr = getMinMax(arr, mid + 1, high);
+        if (mml.min < mmr.min) {
+            minMax.min = mml.min;
+        } else {
+            minMax.min = mmr.min;
+        }
+
+        /* compare maximums of two parts*/
+        if (mml.max > mmr.max) {
+            minMax.max = mml.max;
+        } else {
+            minMax.max = mmr.max;
+        }
+           return minMax;
+    }
 }
