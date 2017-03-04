@@ -17,8 +17,10 @@ public class FindMaxMinUsingMinimumComparsions {
     public static void main(String[] args) {
         int[] arr = {1000, 11, 445, 1, 330, 3000};
         getMinMax(arr);
-        Pair pair = getMinMax(arr, 0, arr.length-1);
+        Pair pair = getMinMax(arr, 0, arr.length - 1);
         System.out.println(pair.min + " " + pair.max);
+        getMinMaxInPairs(arr);
+
     }
 
     private static void getMinMax(int[] arr) {
@@ -86,6 +88,43 @@ public class FindMaxMinUsingMinimumComparsions {
         } else {
             minMax.max = mmr.max;
         }
-           return minMax;
+        return minMax;
     }
+
+    private static void getMinMaxInPairs(int[] arr) {
+        int len = arr.length;
+        int i = 0;
+        int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
+        if (len % 2 == 0) {
+            if (arr[0] >= arr[1]) {
+                max = arr[0];
+                min = arr[1];
+            } else {
+                max = arr[1];
+                min = arr[0];
+            }
+            i = 2;
+        } else {
+            max = min = arr[0];
+            i = 1;
+        }
+        while (i < len - 1) {
+            if (arr[i] > arr[i + 1]) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                } else if (arr[i + 1] < min) {
+                    min = arr[i + 1];
+                }
+            } else {
+                 if (arr[i + 1] > max) {
+                max = arr[i + 1];
+               } else if (arr[i] < min) {
+                min = arr[i];
+            }
+            }
+            i += 2;
+        }
+        System.out.println(min + " " + max);
+    }
+
 }
