@@ -28,6 +28,20 @@ public class Segregate0sAnd1sInArray {
             arr[i] = 1;
         }
     }
+    private static void segregateMethod2(int[] arr) {
+        int left = 0, right = arr.length-1;
+        while( left < right) {
+            while( arr[left] == 0 && left < right)
+                left++;
+            while(arr[right] == 1 && right > left)
+                right--;
+            if(left < right)
+                arr[left] = 0;
+                arr[right] = 1;
+                left++;
+                right--;
+        }
+    }
     private static void printArray(int[] arr) {
         for(int val : arr) {
             System.out.print(val+ " ");
@@ -37,7 +51,8 @@ public class Segregate0sAnd1sInArray {
     public static void main(String[] args) {
         // TODO code application logic here
         int[] arr = {0, 1, 0, 1, 1, 1};
-        segregate(arr);
+        //segregate(arr);
+        segregateMethod2(arr);
         printArray(arr);
     }
     
