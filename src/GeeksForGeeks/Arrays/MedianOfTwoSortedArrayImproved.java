@@ -7,7 +7,7 @@ package GeeksForGeeks.Arrays;
 
 /**
  *
- * @author srivemul
+ * @author srivemul // not finished need to check
  */
 public class MedianOfTwoSortedArrayImproved {
 
