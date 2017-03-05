@@ -33,9 +33,25 @@ public class ProductArrayPuzzle {
         printArray(prod);
         
     }
+    private static void productArrayPuzzleMethod2(int[] arr) {
+        int n = arr.length;
+        int temp = 1;
+        int[] prod = new int[n];
+        for(int i =0; i < n; i++) {
+            prod[i] = temp;
+            temp = temp*arr[i];
+        }
+        temp = 1;
+        for(int j= n-1; j >= 0; j--) {
+            prod[j] = prod[j]*temp;
+            temp = temp * arr[j];
+        }
+        printArray(prod);
+    }
     public static void main(String[] args) {
         int[] arr = {10, 3, 5, 6, 2};
         productArrayPuzzleMethod1(arr);
+        productArrayPuzzleMethod2(arr);
       }
 
     private static void printArray(int[] prod) {
