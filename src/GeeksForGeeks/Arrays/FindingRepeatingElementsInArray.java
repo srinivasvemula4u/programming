@@ -22,9 +22,41 @@ public class FindingRepeatingElementsInArray {
             }
         }
     }
+    private static void method2(int[] arr) {
+        int[] coun = new int[arr.length-2];
+        for(int i =0; i < arr.length; i++) {
+            
+        }
+    }
+    private static void method3(int[] arr) {
+        int xor = arr[0];
+        int n = arr.length - 2;
+        for(int i = 1; i < arr.length; i++) {
+            xor ^= arr[i];
+        }
+        for(int i =1; i <= n; i++) {
+            xor ^= i;
+        }
+        int statusbit = xor & ~(xor -1);
+        int x  = 0, y = 0;
+        for(int i =0; i < arr.length; i++) {
+            if( (arr[i] & statusbit) != 0)
+                 x ^=  arr[i];
+            else 
+                y ^= arr[i];
+        }
+        for(int i = 1; i <= n; i++) {
+            if( (i & statusbit) != 0)
+                 x ^=  i;
+            else 
+                y ^= i;
+        }
+        System.out.println( x + " " + y);
+    }
     public static void main(String[] args) {
         int[] arr = {4, 2, 4, 5, 2, 3, 1};
         method1(arr);
+        method3(arr);
     }
     
 }
