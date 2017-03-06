@@ -33,10 +33,28 @@ public class EquilibriumIndex {
         }
         return -1;
     }
+    private static int equilibriumMethod2(int[] arr) {
+      int n = arr.length;
+      int leftSum = 0, sum = 0;
+      for(int i = 0; i < n; i++)
+          sum += arr[i];
+      for(int i=0; i < n; i++) {
+          sum -= arr[i];
+          if(leftSum == sum)
+              return i;
+          leftSum += arr[i];
+      }
+      return -1;
+    }
 
     public static void main(String[] args) {
         int[] arr = {-7, 1, 5, 2, -4, 3, 0};
         int index = equilibriumMethod1(arr);
+        if(index == -1)
+            System.out.println("No equilibrium index is present");
+        else 
+            System.out.println("Equilibrium inex = "+index);
+        index = equilibriumMethod2(arr);
         if(index == -1)
             System.out.println("No equilibrium index is present");
         else 
