@@ -53,10 +53,20 @@ public class FindingRepeatingElementsInArray {
         }
         System.out.println( x + " " + y);
     }
+     private static void method4(int[] arr) {
+         int n = arr.length;
+         for(int i = 0; i < n; i++) {
+             if(arr[Math.abs(arr[i])] > 0)
+              arr[Math.abs(arr[i])] = -arr[Math.abs(arr[i])];
+             else 
+               System.out.print(Math.abs(arr[i]) + " ");
+         }
+     }
     public static void main(String[] args) {
         int[] arr = {4, 2, 4, 5, 2, 3, 1};
         method1(arr);
         method3(arr);
+        method4(arr);
     }
     
 }
