@@ -32,5 +32,4 @@ public class FindSmallestMissingNumber {
            return findMissingNumber(arr, mid+1, end);
        
     }
-    
 }
