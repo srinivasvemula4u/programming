@@ -18,7 +18,7 @@ public class MajorityElementInSortedArray {
      * at i+n/2 then return 1 else return 0.
      */
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 4, 4, 4};
+        int[] arr = {1, 2, 3, 4, 4, 4, 4,4,5};
 
         int x = 4;
         int n = arr.length;
