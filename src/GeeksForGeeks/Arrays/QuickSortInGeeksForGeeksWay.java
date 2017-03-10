@@ -15,7 +15,7 @@ public class QuickSortInGeeksForGeeksWay {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       int[] arr= {1, 4, 45, 6, 10, -8};
+       int[] arr= {11, 1, 13, 21, 3, 7};
         quickSort(arr);
         for(int val : arr) {
             System.out.print(val + " ");
