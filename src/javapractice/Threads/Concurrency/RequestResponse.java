@@ -3,12 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package StandfordCourseraAlgoithmsPartI;
+package javapractice.Threads.Concurrency;
 
 /**
  *
  * @author srivemul
  */
-public class TestClass {
+public class RequestResponse {
+    String host;
+    int port;
+    String response;
+    RequestResponse(String host, int port) {
+      this.host = host;
+      this.port = port;
+    }
     
 }
