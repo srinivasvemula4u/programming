@@ -6,6 +6,7 @@
 package javapractice.jdbc;
 
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,13 +26,22 @@ public class JDBCFirstExample {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String url = "jdbc:Derby://localhost:1527/EmployeeDB";
-        String userName = "public";
-        String passWord = "tiger";
+       // String url = "jdbc:Derby://localhost:1527/EmployeeDB";
+       String url = "jdbc:oracle:thin:@//localhost:1521/pdborcl.oradev.oraclecorp.com";
+        String userName = "hr";
+        String passWord = "oracle";
         String query = "select * from Employee";
+//        try {  
+//            Class.forName("oracle.jdbc.driver.OracleDriver");
+//        } catch (ClassNotFoundException ex) {
+//            Logger.getLogger(JDBCFirstExample.class.getName()).log(Level.SEVERE, null, ex);
+//        }
         try (Connection con = DriverManager.getConnection(url, userName,passWord);
+               
                 Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
                 ResultSet resultSet = stmt.executeQuery(query);) {
+             DatabaseMetaData dbm = con.getMetaData();
+             System.out.println(dbm.supportsANSI92EntryLevelSQL());
             while(resultSet.next()) {
                 int EmpID = resultSet.getInt("ID");
                 String firstName = resultSet.getString("FirstName");
@@ -42,7 +52,12 @@ public class JDBCFirstExample {
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(JDBCFirstExample.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(JDBCFirstExample.class.getName()).log(Level.SEVERE, null, ex);
+            if(ex != null) {
+                System.out.println(ex.getErrorCode());
+                System.out.println(ex.getLocalizedMessage());
+            }
+            
         }
     }
     
