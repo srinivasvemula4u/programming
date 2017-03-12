@@ -5,9 +5,11 @@
  */
 package javapractice.jdbc;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -27,7 +29,8 @@ public class JDBCFirstExample {
     public static void main(String[] args) {
         // TODO code application logic here
        // String url = "jdbc:Derby://localhost:1527/EmployeeDB";
-       String url = "jdbc:oracle:thin:@//localhost:1521/pdborcl.oradev.oraclecorp.com";
+       //String url = "jdbc:oracle:thin:@//localhost:1521/pdborcl.oradev.oraclecorp.com";
+       String url = "jbdc:default:connection";
         String userName = "hr";
         String passWord = "oracle";
         String query = "select * from Employee";
@@ -41,7 +44,13 @@ public class JDBCFirstExample {
                 Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
                 ResultSet resultSet = stmt.executeQuery(query);) {
              DatabaseMetaData dbm = con.getMetaData();
+            // resultSet.getR
+             int numCols = resultSet.getMetaData().getColumnCount();
+           
              System.out.println(dbm.supportsANSI92EntryLevelSQL());
+             /* PreparedStatement pstmt = con.prepareStatement(query);
+            ResultSet resultSet1 = pstmt.executeQuery();*/
+             //CallableStatement cstmt = con.prepareCall()
             while(resultSet.next()) {
                 int EmpID = resultSet.getInt("ID");
                 String firstName = resultSet.getString("FirstName");
