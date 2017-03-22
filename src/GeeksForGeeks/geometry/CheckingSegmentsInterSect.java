@@ -70,7 +70,7 @@ public class CheckingSegmentsInterSect {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println(doInterSect(new Point(1,1), new Point(10, 1), new Point(1,2), new Point(10,2)));
-         System.out.println(doInterSect(new Point(10,0), new Point(0, 10), new Point(0,0), new Point(10,10)));
+        System.out.println(doInterSect(new Point(10,0), new Point(0, 10), new Point(0,0), new Point(10,10)));
     }
     
 }
