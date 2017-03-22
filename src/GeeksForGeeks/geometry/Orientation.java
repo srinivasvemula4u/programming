@@ -29,16 +29,7 @@ package GeeksForGeeks.geometry;
  * Above expression is 0 when σ = τ, i.e., collinear
  * Above expression is positive when σ > τ, i.e., clockwise
  */
-class Point {
 
-    int x;
-    int y;
-
-    public Point(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-}
 
 public class Orientation {
 
