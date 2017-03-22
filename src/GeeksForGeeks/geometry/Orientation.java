@@ -23,8 +23,7 @@ package GeeksForGeeks.geometry;
  * If  σ > τ, the orientation is clockwise (right turn)
  *
  * Using above values of σ and τ, we can conclude that, the orientation depends
- * on sign of below expression:  *
- * (y2 - y1)*(x3 - x2) - (y3 - y2)*(x2 - x1)
+ * on sign of below expression: * (y2 - y1)*(x3 - x2) - (y3 - y2)*(x2 - x1)
  *
  * Above expression is negative when σ < τ, i.e., counterclockwise
  * Above expression is 0 when σ = τ, i.e., collinear
@@ -46,12 +45,20 @@ public class Orientation {
     /**
      * @param args the command line arguments
      */
-    
-    public static void findOrientation(Point p1, Point p2,Point p3) {
-        //int val = 
+    public static void findOrientation(Point p1, Point p2, Point p3) {
+        int val = (p2.y - p1.y) * (p3.x - p2.x) - (p3.y - p2.y) * (p2.x - p1.x);
+        if (val == 0) {
+            System.out.println("Points are in colinear");
+        } else if (val < 0) {
+            System.out.println("Points are in counter clockwise");
+        } else {
+            System.out.println("Points are in  clockwise");
+        }
     }
+
     public static void main(String[] args) {
         // TODO code application logic here
+        findOrientation(new Point(0, 0), new Point(4, 4), new Point(1, 2));
 
     }
 
