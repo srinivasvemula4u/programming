@@ -57,7 +57,7 @@ public class TestZemoso {
         }
         swap(A, 0, min);
         Point2D pStart = A[0];
-        Arrays.sort(A, 1, n - 1, new Comparator<Point2D>() {
+        Arrays.sort(A, 1, n, new Comparator<Point2D>() {
             @Override
             public int compare(Point2D p1, Point2D p2) {
                 int o = orientation(pStart, p1, p2);
