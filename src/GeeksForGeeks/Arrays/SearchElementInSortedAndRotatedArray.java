@@ -26,6 +26,7 @@ public class SearchElementInSortedAndRotatedArray {
     public static int pivotedBinarySearch(int[] arr, int key) {
         int len = arr.length;
         int pivot = findPivot(arr, 0, len - 1);
+        System.out.println(arr[pivot]);
         if (pivot == -1) {
             return binarySearch(arr, 0, len - 1, key);
         }
@@ -77,8 +78,10 @@ public class SearchElementInSortedAndRotatedArray {
     /* Driver program to check above functions */
     public static void main(String[] args) {
         // Let us search 3 in below array
-        int[] arr = {5, 6, 7, 8, 9, 10, 1, 2, 3};
-        int key = 8;
+        //13,17, 19, 23, 2, 3, 5, 7, 11
+       // int[] arr = {5, 6, 7, 8, 9, 10, 1, 2, 3};
+       int[] arr = {13,17, 19, 23, 2, 3, 5, 7, 11};
+        int key = 5;
         System.out.printf("Index: %d\n", pivotedBinarySearch(arr, key));
 
     }
