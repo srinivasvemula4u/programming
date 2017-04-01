@@ -25,13 +25,31 @@ public class MinStack {
         }
     }
 
-    public int pop(int data) {
+    public int pop() {
         if (elemStack.isEmpty()) {
             return -1;
         }
         minStack.pop();
         return elemStack.pop();
 
+    }
+    // Optimized versions of push and pop
+
+    public void push2(int data) {
+        elemStack.push(data);
+        if (minStack.isEmpty() || minStack.peek() >= data) {
+            minStack.push(data);
+        }
+    }
+
+    public int pop2() {
+        if (elemStack.isEmpty()) {
+            return -1;
+        }
+        if (elemStack.peek() == minStack.peek()) {
+            minStack.pop();
+        }
+        return elemStack.pop();
     }
 
     public int getMinimum() {
@@ -49,12 +67,17 @@ public class MinStack {
 
     public static void main(String args[]) {
         MinStack stack = new MinStack();
-        stack.push(2);
-        stack.push(6);
-        stack.push(4);
-        stack.push(1);
-        stack.push(5);
+//        stack.push(2);
+//        stack.push(6);
+//        stack.push(4);
+//        stack.push(1);
+//        stack.push(5);
+        stack.push2(2);
+        stack.push2(6);
+        stack.push2(4);
+        stack.push2(1);
+        stack.push2(5);
         stack.print();
-        
+
     }
 }
