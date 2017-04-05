@@ -3,15 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Stacks/ReverseStack.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/GeeksForGeeks/Arrays/SearchElementInSortedAndRotatedArray.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/GoldManSachsTest.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/LinkedLists/LinkedListNode.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/LinkedLists/DeletingEvenDataNodeFromLinkedList.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Stacks/StackSpans.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/GeeksForGeeks/DynamicProgramming/SubsetSumInArray.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Stacks/MinStack.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Stacks/RemoveAdjancentDuplicates.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/FindingHeightOfTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/ThreePagePathAlgorithm.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/PrintAllAncestorsOfNodeInTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/WidthOfBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/MirrorOfBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/DiameterOfBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/PrintPathsFromRootToLeafNodes.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/BuildBinaryTreeFromInOrderAndPreOrder.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/FindLevelWithMaxSum.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/GeeksForGeeks/Arrays/SortElementsByFrequency.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/HackerRank/Practice/BinarySearchTrees/CatalanNumber.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/MinimumDepthOfBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/FindMaximumInBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/MaximumDepthOfBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/checkStructurallySameTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/BuildBinaryTreeFromInOrderAndPostOrder.java</file>
         </group>
     </open-files>
 </project-private>
