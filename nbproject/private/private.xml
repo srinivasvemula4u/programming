@@ -5,20 +5,31 @@
         <group>
             <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/FindingHeightOfTree.java</file>
             <file>file:/D:/Course%20Era/Algorithms/src/ThreePagePathAlgorithm.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/SiblingBinaryTreeNode.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/BuildBinaryTreeFromInOrderAndPreOrder.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/GenaricTrees/KArrayTreeNode.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/MinimumDepthOfBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/SizeOfBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/FindMaximumInBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/MaximumDepthOfBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/checkStructurallySameTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/GenaricTrees/QuasiIsomorphicGenericTrees.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/BuildBinaryTreeFromInOrderAndPostOrder.java</file>
             <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/PrintAllAncestorsOfNodeInTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/SiblingBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/GenaricTrees/ChildFirstSiblingNextTreeNode.java</file>
             <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/WidthOfBinaryTree.java</file>
             <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/MirrorOfBinaryTree.java</file>
             <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/DiameterOfBinaryTree.java</file>
             <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/PrintPathsFromRootToLeafNodes.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/BuildBinaryTreeFromInOrderAndPreOrder.java</file>
             <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/FindLevelWithMaxSum.java</file>
             <file>file:/D:/Course%20Era/Algorithms/src/GeeksForGeeks/Arrays/SortElementsByFrequency.java</file>
             <file>file:/D:/Course%20Era/Algorithms/src/HackerRank/Practice/BinarySearchTrees/CatalanNumber.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/MinimumDepthOfBinaryTree.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/FindMaximumInBinaryTree.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/MaximumDepthOfBinaryTree.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/checkStructurallySameTree.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/BuildBinaryTreeFromInOrderAndPostOrder.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/GenaricTrees/KArrayTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/GenaricTrees/FindDepthInGenericTress.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/BuildBinaryTreeFromPreOrder.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/Solution.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/GenaricTrees/SiblingsCount.java</file>
         </group>
     </open-files>
 </project-private>

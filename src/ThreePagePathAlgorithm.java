@@ -107,7 +107,8 @@ public class ThreePagePathAlgorithm {
                     if (urlList.size() > 3) {  // Removing first url for sliding to next 3 urls
                         urlList.remove(0);
                     }
-                    String key = urlList.get(0) + urlList.get(1) + urlList.get(2);
+		    userThreePageMap.put(userId,urlList);
+                    String key = urlList.get(0).trim() + urlList.get(1).trim() + urlList.get(2).trim();
                     int count = (pageCountMap.get(key) == null ? 0 : pageCountMap.get(key)) + 1;
                     pageCountMap.put(key, count);
                 }
