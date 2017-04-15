@@ -19,6 +19,7 @@ public class CheckValidBSTRecursiveSingleVariable {
        if(!isBST(root.getLeft(), prevNodeVal))
            return false;
        if(root.getData() < prevNodeVal)
+              return false;
            prevNodeVal = root.getData();
        return isBST(root.getRight(), prevNodeVal);
    }
@@ -31,6 +32,7 @@ public class CheckValidBSTRecursiveSingleVariable {
         tree.insert(5);
         tree.insert(4);
         tree.insert(6);
+
          System.out.println(checkValidBST(tree.getRoot()));
      }
     
