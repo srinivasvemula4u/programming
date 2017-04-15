@@ -44,9 +44,10 @@ public class FloorInBST {
     reason is prevNode becoming null;   
      */
     private static BinarySearchTreeNode floorInBSTUtil(BinarySearchTreeNode root, BinarySearchTreeNode prevNode, int data) {
-        if (root == null) {
+        if (root == null ) {
             return null;
         }
+    
         BinarySearchTreeNode left = floorInBSTUtil(root.getLeft(), prevNode, data);
         if (left != null) {
             return left;
@@ -89,8 +90,8 @@ public class FloorInBST {
         tree.insert(5);
         tree.insert(7);
         tree.insert(10);
-        //  BinarySearchTreeNode node = floorInBST(tree.getRoot(), 11);
-        BinarySearchTreeNode node = floorInBST2(tree.getRoot(), 100);
+        // BinarySearchTreeNode node = floorInBST(tree.getRoot(), 11);
+        BinarySearchTreeNode node = floorInBST2(tree.getRoot(), 11);
         System.out.println(node != null ? node.getData() : node);
     }
 
