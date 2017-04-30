@@ -39,5 +39,9 @@ public class ConstructRectangle {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+     public static int[] constructRectangle(int area) {
+        int w = (int)Math.sqrt(area);
+         	while (area%w!=0) w--;
+                	return new int[]{area/w, w};
+    }
 }
