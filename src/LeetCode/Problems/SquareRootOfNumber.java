@@ -9,6 +9,14 @@ package LeetCode.Problems;
  *
  * @author srivemul
  */
+/*
+Implement int sqrt(int x).
+
+Compute and return the square root of x.
+ */
+ /* Solution Hint : Quite a few people used Newton already, but I didn't see someone make it this short. 
+ame solution in every language. Explanation under the solutions.
+ */
 public class SquareRootOfNumber {
 
     /**
