@@ -22,7 +22,17 @@ Example:
 Answer: 16
 Explanation: The perimeter is the 16 yellow stripes in the image below:
 
-*/
+ */
+ /*
+Solution Hints :
+Method 1:
+loop over the matrix and count the number of islands;
+if the current dot is an island, count if it has any right neighbour or down neighbour;
+the result is islands * 4 - neighbours * 2
+
+Method 2 :
+add 4 for each land and remove 2 for each internal edge
+ */
 public class IslandPerimeter {
 
     /**
@@ -31,5 +41,26 @@ public class IslandPerimeter {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public static int islandPerimeter1(int[][] grid) {
+        int result = 0;
+        if (grid.length == 0) {
+            return 0;
+        }
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] == 1) {
+                    result = result + 4;
+                    if (i > 0 && grid[i - 1][j] == 1) {
+                        result -= 2;
+                    }
+                    if (j > 0 && grid[i][j - 1] == 1) {
+                        result -= 2;
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
 }
