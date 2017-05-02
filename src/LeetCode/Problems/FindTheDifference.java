@@ -76,4 +76,18 @@ public class FindTheDifference {
         // Return the difference between 2 strings as char
         return (char) (charCodeT - charCodeS);
     }
+    /*
+    UPDATE:
+  "1 optimization: As t.length() is just 1 character longer than s.length(), 
+    we can use 1 pass to process both strings (20% better runtime performance)."
+     */
+    public char findTheDifference3(String s, String t) {
+        int charCode = t.charAt(s.length());
+        // Iterate through both strings and char codes
+        for (int i = 0; i < s.length(); ++i) {
+              charCode -= (int)s.charAt(i);
+              charCode += (int)t.charAt(i); 
+        }
+        return (char)charCode;
+    }
 }
