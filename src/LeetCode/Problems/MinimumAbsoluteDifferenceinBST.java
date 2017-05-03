@@ -28,7 +28,7 @@ Output:
 Explanation:
 The minimum absolute difference is 1, which is the difference between 2 and 1 (or between 2 and 3).
 Note: There are at least two nodes in this BST.
-*/
+ */
 public class MinimumAbsoluteDifferenceinBST {
 
     /**
@@ -37,5 +37,24 @@ public class MinimumAbsoluteDifferenceinBST {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+    int min = Integer.MAX_VALUE;
+    Integer prev = null;
+
+    public int getMinimumDifference(TreeNode root) {
+        if (root == null) {
+            return min;
+        }
+
+        getMinimumDifference(root.left);
+
+        if (prev != null) {
+            min = Math.min(min, root.val - prev);
+        }
+        prev = root.val;
+
+        getMinimumDifference(root.right);
+
+        return min;
+    }
+
 }
