@@ -29,6 +29,13 @@ Explanation:
 The minimum absolute difference is 1, which is the difference between 2 and 1 (or between 2 and 3).
 Note: There are at least two nodes in this BST.
  */
+/*
+Solution Hint :
+
+The most common idea is to first inOrder traverse the tree and compare the delta between each of the adjacent values. It's guaranteed to have the correct answer because it is a BST thus inOrder traversal values are sorted.
+
+Solution 1 - In-Order traverse, time complexity O(N), space complexity O(1).
+*/
 public class MinimumAbsoluteDifferenceinBST {
 
     /**
