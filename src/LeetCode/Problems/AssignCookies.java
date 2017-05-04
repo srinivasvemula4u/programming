@@ -5,6 +5,8 @@
  */
 package LeetCode.Problems;
 
+import java.util.Arrays;
+
 /**
  *
  * @author srivemul
@@ -32,7 +34,7 @@ Output: 2
 Explanation: You have 2 children and 3 cookies. The greed factors of 2 children are 1, 2. 
 You have 3 cookies and their sizes are big enough to gratify all of the children, 
 You need to output 2.
-*/
+ */
 public class AssignCookies {
 
     /**
@@ -41,5 +43,21 @@ public class AssignCookies {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public int findContentChildren(int[] g, int[] s) {
+        int i = g.length - 1, j = s.length - 1, count = 0;
+        Arrays.sort(g);
+        Arrays.sort(s);
+        while (i >= 0 && j >= 0) {
+            if (s[j] >= g[i]) {
+                count++;
+                i--;
+                j--;
+            } else {
+                i--;
+            }
+        }
+        return count;
+    }
+
 }
