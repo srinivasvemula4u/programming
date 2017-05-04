@@ -3,16 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/FizzBuzz.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/SumOfTwoNumbers.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/DetectCapital.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/ReverseWordsInString.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/HammingDistance.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/SingleElemenInASortedArray.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/InvertBinaryTree.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/FindAllNumbersDisappearedInAnArray.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/KeyBoardRow.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/IslandPerimeter.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/MinimumDepthOfBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/Trees/MinimumDepthOfBinaryTree.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/TwoSum.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/AssignCookies.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/RelativeRanks.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/LeetCode/Problems/TwoSumIIInputArrayIsSorted.java</file>
         </group>
     </open-files>
 </project-private>
