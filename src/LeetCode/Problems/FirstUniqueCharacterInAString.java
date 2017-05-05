@@ -79,4 +79,21 @@ public class FirstUniqueCharacterInAString {
         }
         return slow;
     }
+
+    /*
+   1) Get the frequency of each character.
+    2) Get the first character that has a frequency of one.
+     */
+    public int firstUniqCharStraightForward(String s) {
+        int freq[] = new int[256];
+        for (int i = 0; i < s.length(); i++) {
+            freq[s.charAt(i) - 'a']++;
+        }
+        for (int i = 0; i < s.length(); i++) {
+            if (freq[s.charAt(i) - 'a'] == 1) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
