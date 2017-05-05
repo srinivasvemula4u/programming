@@ -21,7 +21,7 @@ For example:
     Z -> 26
     AA -> 27
     AB -> 28 
-*/
+ */
 public class ExcelSheetColumnNumber {
 
     /**
@@ -30,5 +30,13 @@ public class ExcelSheetColumnNumber {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public int titleToNumber(String s) {
+        int result = 0;
+        for (int i = 0; i < s.length(); i++) {
+            result = result * 26 + (s.charAt(i) - 'A' + 1);
+        }
+        return result;
+    }
+
 }
