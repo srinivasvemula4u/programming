@@ -5,6 +5,8 @@
  */
 package LeetCode.Problems;
 
+import java.util.Stack;
+
 /**
  *
  * @author srivemul
@@ -51,9 +53,34 @@ public class SumOfLeftLeaves {
         ans = ans + sumOfLeftLeaves(root.right);
         return ans;
     }
+
     /*
     Iterative method. Here for each node in the tree we check whether its left child is a leaf. If it is true, we add its value to answer, otherwise add left child to the stack to process it later. 
     For right child we add it to stack only if it is not a leaf.
      */
+    public int sumOfLeftLeavesIterative(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        int res = 0;
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            if (node.left != null) {
+                if (node.left.left == null && node.left.right == null) {
+                    res += node.left.val;
+                } else {
+                    stack.push(node.left);
+                }
+            }
+            if (node.right != null) {
+                if (node.right.left != null || node.right.right != null) {
+                    stack.push(node.right);
+                }
+            }
+        }
+        return res;
+    }
 
 }
