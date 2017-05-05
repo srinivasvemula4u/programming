@@ -21,7 +21,7 @@ For example:
     26 -> Z
     27 -> AA
     28 -> AB 
-*/
+ */
 public class ExcelSheetColumnTitle {
 
     /**
@@ -30,5 +30,15 @@ public class ExcelSheetColumnTitle {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public String convertToTitle(int n) {
+        StringBuilder builder = new StringBuilder();
+        while (n > 0) {
+            n--;
+            builder.insert(0, (char) ('A' + n % 26));
+            n /= 26;
+        }
+        return builder.toString();
+    }
+
 }
