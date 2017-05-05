@@ -5,6 +5,9 @@
  */
 package LeetCode.Problems;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author srivemul
@@ -27,6 +30,7 @@ public class FirstUniqueCharacterInAString {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println(firstUniqCharUsingMap("loveleetcode"));
     }
 
     /*
@@ -91,6 +95,23 @@ public class FirstUniqueCharacterInAString {
         }
         for (int i = 0; i < s.length(); i++) {
             if (freq[s.charAt(i) - 'a'] == 1) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static int firstUniqCharUsingMap(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            if (map.containsKey(s.charAt(i))) {
+                map.put(s.charAt(i), map.get(s.charAt(i)) + 1);
+            } else {
+                map.put(s.charAt(i), 1);
+            }
+        }
+        for (int i = 0; i < s.length(); i++) {
+            if (map.get(s.charAt(i)) == 1) {
                 return i;
             }
         }
