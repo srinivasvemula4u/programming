@@ -84,21 +84,42 @@ public class SumOfLeftLeaves {
         }
         return res;
     }
+
     public int sumOfLeftLeavesWithQueue(TreeNode root) {
-        if(root == null || root.left == null && root.right == null) return 0;
-        
+        if (root == null || root.left == null && root.right == null) {
+            return 0;
+        }
+
         int res = 0;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        
-        while(!queue.isEmpty()) {
+
+        while (!queue.isEmpty()) {
             TreeNode curr = queue.poll();
 
-            if(curr.left != null && curr.left.left == null && curr.left.right == null) res += curr.left.val;
-            if(curr.left != null) queue.offer(curr.left);
-            if(curr.right != null) queue.offer(curr.right);
+            if (curr.left != null && curr.left.left == null && curr.left.right == null) {
+                res += curr.left.val;
+            }
+            if (curr.left != null) {
+                queue.offer(curr.left);
+            }
+            if (curr.right != null) {
+                queue.offer(curr.right);
+            }
         }
         return res;
+    }
+
+    public int sumOfLeftLeavesRecursiveOptimized(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        if (root.left != null) {
+            if (root.left.left == null && root.left.right == null) {
+                return root.left.val + sumOfLeftLeaves(root.right);
+            }
+        }
+        return sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right);
     }
 
 }
