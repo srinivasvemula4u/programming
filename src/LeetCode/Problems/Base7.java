@@ -19,7 +19,7 @@ Example 2:
 Input: -7
 Output: "-10"
 Note: The input will be in range of [-1e7, 1e7].
-*/
+ */
 public class Base7 {
 
     /**
@@ -28,5 +28,25 @@ public class Base7 {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public String convertToBase7(int num) {
+        StringBuilder sb = new StringBuilder();
+        boolean flag = false;
+        if (num == 0) {
+            return "0";
+        }
+        if (num < 0) {
+            flag = true;
+        }
+        num = Math.abs(num);
+        while (num > 0) {
+            sb.insert(0, num % 7 + "");
+            num /= 7;
+        }
+        if (flag) {
+            sb.insert(0, "-");
+        }
+        return sb.toString();
+    }
+
 }
