@@ -14,7 +14,7 @@ Write a function to delete a node (except the tail) in a singly linked list, giv
 
 Supposed the linked list is 1 -> 2 -> 3 -> 4 and you are given the third node with value 3, t
 he linked list should become 1 -> 2 -> 4 after calling your function.
-*/
+ */
 public class DeleteNodeInALinkedList {
 
     /**
@@ -23,5 +23,10 @@ public class DeleteNodeInALinkedList {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public void deleteNode(ListNode node) {
+        node.val = node.next.val;
+        node.next = node.next.next;
+    }
+
 }
