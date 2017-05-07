@@ -64,5 +64,10 @@ public class StudentAttendanceRecordI {
     public boolean checkRecord3(String s) {
         return !s.matches(".*A.*A.*") && !s.matches(".*LLL.*");
     }
+    public boolean checkRecord4(String s) {
+        if(s.indexOf("A") != s.lastIndexOf("A") || s.contains("LLL"))
+            return false;
+        return true;
+    }
 
 }
