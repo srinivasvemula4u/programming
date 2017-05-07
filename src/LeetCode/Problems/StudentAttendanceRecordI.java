@@ -61,4 +61,8 @@ public class StudentAttendanceRecordI {
         return !s.matches(".*LLL.*|.*A.*A.*");
     }
 
+    public boolean checkRecord3(String s) {
+        return !s.matches(".*A.*A.*") && !s.matches(".*LLL.*");
+    }
+
 }
