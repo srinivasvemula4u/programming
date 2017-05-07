@@ -5,6 +5,9 @@
  */
 package LeetCode.Problems;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  *
  * @author srivemul
@@ -42,7 +45,7 @@ Given tree t:
   / \
  1   2
 Return false.
-*/
+ */
 public class SubtreeOfAnotherTree {
 
     /**
@@ -51,5 +54,40 @@ public class SubtreeOfAnotherTree {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public boolean isSubtree(TreeNode s, TreeNode t) {
+        if (s == null && t == null) {
+            return true;
+        }
+        boolean flag = false;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(s);
+        while (!queue.isEmpty()) {
+            TreeNode temp = queue.poll();
+            if (temp.val == t.val) {
+                flag = findSameTree(temp, t);
+            }
+            if (flag) {
+                return flag;
+            }
+            if (temp.left != null) {
+                queue.offer(temp.left);
+            }
+            if (temp.right != null) {
+                queue.offer(temp.right);
+            }
+        }
+        return flag;
+    }
+
+    private boolean findSameTree(TreeNode s, TreeNode q) {
+        if (s == null && q == null) {
+            return true;
+        }
+        if (s == null || q == null) {
+            return false;
+        }
+        return (s.val == q.val) && (findSameTree(s.left, q.left)) && (findSameTree(s.right, q.right));
+    }
+
 }
