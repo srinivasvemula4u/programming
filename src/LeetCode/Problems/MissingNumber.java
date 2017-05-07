@@ -17,7 +17,7 @@ Given nums = [0, 1, 3] return 2.
 
 Note:
 Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
-*/
+ */
 public class MissingNumber {
 
     /**
@@ -26,5 +26,15 @@ public class MissingNumber {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public int missingNumber(int[] nums) {
+        int sum = 0;
+        for (int i = 0; i <= nums.length; i++) {
+            sum = sum ^ i;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            sum = sum ^ nums[i];
+        }
+        return sum;
+    }
 }
