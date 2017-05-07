@@ -5,6 +5,9 @@
  */
 package LeetCode.Problems;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author srivemul
@@ -36,6 +39,23 @@ public class LongestPalindrome {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+    }
+
+    public int longestPalindrome(String s) {
+        int maxLen = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            if (map.containsKey(s.charAt(i))) {
+                maxLen += 2;
+                map.remove(s.charAt(i));
+            } else {
+                map.put(s.charAt(i), 1);
+            }
+        }
+        if (!map.isEmpty()) {
+            maxLen += 1;
+        }
+        return maxLen;
     }
 
 }
