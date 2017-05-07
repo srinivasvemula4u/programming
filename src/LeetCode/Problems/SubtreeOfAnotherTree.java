@@ -115,4 +115,24 @@ public class SubtreeOfAnotherTree {
         return isSame(s.left, t.left) && isSame(s.right, t.right);
     }
 
+    public boolean isSubtree3(TreeNode s, TreeNode t) {
+        return serialize(s).contains(serialize(t));
+    }
+
+    public String serialize(TreeNode root) {
+        StringBuilder res = new StringBuilder();
+        serialize(root, res);
+        return res.toString();
+    }
+
+    private void serialize(TreeNode cur, StringBuilder res) {
+        if (cur == null) {
+            res.append(",#");
+            return;
+        }
+        res.append("," + cur.val);
+        serialize(cur.left, res);
+        serialize(cur.right, res);
+    }
+
 }
