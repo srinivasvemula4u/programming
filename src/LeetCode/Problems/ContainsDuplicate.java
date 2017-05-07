@@ -5,6 +5,9 @@
  */
 package LeetCode.Problems;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author srivemul
