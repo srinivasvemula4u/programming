@@ -50,4 +50,15 @@ public class DistributeCandies {
         return kinds.size() >= candies.length / 2 ? candies.length / 2 : kinds.size();
     }
 
+    public int distributeCandies2(int[] candies) {
+        Set<Integer> set = new HashSet<>();
+        for (Integer candie : candies) {
+            set.add(candie);
+            if (set.size() == candies.length / 2) {
+                return set.size();
+            }
+        }
+        return Math.min(set.size(), candies.length / 2);
+    }
+
 }
