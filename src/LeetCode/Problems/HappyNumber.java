@@ -5,6 +5,9 @@
  */
 package LeetCode.Problems;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author srivemul
@@ -57,6 +60,22 @@ public class HappyNumber {
         } else {
             return false;
         }
+    }
+
+    public boolean isHappy2(int n) {
+        Set<Integer> set = new HashSet<>();
+        while (set.add(n)) {
+            int squareSum = 0;
+            while (n > 0) {
+                squareSum = squareSum + ((n % 10) * (n % 10));
+                n = n / 10;
+            }
+            if (squareSum == 1) {
+                return true;
+            }
+            n = squareSum;
+        }
+        return false;
     }
 
 }
