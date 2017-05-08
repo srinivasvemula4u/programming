@@ -15,7 +15,7 @@ Given a sorted linked list, delete all duplicates such that each element appear 
 For example,
 Given 1->1->2, return 1->2.
 Given 1->1->2->3->3, return 1->2->3.
-*/
+ */
 public class RemoveDuplicatesFromSortedList {
 
     /**
@@ -24,5 +24,24 @@ public class RemoveDuplicatesFromSortedList {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public ListNode deleteDuplicates(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode current = head, previous = head;
+        while (current != null) {
+            if (current.val == previous.val) {
+                current = current.next;
+            } else {
+                previous.next = current;
+                previous = current;
+                current = current.next;
+            }
+        }
+        previous.next = current;
+        return head;
+
+    }
+
 }
