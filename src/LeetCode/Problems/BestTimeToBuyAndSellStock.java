@@ -35,4 +35,21 @@ public class BestTimeToBuyAndSellStock {
         // TODO code application logic here
     }
 
+    public int maxProfit(int[] prices) {
+        if (prices.length <= 0) {
+            return 0;
+        }
+        int min_val = prices[0];
+        int max_profit = 0;
+        for (int i = 1; i < prices.length; i++) {
+            if (prices[i] < min_val) {
+                min_val = prices[i];
+            } else if (max_profit < (prices[i] - min_val)) {
+                max_profit = (prices[i] - min_val);
+            }
+
+        }
+        return max_profit;
+    }
+
 }
