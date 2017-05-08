@@ -25,4 +25,8 @@ public class PowerOfTwo {
         return n > 0 && ((n & (n - 1)) == 0);
     }
 
+    public boolean isPowerOfTwo2(int n) {
+        return (Math.log10(n) / Math.log10(2)) % 1 == 0;
+    }
+
 }
