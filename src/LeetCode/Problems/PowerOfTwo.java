@@ -11,7 +11,7 @@ package LeetCode.Problems;
  */
 /*
 Given an integer, write a function to determine if it is a power of two.
-*/
+ */
 public class PowerOfTwo {
 
     /**
@@ -20,5 +20,9 @@ public class PowerOfTwo {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public boolean isPowerOfTwo(int n) {
+        return n > 0 && ((n & (n - 1)) == 0);
+    }
+
 }
