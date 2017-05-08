@@ -16,15 +16,18 @@ Example:
 Given num = 16, return true. Given num = 5, return false.
 
 Follow up: Could you solve it without loops/recursion?
-*/
+ */
 public class PowerOfFour {
 
     /**
      * @param args the command line arguments
      */
-    
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public boolean isPowerOfFour(int num) {
+        return (Math.log10(num) / Math.log10(4)) % 1 == 0;
+    }
+
 }
