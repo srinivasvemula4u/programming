@@ -33,4 +33,8 @@ public class PowerOfThree {
         return ((Math.log10(n) / Math.log10(3)) % 1 == 0);
     }
 
+    public boolean isPowerOfThree3(int n) {
+        return n == 0 ? false : (n == Math.pow(3, Math.round(Math.log(n) / Math.log(3))));
+    }
+
 }
