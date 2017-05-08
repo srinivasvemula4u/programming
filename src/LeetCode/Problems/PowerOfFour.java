@@ -36,4 +36,8 @@ public class PowerOfFour {
         //so that the single 1 bit always appears at the odd position 
     }
 
+    boolean isPowerOfFour3(int num) {
+        return ((num - 1) & num) == 0 && (num - 1) % 3 == 0;
+    }
+
 }
