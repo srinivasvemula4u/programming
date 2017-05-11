@@ -27,7 +27,7 @@ But the following [1,2,2,null,3,null,3] is not:
    3    3
 Note:
 Bonus points if you could solve it both recursively and iteratively.
-*/
+ */
 public class SymmetricTree {
 
     /**
@@ -36,5 +36,22 @@ public class SymmetricTree {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public boolean isSymmetric(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        return isSymmetricHelp(root.left, root.right);
+    }
+
+    private boolean isSymmetricHelp(TreeNode left, TreeNode right) {
+        if (left == null || right == null) {
+            return left == right;
+        }
+        if (left.val != right.val) {
+            return false;
+        }
+        return isSymmetricHelp(left.left, right.right) && isSymmetricHelp(left.right, right.left);
+    }
+
 }
