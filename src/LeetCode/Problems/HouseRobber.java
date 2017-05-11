@@ -45,4 +45,15 @@ public class HouseRobber {
         return latestMax;
     }
 
+    public int rob2(int[] num) {
+        int prevNo = 0;
+        int prevYes = 0;
+        for (int n : num) {
+            int temp = prevNo;
+            prevNo = Math.max(prevNo, prevYes);
+            prevYes = n + temp;
+        }
+        return Math.max(prevNo, prevYes);
+    }
+
 }
