@@ -6,7 +6,10 @@
 package LeetCode.Problems;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -76,6 +79,44 @@ public class FindModeInBinarySearchTree {
 
     public static void main(String[] args) {
         // TODO code application logic here
+    }
+    /*
+    Classic solution
+     */
+    Map<Integer, Integer> map;
+    int maxCount = 0;
+
+    public int[] findMode2(TreeNode root) {
+        if (root == null) {
+            return new int[0];
+        }
+        this.map = new HashMap<>();
+
+        inorder(root);
+
+        List<Integer> list = new LinkedList<>();
+        for (int key : map.keySet()) {
+            if (map.get(key) == maxCount) {
+                list.add(key);
+            }
+        }
+
+        int[] res = new int[list.size()];
+        for (int i = 0; i < res.length; i++) {
+            res[i] = list.get(i);
+        }
+        return res;
+    }
+
+    private void inorder(TreeNode node) {
+        if (node.left != null) {
+            inorder(node.left);
+        }
+        map.put(node.val, map.getOrDefault(node.val, 0) + 1);
+        maxCount = Math.max(maxCount, map.get(node.val));
+        if (node.right != null) {
+            inorder(node.right);
+        }
     }
 
 }
