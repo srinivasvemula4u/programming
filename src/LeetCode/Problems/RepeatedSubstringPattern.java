@@ -66,4 +66,34 @@ public class RepeatedSubstringPattern {
         }
         return false;
     }
+
+    /* 
+    Finding SubString length based on KMP prefix algorithm
+     */
+    public boolean repeatedSubstringPattern2(String s) {
+        int[] prefix = kmp(s);
+        int len = prefix[s.length() - 1];
+        int n = s.length();
+        return (len > 0 && n % (n - len) == 0);
+    }
+
+    private int[] kmp(String str) {
+        int len = str.length();
+        int[] prefix = new int[len];
+        int i = 0, j = 1;
+        prefix[0] = 0;
+        while (i < len && j < len) {
+            if (str.charAt(i) == str.charAt(j)) {
+                prefix[j] = i + 1;
+                i++;
+                j++;
+            } else if (i == 0) {
+                prefix[j] = 0;
+                j++;
+            } else {
+                i = prefix[i - 1];
+            }
+        }
+        return prefix;
+    }
 }
