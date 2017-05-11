@@ -23,6 +23,15 @@ Return
  [1,4,6,4,1]
 ]
 */
+/*
+Solution Hint : 
+
+two loops, one go through the row, one go through the column
+
+database: pretty straight forward, ArrayList
+
+calculate element value: K(i)(j)=K(i-1)(j-1)+K(i-1)(j) except for the first and last element
+*/
 public class PascalsTriangle {
 
     /**
