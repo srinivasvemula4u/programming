@@ -31,5 +31,12 @@ public class ValidPerfectSquare {
     public static void main(String[] args) {
         // TODO code application logic here
     }
+     public boolean isPerfectSquare(int num) {
+        long x = num;
+        while (x * x > num) {
+            x = (x + num / x) >> 1;
+        }
+        return x * x == num;
+    }
     
 }
