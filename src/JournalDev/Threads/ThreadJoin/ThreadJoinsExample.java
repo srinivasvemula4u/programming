@@ -9,7 +9,7 @@ package JournalDev.Threads.ThreadJoin;
  *
  * @author srivemul
  */
-public class ThreadJoinExample {
+public class ThreadJoinsExample {
 
  public static void main(String[] args) {
         Thread t1 = new Thread(new MyRunnable(), "t1");
