@@ -34,9 +34,6 @@ public class ThreadNeverDeadLock {
 
     }
 }
-
-
-}
     class SyncThread1 implements Runnable {
 
     private Object obj1;
