@@ -6,6 +6,7 @@
 package JournalDev.Threads.Timer;
 
 import java.util.Date;
+import java.util.Timer;
 import java.util.TimerTask;
 
 /**
@@ -17,10 +18,6 @@ public class MyTimerTask extends TimerTask {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-
     @Override
     public void run() {
         System.out.println("Timer task started at:" + new Date());
@@ -35,4 +32,26 @@ public class MyTimerTask extends TimerTask {
             e.printStackTrace();
         }
     }
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        MyTimerTask myTimerTask = new MyTimerTask();
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(myTimerTask, 0, 10 * 1000);
+        System.out.println("TimerTask started");
+        try {
+            Thread.sleep(120000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+        timer.cancel();
+          System.out.println("TimerTask cancelled");
+         try {
+            Thread.sleep(30000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+
+    }
+
 }
