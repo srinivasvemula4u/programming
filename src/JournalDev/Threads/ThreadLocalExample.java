@@ -17,7 +17,7 @@ public class ThreadLocalExample implements Runnable {
     /**
      * @param args the command line arguments
      */
-    private  ThreadLocal<SimpleDateFormat> formatter = new ThreadLocal<SimpleDateFormat>() {
+    private static final ThreadLocal<SimpleDateFormat> formatter = new ThreadLocal<SimpleDateFormat>() {
         @Override
         protected SimpleDateFormat initialValue() {
             return new SimpleDateFormat("yyyyMMdd HHmm");
