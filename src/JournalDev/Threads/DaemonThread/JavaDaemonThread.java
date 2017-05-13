@@ -20,6 +20,7 @@ public class JavaDaemonThread {
         dt.start();
         //continue program
         Thread.sleep(30000);
+      //  dt.join();
         System.out.println("Finishing program");
     }
  
