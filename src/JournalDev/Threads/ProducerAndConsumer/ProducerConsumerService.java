@@ -19,7 +19,7 @@ public class ProducerConsumerService {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        BlockingQueue<Message> blockingQueue = new ArrayBlockingQueue<>(10);
+        BlockingQueue<Message> blockingQueue = new ArrayBlockingQueue<>(2);
         Producer producer = new Producer(blockingQueue);
         Consumer consumer = new Consumer(blockingQueue);
         new Thread(producer).start();
