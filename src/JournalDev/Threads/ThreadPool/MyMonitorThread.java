@@ -35,4 +35,8 @@ public class MyMonitorThread implements Runnable {
         }
     }
 
+    public void shutdown() {
+        this.flag = false;
+    }
+
 }
