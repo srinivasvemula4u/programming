@@ -19,9 +19,21 @@ public class LinkedListCycle {
 
 Follow up:
 Can you solve it without using extra space?
-    */
+     */
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    public boolean hasCycle(ListNode head) {
+        ListNode slowPtr = head, fastPtr = head;
+        while (fastPtr != null && fastPtr.next != null) {
+            fastPtr = fastPtr.next.next;
+            slowPtr = slowPtr.next;
+            if (slowPtr == fastPtr) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
