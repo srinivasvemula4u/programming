@@ -90,6 +90,63 @@ Binary search is used in this case to slowly narrow down the `x` that will satis
     implicitly autoboxed to double data type.
 
 
+     */
+    public int arrangeCoins2(int n) {
+        return (int) ((Math.sqrt(1 + 8.0 * n) - 1) / 2);
+        
+    }
+    /*
+    Complexity Analysis
+
+Uniform cost model is used as Cost Model and `n` is the input number. `b` in this case would be `2`.
+
+Time Complexity:
+
+Best Case `O(1)` : With respect to the input, the algorithm will always perform basic mathematical operation 
+    that run in constant time.
+Average Case `O(1)` : With respect to the input, the algorithm will always perform basic mathematical 
+    operation that run in constant time.
+Worst Case `O(1)` : With respect to the input, the algorithm will always perform basic mathematical 
+    operation that run in constant time.
+Auxiliary Space:
+
+Worst Case `O(1)` : No extra space is used.
+Algorithm
+
+Approach: Mathematics
+
+The problem is basically asking the maximum length of consecutive number that has the running sum lesser or
+    equal to `n`. In other word, find `x` that satisfy the following condition:
+
+`1 + 2 + 3 + 4 + 5 + 6 + 7 + ... + x <= n`
+`sum_{i=1}^x i <= n`
+Running sum can be simplified,
+
+`(x * ( x + 1)) / 2 <= n`
+Using quadratic formula, `x` is evaluated to be,
+
+`x = 1 / 2 * (-sqrt(8 * n + 1)-1)` (Inapplicable) or `x = 1 / 2 * (sqrt(8 * n + 1)-1)`
+Negative root is ignored and positive root is used instead. Note that 8.0 * n is very important because it 
+ will cause Java to implicitly autoboxed the intermediate result into double data type. The code will not work 
+    if it is simply 8 * n. Alternatively, an explicit casting can be done 8 * (long) n).
+
+More...
+Show All
+
+
+
+1
+2
+3
+4
+5
+6
+public class Solution {
+        public int arrangeCoins(int n) {
+        return (int) ((Math.sqrt(1 + 8.0 * n) - 1) / 2);
+    }
+}
+
     */
 
 }
