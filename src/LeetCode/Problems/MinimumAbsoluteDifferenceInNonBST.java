@@ -48,7 +48,7 @@ public class MinimumAbsoluteDifferenceInNonBST {
     TreeSet<Integer> set = new TreeSet<>();
     int min = Integer.MAX_VALUE;
     //   int min = Integer.MAX_VALUE;
-    Integer prev = null;
+    //Integer prev = null;
 
     public int getMinimumDifference(TreeNode root) {
         if (root == null) {
@@ -67,23 +67,6 @@ public class MinimumAbsoluteDifferenceInNonBST {
         set.add(root.val);
 
         getMinimumDifference(root.left);
-        getMinimumDifference(root.right);
-
-        return min;
-    }
-
-    public int getMinimumDifference2(TreeNode root) {
-        if (root == null) {
-            return min;
-        }
-
-        getMinimumDifference(root.left);
-
-        if (prev != null) {
-            min = Math.min(min, root.val - prev);
-        }
-        prev = root.val;
-
         getMinimumDifference(root.right);
 
         return min;
