@@ -9,7 +9,8 @@ package LeetCode.Problems;
  *
  * @author srivemul
  */
-public class ReverseBetween {
+
+public class ReverseLinkedListII {
 
     /**
      * @param args the command line arguments
