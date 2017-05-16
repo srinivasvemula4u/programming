@@ -21,9 +21,10 @@ public class RomanToInteger {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println(romanToInt("CL"));
     }
 
-    public int romanToInt(String s) {
+    public static int romanToInt(String s) {
         int nums[] = new int[s.length()];
         for (int i = 0; i < s.length(); i++) {
             switch (s.charAt(i)) {
