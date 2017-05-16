@@ -30,8 +30,8 @@ Output:
 
 Explanation:
 The minimum absolute difference is 1, which is the difference between 2 and 1 (or between 2 and 3).
-*/
-/*
+ */
+ /*
 What if it is not a BST? (Follow up of the problem) The idea is to put values in a TreeSet and 
 then every time we can use O(lgN) time to lookup for the nearest values.
 
@@ -47,6 +47,8 @@ public class MinimumAbsoluteDifferenceInNonBST {
     }
     TreeSet<Integer> set = new TreeSet<>();
     int min = Integer.MAX_VALUE;
+    //   int min = Integer.MAX_VALUE;
+    Integer prev = null;
 
     public int getMinimumDifference(TreeNode root) {
         if (root == null) {
@@ -65,6 +67,23 @@ public class MinimumAbsoluteDifferenceInNonBST {
         set.add(root.val);
 
         getMinimumDifference(root.left);
+        getMinimumDifference(root.right);
+
+        return min;
+    }
+
+    public int getMinimumDifference2(TreeNode root) {
+        if (root == null) {
+            return min;
+        }
+
+        getMinimumDifference(root.left);
+
+        if (prev != null) {
+            min = Math.min(min, root.val - prev);
+        }
+        prev = root.val;
+
         getMinimumDifference(root.right);
 
         return min;
