@@ -11,26 +11,6 @@ import java.util.TreeSet;
  *
  * @author srivemul
  */
-/*
-Given a binary search tree with non-negative values, find the minimum absolute difference 
-between values of any two nodes.
-
-Example:
-
-Input:
-
-   1
-    \
-     3
-    /
-   2
-
-Output:
-1
-
-Explanation:
-The minimum absolute difference is 1, which is the difference between 2 and 1 (or between 2 and 3).
- */
  /*
 What if it is not a BST? (Follow up of the problem) The idea is to put values in a TreeSet and 
 then every time we can use O(lgN) time to lookup for the nearest values.
