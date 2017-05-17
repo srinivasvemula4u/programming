@@ -28,6 +28,11 @@ public class ArrayIsSubSetOfAnotherArray {
     /**
      * @param args the command line arguments
      */
+   /*
+    Method 1 (Simple)
+Use two loops: The outer loop picks all the elements of arr2[] one by one. The inner loop linearly searches for the 
+element picked by outer loop. If all elements are found then return 1, else return 0.
+    */
     private static boolean isSubset(int[] arr1, int[] arr2) {
         int m = arr1.length;
         int n = arr2.length;
