@@ -5,6 +5,8 @@
  */
 package GeeksForGeeks.Arrays;
 
+import java.util.Arrays;
+
 /**
  *
  * @author srivemul
@@ -122,13 +124,37 @@ element picked by outer loop. If all elements are found then return 1, else retu
     sorting which is not the case in above code. 
     In above code Quick Sort is sued and worst case time complexity of Quick Sort is O(m^2)
      */
+ /* Method 3 (Use Sorting and Merging )
+1) Sort both arrays: arr1[] and arr2[] O(mLogm + nLogn)
+2) Use Merge type of process to see if all elements of sorted arr2[] are present in sorted arr1[]. */
+    public static boolean isSubSetofArray(int[] arr1, int[] arr2) {
+        quicksort(arr1);
+        quicksort(arr2);
+        int i = 0, j = 0;
+        while (j < arr2.length) {
+            if (arr1[i] < arr2[j]) {
+                i++;
+            } else if (arr1[i] == arr2[i]) {
+                i++;
+                j++;
+            } else if (arr1[i] > arr2[j]) {
+                return false;
+            }
+        }
+        if (j < arr2.length) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     public static void main(String[] args) {
         // TODO code application logic here
         int[] arr1 = {11, 1, 13, 21, 3, 7};
-        int[] arr2 = {11, 3, 7, 1};
+        int[] arr2 = {11, 3, 7, 1, 4};
         System.out.println(isSubset(arr1, arr2));
         System.out.println(sortingAndMerging(arr1, arr2));
+        System.out.println(isSubSetofArray(arr1, arr2));
 
     }
 }
