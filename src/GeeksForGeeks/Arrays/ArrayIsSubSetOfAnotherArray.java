@@ -22,17 +22,17 @@ Output: arr2[] is a subset of arr1[]
 
 Input: arr1[] = {10, 5, 2, 23, 19}, arr2[] = {19, 5, 3}
 Output: arr2[] is not a subset of arr1[]
-*/
+ */
 public class ArrayIsSubSetOfAnotherArray {
 
     /**
      * @param args the command line arguments
      */
-   /*
+    /*
     Method 1 (Simple)
 Use two loops: The outer loop picks all the elements of arr2[] one by one. The inner loop linearly searches for the 
 element picked by outer loop. If all elements are found then return 1, else return 0.
-    */
+     */
     private static boolean isSubset(int[] arr1, int[] arr2) {
         int m = arr1.length;
         int n = arr2.length;
@@ -50,6 +50,12 @@ element picked by outer loop. If all elements are found then return 1, else retu
         return true;
     }
 
+    /* Method 2 (Use Sorting and Binary Search)
+
+1) Sort arr1[] O(mLogm)
+2) For each element of arr2[], do binary search for it in sorted arr1[].
+         a) If the element is not found then return 0.
+3) If all elements are present then return 1. */
     private static boolean sortingAndMerging(int[] arr1, int[] arr2) {
         int m = arr1.length;
         int n = arr2.length;
