@@ -48,18 +48,18 @@ public class MatrixInSpiralForm {
                 System.out.print(arr[i][n - 1] + " ");
             }
             n--;
-            if (k < m) {
+          //  if (k < m) {
                 for (int i = n - 1; i >= l; i--) {
                     System.out.print(arr[m - 1][i] + " ");
                 }
                 m--;
-            }
-            if (l < n) {
+          //  }
+          //  if (l < n) {
                 for (int i = m - 1; i >= k; i--) {
                     System.out.print(arr[i][l] + " ");
                 }
                 l++;
-            }
+         //   }
         }
     }
 
