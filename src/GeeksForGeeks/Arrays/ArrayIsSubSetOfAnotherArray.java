@@ -117,6 +117,12 @@ element picked by outer loop. If all elements are found then return 1, else retu
         arr[j] = temp;
     }
 
+    /*
+    Time Complexity: O(mLogm + nLogm). Please note that this will be the complexity if an mLogm algorithm is used for 
+    sorting which is not the case in above code. 
+    In above code Quick Sort is sued and worst case time complexity of Quick Sort is O(m^2)
+     */
+
     public static void main(String[] args) {
         // TODO code application logic here
         int[] arr1 = {11, 1, 13, 21, 3, 7};
