@@ -48,6 +48,9 @@ public class ReflectionMainClass {
 
         Class<?> superClass = Class.forName("JournalDev.Reflection.ConcreteClass").getSuperclass();
         Class<?>[] interfaces = Class.forName("JournalDev.Reflection.ConcreteClass").getInterfaces();
+        for (Class interfaceObj : interfaces) {
+            System.out.println(interfaceObj.getCanonicalName());
+        }
         System.out.println(superClass); // prints "class com.journaldev.reflection.BaseClass"
         System.out.println(Object.class.getSuperclass()); // prints "null"
         System.out.println(String[][].class.getSuperclass());// prints "class java.lang.Object"
