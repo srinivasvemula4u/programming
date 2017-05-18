@@ -43,6 +43,8 @@ public class ReflectionMainClass {
 
         Class<?> twoDStringArray = String[][].class;
         System.out.println(twoDStringArray.getCanonicalName()); // prints java.lang.String[][]
+        twoDStringArray = String.class;
+        System.out.println(twoDStringArray.getCanonicalName());
 
     }
 
