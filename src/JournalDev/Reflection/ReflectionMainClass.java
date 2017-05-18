@@ -30,11 +30,17 @@ public class ReflectionMainClass {
         //for primitive types, wrapper classes and arrays
         Class<?> booleanClass = boolean.class;
         System.out.println(booleanClass.getCanonicalName()); // prints boolean
-        
+
         Class<?> cDouble = Double.class;
         System.out.println(cDouble.getCanonicalName());
         cDouble = Double.TYPE;
-         System.out.println(cDouble.getCanonicalName());
+        System.out.println(cDouble.getCanonicalName());
+
+        Class<?> cDoubleArray = Class.forName("[D");
+        System.out.println(cDoubleArray.getCanonicalName()); //prints double[]
+        cDoubleArray = Double[].class;
+         System.out.println(cDoubleArray.getCanonicalName());
+
     }
 
 }
