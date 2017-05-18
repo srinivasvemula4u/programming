@@ -5,6 +5,8 @@
  */
 package JournalDev.Reflection;
 
+import java.util.Arrays;
+
 /**
  *
  * @author srivemul
@@ -57,10 +59,18 @@ public class ReflectionMainClass {
         for (Class classObj : classes) {
             System.out.println(classObj.getCanonicalName());
         }
-         System.out.println("**********************");
+        System.out.println("**********************");
         System.out.println(superClass); // prints "class com.journaldev.reflection.BaseClass"
         System.out.println(Object.class.getSuperclass()); // prints "null"
         System.out.println(String[][].class.getSuperclass());// prints "class java.lang.Object"
+
+        Class<?>[] classes1 = concreteClass.getClasses();
+        //[class com.journaldev.reflection.ConcreteClass$ConcreteClassPublicClass, 
+        //class com.journaldev.reflection.ConcreteClass$ConcreteClassPublicEnum, 
+        //interface com.journaldev.reflection.ConcreteClass$ConcreteClassPublicInterface,
+        //class com.journaldev.reflection.BaseClass$BaseClassInnerClass, 
+        //class com.journaldev.reflection.BaseClass$BaseClassMemberEnum]
+        System.out.println(Arrays.toString(classes1));
 
     }
 
