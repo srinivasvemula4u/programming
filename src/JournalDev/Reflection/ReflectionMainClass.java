@@ -46,6 +46,12 @@ public class ReflectionMainClass {
         twoDStringArray = String.class;
         System.out.println(twoDStringArray.getCanonicalName());
 
+        Class<?> superClass = Class.forName("JournalDev.Reflection.ConcreteClass").getSuperclass();
+        Class<?>[] interfaces = Class.forName("JournalDev.Reflection.ConcreteClass").getInterfaces();
+        System.out.println(superClass); // prints "class com.journaldev.reflection.BaseClass"
+        System.out.println(Object.class.getSuperclass()); // prints "null"
+        System.out.println(String[][].class.getSuperclass());// prints "class java.lang.Object"
+
     }
 
 }
