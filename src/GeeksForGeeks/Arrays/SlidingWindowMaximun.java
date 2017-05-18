@@ -12,6 +12,24 @@ import java.util.Deque;
  *
  * @author srivemul
  */
+/*
+Given an array and an integer k, find the maximum for each and every contiguous subarray of size k.
+
+Examples:
+
+Input :
+arr[] = {1, 2, 3, 1, 4, 5, 2, 3, 6}
+k = 3
+Output :
+3 3 4 5 5 5 6
+
+Input :
+arr[] = {8, 5, 10, 7, 9, 4, 15, 12, 90, 13}
+k = 4
+Output :
+10 10 10 15 15 90 90
+
+ */
 public class SlidingWindowMaximun {
 
     /**
@@ -30,31 +48,35 @@ public class SlidingWindowMaximun {
         }
         System.out.println();
     }
-    private static void slidingWindowMaximum2(int[] arr,int k) {
+
+    private static void slidingWindowMaximum2(int[] arr, int k) {
         int n = arr.length;
         Deque<Integer> deque = new ArrayDeque<>();
         int i = 0;
-        for(; i < k; i++) {
-           while(!deque.isEmpty() && arr[i] >= arr[deque.getLast()])
-               deque.pollLast();
-           deque.offerLast(i);
-        }
-        for(; i < n; i++) {
-            System.out.print(arr[deque.getFirst()] + " ");
-            while(!deque.isEmpty() && deque.getFirst() <= i - k)
-                deque.pollFirst();
-            while(!deque.isEmpty() && arr[i] >= arr[deque.getLast()])
+        for (; i < k; i++) {
+            while (!deque.isEmpty() && arr[i] >= arr[deque.getLast()]) {
                 deque.pollLast();
+            }
             deque.offerLast(i);
         }
-          System.out.print(arr[deque.getFirst()] + " ");
+        for (; i < n; i++) {
+            System.out.print(arr[deque.getFirst()] + " ");
+            while (!deque.isEmpty() && deque.getFirst() <= i - k) {
+                deque.pollFirst();
+            }
+            while (!deque.isEmpty() && arr[i] >= arr[deque.getLast()]) {
+                deque.pollLast();
+            }
+            deque.offerLast(i);
+        }
+        System.out.print(arr[deque.getFirst()] + " ");
         System.out.println();
     }
 
     public static void main(String[] args) {
-       int[] arr = {8, 5, 10, 7, 9, 4, 15, 12, 90, 13};
-       slidingWindowMaximum(arr,4);
-        slidingWindowMaximum2(arr,4);
+        int[] arr = {8, 5, 10, 7, 9, 4, 15, 12, 90, 13};
+        slidingWindowMaximum(arr, 4);
+        slidingWindowMaximum2(arr, 4);
     }
 
 }
