@@ -54,6 +54,7 @@ So time complexity is O((n-k+1)*k)  */
         }
         System.out.println();
     }
+
     /*
     
 Method 2 (Use Self-Balancing BST)
@@ -66,8 +67,16 @@ Method 2 (Use Self-Balancing BST)
 Time Complexity: Time Complexity of step 1 is O(kLogk). Time Complexity of steps 2(a), 2(b) and 2(c) is O(Logk).
     Since steps 2(a), 2(b) and 2(c) are in a loop that runs n-k+1 times, time complexity of the complete algorithm is 
     O(kLogk + (n-k+1)*Logk) which can also be written as O(nLogk).
-    */
+     */
 
+ /*
+    Method 3 (A O(n) method: use Dequeue)
+We create a Dequeue, Qi of capacity k, that stores only useful elements of current window of k elements. 
+    An element is useful if it is in current window and is greater than all other elements on left side of it in 
+    current window. We process all array elements one by one and maintain Qi to contain useful elements of current 
+    window and these useful elements are maintained in sorted order. The element at front of the Qi is the largest and 
+    element at rear of Qi is the smallest of current window. 
+     */
     private static void slidingWindowMaximum2(int[] arr, int k) {
         int n = arr.length;
         Deque<Integer> deque = new ArrayDeque<>();
@@ -91,6 +100,12 @@ Time Complexity: Time Complexity of step 1 is O(kLogk). Time Complexity of steps
         System.out.print(arr[deque.getFirst()] + " ");
         System.out.println();
     }
+
+    /*
+    Time Complexity: O(n). It seems more than O(n) at first look. If we take a closer look, 
+    we can observe that every element of array is added and removed at most once. So there are total 2n operations.
+Auxiliary Space: O(k)
+     */
 
     public static void main(String[] args) {
         int[] arr = {8, 5, 10, 7, 9, 4, 15, 12, 90, 13};
