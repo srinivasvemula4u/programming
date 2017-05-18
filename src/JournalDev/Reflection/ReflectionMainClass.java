@@ -72,6 +72,17 @@ public class ReflectionMainClass {
         //class com.journaldev.reflection.BaseClass$BaseClassMemberEnum]
         System.out.println(Arrays.toString(classes1));
 
+        //getting all of the classes, interfaces, and enums that are explicitly declared in ConcreteClass
+        Class<?>[] explicitClasses = Class.forName("JournalDev.Reflection.ConcreteClass").getDeclaredClasses();
+        //prints [class com.journaldev.reflection.ConcreteClass$ConcreteClassDefaultClass, 
+        //class com.journaldev.reflection.ConcreteClass$ConcreteClassDefaultEnum, 
+        //class com.journaldev.reflection.ConcreteClass$ConcreteClassPrivateClass, 
+        //class com.journaldev.reflection.ConcreteClass$ConcreteClassProtectedClass, 
+        //class com.journaldev.reflection.ConcreteClass$ConcreteClassPublicClass, 
+        //class com.journaldev.reflection.ConcreteClass$ConcreteClassPublicEnum, 
+        //interface com.journaldev.reflection.ConcreteClass$ConcreteClassPublicInterface]
+        System.out.println(Arrays.toString(explicitClasses));
+
     }
 
 }
