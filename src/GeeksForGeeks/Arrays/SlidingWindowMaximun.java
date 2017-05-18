@@ -54,6 +54,19 @@ So time complexity is O((n-k+1)*k)  */
         }
         System.out.println();
     }
+    /*
+    
+Method 2 (Use Self-Balancing BST)
+1) Pick first k elements and create a Self-Balancing Binary Search Tree (BST) of size k.
+2) Run a loop for i = 0 to n – k
+…..a) Get the maximum element from the BST, and print it.
+…..b) Search for arr[i] in the BST and delete it from the BST.
+…..c) Insert arr[i+k] into the BST.
+
+Time Complexity: Time Complexity of step 1 is O(kLogk). Time Complexity of steps 2(a), 2(b) and 2(c) is O(Logk).
+    Since steps 2(a), 2(b) and 2(c) are in a loop that runs n-k+1 times, time complexity of the complete algorithm is 
+    O(kLogk + (n-k+1)*Logk) which can also be written as O(nLogk).
+    */
 
     private static void slidingWindowMaximum2(int[] arr, int k) {
         int n = arr.length;
