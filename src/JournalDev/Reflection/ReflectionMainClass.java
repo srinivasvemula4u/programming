@@ -39,7 +39,10 @@ public class ReflectionMainClass {
         Class<?> cDoubleArray = Class.forName("[D");
         System.out.println(cDoubleArray.getCanonicalName()); //prints double[]
         cDoubleArray = Double[].class;
-         System.out.println(cDoubleArray.getCanonicalName());
+        System.out.println(cDoubleArray.getCanonicalName());
+
+        Class<?> twoDStringArray = String[][].class;
+        System.out.println(twoDStringArray.getCanonicalName()); // prints java.lang.String[][]
 
     }
 
