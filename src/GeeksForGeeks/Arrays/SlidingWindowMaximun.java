@@ -35,6 +35,12 @@ public class SlidingWindowMaximun {
     /**
      * @param args the command line arguments
      */
+    /*
+    Method 1 (Simple)
+Run two loops. In the outer loop, take all subarrays of size k. In the inner loop, 
+    get the maximum of the current subarray.
+    Time Complexity: The outer loop runs n-k+1 times and the inner loop runs k times for every iteration of outer loop. 
+So time complexity is O((n-k+1)*k)  */
     private static void slidingWindowMaximum(int[] arr, int k) {
         int n = arr.length;
         for (int i = 0; i <= n - k; i++) {
