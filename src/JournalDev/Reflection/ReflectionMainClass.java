@@ -140,6 +140,14 @@ public class ReflectionMainClass {
 //prints public fields of ConcreteClass, it's superclass and super interfaces
         System.out.println(Arrays.toString(publicFields));
 
+        /*
+        getAnnotations() method returns all the annotations for the element, we can use it with class, 
+        fields and methods also. Note that only annotations available with reflection are with retention policy of RUNTIME, 
+        check out Java Annotations Tutorial.
+         */
+        java.lang.annotation.Annotation[] annotations = Class.forName("JournalDev.Reflection.ConcreteClass").getAnnotations();
+//prints [@java.lang.Deprecated()]
+        System.out.println(Arrays.toString(annotations));
     }
 
 }

@@ -9,6 +9,7 @@ package JournalDev.Reflection;
  *
  * @author srivemul
  */
+@Deprecated
 public class ConcreteClass extends BaseClass implements BaseInterface {
 
     public int publicInt;
