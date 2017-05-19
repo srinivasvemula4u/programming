@@ -5,6 +5,8 @@
  */
 package JournalDev.Reflection;
 
+import java.lang.reflect.Modifier;
+import java.lang.reflect.TypeVariable;
 import java.util.Arrays;
 
 /**
@@ -95,6 +97,14 @@ public class ReflectionMainClass {
         We can invoke getName() method of Package to get the name of the package.
          */
         //System.out.println(Class.forName("Journaldev.Reflection.BaseInterface").getPackage().getName());
+        System.out.println(Modifier.toString(concreteClass.getModifiers())); //prints "public"
+        //prints "public abstract interface"
+        // System.out.println(Modifier.toString(Class.forName("Journaldev.Reflection.BaseInterface").getModifiers()));
+        //Get Type parameters (generics)
+        TypeVariable<?>[] typeParameters = Class.forName("java.util.HashMap").getTypeParameters();
+        for (TypeVariable<?> t : typeParameters) {
+            System.out.print(t.getName() + ",");
+        }
 
     }
 
