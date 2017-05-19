@@ -26,7 +26,7 @@ public class ReflectionMainClass {
     We can get Class of an object using three methods – through static variable class,
     using getClass() method of object and java.lang.Class.forName(String fullyClassifiedClassName). For primitive 
      */
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException {
         // TODO code application logic here
         Class<?> concreteClass = ConcreteClass.class;
         System.out.println(concreteClass.getCanonicalName());
@@ -148,6 +148,10 @@ public class ReflectionMainClass {
         java.lang.annotation.Annotation[] annotations = Class.forName("JournalDev.Reflection.ConcreteClass").getAnnotations();
 //prints [@java.lang.Deprecated()]
         System.out.println(Arrays.toString(annotations));
+
+        Field field = Class.forName("JournalDev.Reflection.ConcreteClass").getField("interfaceInt");
+        Class<?> fieldClass = field.getDeclaringClass();
+        System.out.println(fieldClass.getCanonicalName());
     }
 
 }
