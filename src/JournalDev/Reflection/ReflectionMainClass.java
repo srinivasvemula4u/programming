@@ -5,6 +5,7 @@
  */
 package JournalDev.Reflection;
 
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;
@@ -93,14 +94,17 @@ public class ReflectionMainClass {
         //prints com.journaldev.reflection.ConcreteClass
         System.out.println(innerClass.getDeclaringClass().getCanonicalName());
         System.out.println(innerClass.getEnclosingClass().getCanonicalName());
+             System.out.println("\n\n");
         /*
         getPackage() method returns the package for this class. The class loader of this class is used to find the package. 
         We can invoke getName() method of Package to get the name of the package.
          */
-        //System.out.println(Class.forName("Journaldev.Reflection.BaseInterface").getPackage().getName());
+        System.out.println(Class.forName("JournalDev.Reflection.BaseInterface").getPackage().getName());
+        System.out.println(BaseInterface.class.getPackage().getName());
         System.out.println(Modifier.toString(concreteClass.getModifiers())); //prints "public"
+              System.out.println("\n\n");
         //prints "public abstract interface"
-        // System.out.println(Modifier.toString(Class.forName("Journaldev.Reflection.BaseInterface").getModifiers()));
+        System.out.println(Modifier.toString(Class.forName("JournalDev.Reflection.BaseInterface").getModifiers()));
         //Get Type parameters (generics)
         TypeVariable<?>[] typeParameters = Class.forName("java.util.HashMap").getTypeParameters();
         for (TypeVariable<?> t : typeParameters) {
@@ -112,6 +116,14 @@ public class ReflectionMainClass {
         System.out.println(Arrays.toString(interfaces1));
 //prints "[interface java.util.Map, interface java.lang.Cloneable, interface java.io.Serializable]"
         System.out.println(Arrays.toString(Class.forName("java.util.HashMap").getInterfaces()));
+  
+         /*
+        getMethods() method returns the array of public methods of the Class including public methods of it’s superclasses and 
+        super interfaces.
+        */
+        Method[] publicMethods = Class.forName("JournalDev.Reflection.ConcreteClass").getMethods();
+//prints public methods of ConcreteClass, BaseClass, Object
+        System.out.println(Arrays.toString(publicMethods));
 
     }
 
