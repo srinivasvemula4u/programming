@@ -83,6 +83,14 @@ public class ReflectionMainClass {
         //interface com.journaldev.reflection.ConcreteClass$ConcreteClassPublicInterface]
         System.out.println(Arrays.toString(explicitClasses));
 
+        /*
+        getDeclaringClass() method returns the Class object representing the class in which it was declared.
+         */
+        Class<?> innerClass = Class.forName("JournalDev.Reflection.ConcreteClass$ConcreteClassDefaultClass");
+        //prints com.journaldev.reflection.ConcreteClass
+        System.out.println(innerClass.getDeclaringClass().getCanonicalName());
+        System.out.println(innerClass.getEnclosingClass().getCanonicalName());
+
     }
 
 }
