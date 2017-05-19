@@ -152,6 +152,9 @@ public class ReflectionMainClass {
         Field field = Class.forName("JournalDev.Reflection.ConcreteClass").getField("interfaceInt");
         Class<?> fieldClass = field.getDeclaringClass();
         System.out.println(fieldClass.getCanonicalName());
+        
+        
+        
     }
 
 }
