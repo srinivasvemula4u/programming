@@ -90,6 +90,11 @@ public class ReflectionMainClass {
         //prints com.journaldev.reflection.ConcreteClass
         System.out.println(innerClass.getDeclaringClass().getCanonicalName());
         System.out.println(innerClass.getEnclosingClass().getCanonicalName());
+        /*
+        getPackage() method returns the package for this class. The class loader of this class is used to find the package. 
+        We can invoke getName() method of Package to get the name of the package.
+         */
+        //System.out.println(Class.forName("Journaldev.Reflection.BaseInterface").getPackage().getName());
 
     }
 
