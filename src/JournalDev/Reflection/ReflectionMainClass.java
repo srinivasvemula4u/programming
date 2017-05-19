@@ -163,6 +163,14 @@ public class ReflectionMainClass {
         field3.setInt(obj, 10); //setting field value to 10 in object
         System.out.println(field3.get(obj)); //prints 10
 
+        Field privateField = Class.forName("JournalDev.Reflection.ConcreteClass").getDeclaredField("privateString");
+//turning off access check with below method call
+        privateField.setAccessible(true);
+        ConcreteClass objTest = new ConcreteClass(1);
+        System.out.println(privateField.get(objTest)); // prints "private string"
+        privateField.set(objTest, "private string updated");
+        System.out.println(privateField.get(objTest)); //prints "private string updated"
+
     }
 
 }
