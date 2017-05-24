@@ -34,4 +34,34 @@ public class SamsungTest {
 
     }
 
+    Node getShrinkList(Node head) {
+        Node start = head, cur = head;
+        while (cur.next != null && cur.next.next != null) {
+            if ((cur.next.y == start.y) && start.y == cur.next.next.y) {
+                cur = cur.next.next;
+            } else if (cur.next.y == start.y && start.y != cur.next.next.y) {
+                cur = cur.next;
+                start.next = cur;
+                start = cur.next;
+                cur = start;
+                //start = start.next;   
+            } else {
+                start.next = cur;
+                start = cur;
+            }
+        }
+
+        return head;
+    }
+
+    private static class Node {
+
+        int x, y;
+        Node next;
+
+        public Node() {
+
+        }
+    }
+
 }
