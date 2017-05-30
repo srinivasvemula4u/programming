@@ -6,7 +6,7 @@
 
 /**
  *
- * @author srivemul
+ * 
  */
 public class SamsungTest {
 
