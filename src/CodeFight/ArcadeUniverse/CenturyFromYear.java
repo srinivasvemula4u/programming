@@ -32,7 +32,7 @@ Guaranteed constraints:
 [output] integer
 
 The number of the century the year is in.
-*/
+ */
 public class CenturyFromYear {
 
     /**
@@ -41,5 +41,13 @@ public class CenturyFromYear {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
+    int centuryFromYear(int year) {
+        if (year % 100 == 0) {
+            return year / 100;
+        } else {
+            return year / 100 + 1;
+        }
+    }
+
 }
