@@ -43,4 +43,16 @@ public class CheckPalindrome {
         // TODO code application logic here
     }
 
+    boolean checkPalindrome(String inputString) {
+        if (inputString.length() == 1) {
+            return true;
+        }
+        for (int i = 0, j = inputString.length() - 1; i < j; i++, j--) {
+            if (inputString.charAt(i) != inputString.charAt(j)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
