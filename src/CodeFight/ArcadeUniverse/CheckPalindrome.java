@@ -5,6 +5,9 @@
  */
 package CodeFight.ArcadeUniverse;
 
+import java.util.LinkedList;
+import java.util.stream.Collectors;
+
 /**
  *
  * @author srivemul
@@ -53,6 +56,16 @@ public class CheckPalindrome {
             }
         }
         return true;
+    }
+
+    boolean checkPalindrome2(String inputString) {
+        StringBuilder reverse = new StringBuilder();
+        inputString.chars()
+                .mapToObj(character -> (char) character)
+                .collect(Collectors.toCollection(LinkedList::new))
+                .descendingIterator()
+                .forEachRemaining(reverse::append);
+        return inputString.equals(reverse.toString());
     }
 
 }
