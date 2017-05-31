@@ -67,5 +67,8 @@ public class CheckPalindrome {
                 .forEachRemaining(reverse::append);
         return inputString.equals(reverse.toString());
     }
+    boolean checkPalindrome3(String inputString) {
+    return inputString.equals(new StringBuilder(inputString).reverse().toString());
+}
 
 }
