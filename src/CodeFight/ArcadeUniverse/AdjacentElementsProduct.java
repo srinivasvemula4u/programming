@@ -43,4 +43,12 @@ public class AdjacentElementsProduct {
         // TODO code application logic here
     }
 
+    int adjacentElementsProduct(int[] inputArray) {
+        int maxSum = Integer.MIN_VALUE;
+        for (int i = 0; i < inputArray.length - 1; i++) {
+            maxSum = Math.max(inputArray[i] * inputArray[i + 1], maxSum);
+        }
+        return maxSum;
+    }
+
 }
