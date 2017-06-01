@@ -51,4 +51,17 @@ public class AdjacentElementsProduct {
         return maxSum;
     }
 
+    int adjacentElementsProduct2(int[] inputArray) {
+        int preMul = inputArray[0] * inputArray[1];
+        int len = inputArray.length;
+        for (int i = 1; i < len; i++) {
+            int mul = inputArray[i - 1] * inputArray[i];
+            if (mul > preMul) {
+                preMul = mul;
+            }
+        }
+        return preMul;
+
+    }
+
 }
