@@ -8,6 +8,25 @@
  *
  * 
  */
+/*
+List of tuples, need to determine if union of the tuples covers the tuple K.
+
+[{8, 14}, {1, 3}, {4, 10}, {1, 6}], {1, 9} => true = (1,3) (1,6) (1,9) (4,10) (8,14)  => (1,6)(1,9) =>( 1,9)(4,10),(8,14) => (1,10),
+[{8, 14}, {1, 2}, {4, 10}], {1, 9} => false
+
+[{1, 10}, {3, 7}, {11, 15}, { 13, 20}], {1, 18} = true
+
+temp = 1,10
+i=1 3,7
+
+temp 1,10 
+i= 2 (11,15
+
+temp = 1,15
+i = 3 (13, 20)
+temp 1,20
+
+*/
 public class SamsungTest {
 
     /**
