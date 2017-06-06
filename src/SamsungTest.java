@@ -1,12 +1,14 @@
+
+import java.util.List;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
- * 
+ *
  */
 /*
 List of tuples, need to determine if union of the tuples covers the tuple K.
@@ -26,7 +28,7 @@ temp = 1,15
 i = 3 (13, 20)
 temp 1,20
 
-*/
+ */
 public class SamsungTest {
 
     /**
@@ -81,6 +83,48 @@ public class SamsungTest {
         public Node() {
 
         }
+    }
+
+    boolean isEnclosed(List<Tuple> list, Tuple t) {
+        if (list.size() == 0) {
+            return false;
+        }
+        Tuple temp = list.get(0);
+        if (isEnclosedHelper(temp, t)) {
+            return true;
+        }
+        for (int i = 1; i < list.size(); i++) {
+            if (temp.end > list.get(i).start) {
+                if (temp.end < list.get(i).end) {
+                    temp.end = list.get(i).end;
+                }
+            } else if (temp.end < list.get(i).start && (temp.end == list.get(i).start - 1)) {
+                if (temp.end < list.get(i).end) {
+                    temp.end = list.get(i).end;
+                }
+            } else {
+                temp = list.get(i);
+            }
+            if (isEnclosedHelper(temp, t)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    boolean isEnclosedHelper(Tuple temp, Tuple t) {
+        if (temp.start >= t.start && temp.end >= t.end) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private class Tuple {
+
+        public int start;
+        public int end;
     }
 
 }
