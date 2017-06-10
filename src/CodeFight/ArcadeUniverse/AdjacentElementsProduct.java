@@ -60,7 +60,7 @@ public class AdjacentElementsProduct {
                 preMul = mul;
             }
         }
-        return preMul;
+        return preMul;//
 
     }
 
