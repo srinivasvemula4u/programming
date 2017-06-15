@@ -5,6 +5,8 @@
  */
 package HackerEarth.Practice;
 
+import java.util.Scanner;
+
 /**
  *
  * @author srivemul
@@ -114,5 +116,25 @@ sum=15 which is not greater than
 4 is the minimum value to which array elements need to be updated.
  */
 public class FredoAndArrayUpdate {
+ public static void main(String args[] ) throws Exception {
+        /*
+         * Read input from stdin and provide input before running
+         * Use either of these methods for input
 
+        //BufferedReader
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line = br.readLine();
+        int N = Integer.parseInt(line);
+    */
+        //Scanner
+        Scanner s = new Scanner(System.in);
+        int N = s.nextInt();
+        int[] arr = new int[N];
+        long sum = 0;
+        for (int i = 0; i < N; i++) {
+          arr[i] = s.nextInt();  
+          sum += arr[i];
+        }
+        System.out.println( sum / N + 1);
+    }
 }
