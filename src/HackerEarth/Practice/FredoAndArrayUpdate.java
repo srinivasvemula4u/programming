@@ -65,6 +65,54 @@ i
 ≤
 1000
  */
+ /*
+Explanation
+Initial sum of array 
+=
+1
++
+2
++
+3
++
+4
++
+5
+=
+15
+=1+2+3+4+5=15
+When we update all elements to 
+4
+4, sum of array 
+=
+4
++
+4
++
+4
++
+4
++
+4
+=
+20
+=4+4+4+4+4=20 which is greater than 
+15
+15.
+Note that if we had updated the array elements to 
+3
+3, 
+s
+u
+m
+=
+15
+sum=15 which is not greater than 
+15
+15. So, 
+4
+4 is the minimum value to which array elements need to be updated.
+ */
 public class FredoAndArrayUpdate {
 
 }
