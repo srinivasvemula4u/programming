@@ -4,12 +4,29 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Course%20Era/Algorithms/src/CodeFight/ArcadeUniverse/CenturyFromYear.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Reflection/BaseClass.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/PriorityQueues/Heap.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/ProducerAndConsumer/Consumer.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/ThreadPool/SimpleThreadPool.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/DeadLock/ThreadDeadlock.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/HeavyWorkRunnable.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/ThreadLocalExample.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/DaemonThread/DaemonThreadExample.java</file>
             <file>file:/D:/Course%20Era/Algorithms/src/SamsungTest.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/DeadLock/ThreadNeverDeadLock.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/ProducerAndConsumer/Message.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/CodeFight/ArcadeUniverse/CheckPalindrome.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/WaitNotifyNotifyAll/Waiter.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Reflection/BaseClass.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Reflection/ConcreteClass.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/ThreadSafety/HashMapProcessor.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/DaemonThread/JavaDaemonThread.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/NarsihmaKarunmanchi/PriorityQueues/Heap.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/ThreadSafety/SyncronizedMethod.java</file>
             <file>file:/D:/Course%20Era/Algorithms/src/CodeFight/ArcadeUniverse/AdjacentElementsProduct.java</file>
             <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Reflection/ReflectionMainClass.java</file>
-            <file>file:/D:/Course%20Era/Algorithms/src/CodeFight/ArcadeUniverse/CheckPalindrome.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/ThreadJoin/ThreadJoinsExample.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/ThreadSafety/ProcessingThread.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/ThreadSafety/ThreadSafety.java</file>
+            <file>file:/D:/Course%20Era/Algorithms/src/JournalDev/Threads/ProducerAndConsumer/Producer.java</file>
         </group>
     </open-files>
 </project-private>
