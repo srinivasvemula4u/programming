@@ -5,6 +5,10 @@
  */
 package HackerRank.Practice;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 /**
  *
  * @author srivemul
@@ -55,7 +59,43 @@ Let's find the XOR sum for all consecutive subsequences. We'll refer to the freq
 , frequencies: , , , and 
 Our maximal frequency is , and the integers , , and  all have this frequency. Because more than one integer has this frequency, we choose the smallest one, which is . We then print the respective smallest number having the maximal frequency and the maximal 
 frequency as a single line of space-separated values.
-*/
+ */
 public class XORSubsequences {
-    
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        int[] arr = new int[N];
+        for (int i = 0; i < N; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        Map<Integer, Integer> map = new HashMap<>();
+        subArray(arr, N, map);
+        int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
+        /*  for(int val : map.keySet()) {
+            System.out.println(val + " " + map.get(val));
+        }*/
+        for (int val : map.keySet()) {
+            if (map.get(val) > max) {
+                max = map.get(val);
+                min = val;
+            }
+        }
+        System.out.println(min + " " + max);
+    }
+
+    static void subArray(int[] arr, int n, Map<Integer, Integer> map) {
+        // Pick starting point
+        for (int i = 0; i < n; i++) {
+            // Pick ending point
+            for (int j = i; j < n; j++) {
+                int sum = 0;
+                for (int k = i; k <= j; k++) {
+                    sum ^= arr[k];
+                }
+                map.put(sum, map.getOrDefault(sum, 0) + 1);
+            }
+        }
+    }
 }
