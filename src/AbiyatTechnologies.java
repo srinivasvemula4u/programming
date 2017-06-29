@@ -8,6 +8,6 @@
  *
  * @author Srinivas
  */
-public class NewTest {
+public class AbiyatTechnologies {
     
 }
