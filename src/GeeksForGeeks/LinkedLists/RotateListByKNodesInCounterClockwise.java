@@ -9,6 +9,6 @@ package GeeksForGeeks.LinkedLists;
  *
  * @author Srinivas
  */
-public class RotateListByKNodes {
+public class RotateListByKNodesInCounterClockwise {
     
 }
