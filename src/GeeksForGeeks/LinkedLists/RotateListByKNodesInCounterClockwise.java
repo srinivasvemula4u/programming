@@ -5,6 +5,8 @@
  */
 package GeeksForGeeks.LinkedLists;
 
+import NarsihmaKarunmanchi.LinkedLists.LinkedListNode;
+
 /**
  *
  * @author Srinivas
@@ -24,5 +26,20 @@ Traverse the list from beginning and stop at kth node. Store pointer to kth node
 Finally, change pointers as stated above
 */
 public class RotateListByKNodesInCounterClockwise {
-    
+    public LinkedListNode rotateListByKNodesInCounterClockwise(LinkedListNode head,int k) {
+       LinkedListNode current = head;
+       int count = 1;
+        while(count < k && current != null) {
+            current = current.getNext();
+            count++;
+        }
+        if(current == null)
+            return head;
+        LinkedListNode kthNode = current;
+        while(current.getNext() != null) 
+             current = current.getNext();
+        current.setNext(head);
+        head = kthNode.getNext();
+        return head;
+    }
 }
