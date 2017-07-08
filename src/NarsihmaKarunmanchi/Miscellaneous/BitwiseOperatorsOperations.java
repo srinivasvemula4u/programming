@@ -27,6 +27,10 @@ public class BitwiseOperatorsOperations {
         int mask = 1 << k-1;
         num = num ^ mask;
     }
+    // resetting rightmost 1 to 0
+    public static void resetRightMostOne(int num) {
+        num = num & (num-1);
+    }
     public static void main(String[] args) {
         System.out.println(checkKthBitSetOrNot(4, 2));
     }
