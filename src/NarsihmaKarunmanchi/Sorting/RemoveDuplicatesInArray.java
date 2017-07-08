@@ -30,7 +30,6 @@ public class RemoveDuplicatesInArray {
         n = removeDuplicatesInArray(arr);
         System.out.println("new length = "+n);
         print(arr);
-        // print(arr);
     }
         private static void print(int[] ar) {
         for (int n : ar) {
