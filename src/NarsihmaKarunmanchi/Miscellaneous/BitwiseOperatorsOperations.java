@@ -23,6 +23,10 @@ public class BitwiseOperatorsOperations {
         int mask = 1 << k-1;
         num = num & ~mask;
     }
+    public static void togglingKthBit(int num, int k) {
+        int mask = 1 << k-1;
+        num = num ^ mask;
+    }
     public static void main(String[] args) {
         System.out.println(checkKthBitSetOrNot(4, 2));
     }
