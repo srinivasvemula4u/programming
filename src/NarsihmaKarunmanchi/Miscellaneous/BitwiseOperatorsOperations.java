@@ -7,8 +7,15 @@ package NarsihmaKarunmanchi.Miscellaneous;
 
 /**
  *
- * @author sv186040
+ * @author Srinivas
+ * This file all bitwise operations are explained in karumanchi book
  */
 public class BitwiseOperatorsOperations {
-    
+    public static boolean checkKthBitSetOrNot(int num,int k) {
+          int mask = 1 << k-1;
+           return (num & mask)  > 0 ? true: false;
+    }
+    public static void main(String[] args) {
+        System.out.println(checkKthBitSetOrNot(4, 2));
+    }
 }
