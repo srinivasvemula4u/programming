@@ -45,15 +45,21 @@ public class BitwiseOperatorsOperations {
         num = num << k;
     } 
     public static void divideNumberByPowerof2(int num, int k) {
-        if(num < 0) {
+        if(num < 0) {   
             num = num >>> k;
         } else {
             num = num >> k;
         }
     }
+    // For a given number n, to find the modulo of a number k use the following expression
+    // n & (k-1) eg: for %8 we do  n & 0x07
+    public static int findModuloOfNumber(int num, int k) {
+        return num & (k-1);
+    }
     public static void main(String[] args) {
         System.out.println(checkKthBitSetOrNot(4, 2));
         isolateRightMost1Bit(11);
         System.out.println(checkNumberPowerofTwoorNot(3));
+        System.out.println(findModuloOfNumber(16, 8));
     }
 }
