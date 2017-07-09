@@ -79,7 +79,16 @@ public class BitwiseOperatorsOperations {
         nReverse = nReverse << s;
         return nReverse;
     }
-
+    // Counting Number of 1's in a given n
+    //approach 1;
+    public static int countNumberOf1s(int num) {
+        int count = 0;
+        while(num > 0) {
+            count = count +  num & 1;
+            num >>= 1;
+        }
+        return count;
+    }
     public static void main(String[] args) {
         System.out.println(checkKthBitSetOrNot(4, 2));
         isolateRightMost1Bit(11);
