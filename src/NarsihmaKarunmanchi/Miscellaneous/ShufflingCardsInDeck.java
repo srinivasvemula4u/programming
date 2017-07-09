@@ -14,11 +14,25 @@ public class ShufflingCardsInDeck {
     /**
      * @param args the command line arguments
      */
-    public static shufflingCardsInDeck() {
-        
+    public static void shufflingCardsInDeck() {
+        int[] cards = new int[52];
+        for (int i = 0; i < 52; i++) {
+            cards[i] = i;
+        }
+        for (int i = 0; i < 52; i++) {
+            int r = i + (int) (Math.random() * (52 - i));
+            int temp = cards[i];
+            cards[i] = cards[r];
+            cards[r] = temp;
+        }
+        for (int i = 0; i < 52; i++) {
+            System.out.print(cards[i] + " ");
+        }
     }
+
     public static void main(String[] args) {
         // TODO code application logic here
+        shufflingCardsInDeck();
     }
-    
+
 }
