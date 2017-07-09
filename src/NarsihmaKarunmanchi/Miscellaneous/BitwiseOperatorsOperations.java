@@ -89,6 +89,14 @@ public class BitwiseOperatorsOperations {
         }
         return count;
     }
+    public static int countNumberOf1s_2(int num) {
+        int count = 0;
+        while(num > 0) {
+            count = count +  num % 2;
+            num = num / 2;
+        }
+        return count;
+    }
     public static void main(String[] args) {
         System.out.println(checkKthBitSetOrNot(4, 2));
         isolateRightMost1Bit(11);
