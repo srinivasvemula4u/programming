@@ -36,8 +36,13 @@ public class BitwiseOperatorsOperations {
         int nNum = -num;
         System.out.println( (num & nNum));
     }
+    // check whether the number is power of 2 or not
+    public static boolean checkNumberPowerofTwoorNot(int n) {
+        return (n & n-1) == 0 ? true : false;
+    }
     public static void main(String[] args) {
         System.out.println(checkKthBitSetOrNot(4, 2));
         isolateRightMost1Bit(11);
+        System.out.println(checkNumberPowerofTwoorNot(3));
     }
 }
