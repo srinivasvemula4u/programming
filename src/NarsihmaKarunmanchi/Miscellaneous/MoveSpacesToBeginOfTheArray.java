@@ -23,17 +23,32 @@ public class MoveSpacesToBeginOfTheArray {
         }
         return new String(arr);
     }
-     private static void swap(char[] arr, int a, int b) {
+
+    private static void swap(char[] arr, int a, int b) {
         char temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
     }
+
+    private static String moveSpacesToBeginingOptimized(char[] arr) {
+        int len = arr.length - 1;
+        int count = len;
+        for (int i = len; i >= 0; i--) {
+            if (!Character.isSpaceChar(arr[i])) {
+                arr[count--] = arr[i];
+            }
+        }
+        while (count >= 0) {
+            arr[count--] = ' ';
+        }
+        return new String(arr);
+    }
+
     public static void main(String[] args) {
         // TODO code application logic here
         String str = "This is a test";
         System.out.println(moveSpacesToBegining(str.toCharArray()));
+        System.out.println(moveSpacesToBeginingOptimized(str.toCharArray()));
     }
-
-  
 
 }
