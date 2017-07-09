@@ -31,7 +31,13 @@ public class BitwiseOperatorsOperations {
     public static void resetRightMostOne(int num) {
         num = num & (num-1);
     }
+    //Isolating Rightmost one bit
+    public static void isolateRightMost1Bit(int num) {
+        int nNum = -num;
+        System.out.println( (num & nNum));
+    }
     public static void main(String[] args) {
         System.out.println(checkKthBitSetOrNot(4, 2));
+        isolateRightMost1Bit(11);
     }
 }
