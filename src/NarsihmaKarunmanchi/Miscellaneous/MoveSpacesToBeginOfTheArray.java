@@ -23,17 +23,17 @@ public class MoveSpacesToBeginOfTheArray {
         }
         return new String(arr);
     }
-
+     private static void swap(char[] arr, int a, int b) {
+        char temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+    }
     public static void main(String[] args) {
         // TODO code application logic here
         String str = "This is a test";
         System.out.println(moveSpacesToBegining(str.toCharArray()));
     }
 
-    private static void swap(char[] arr, int a, int b) {
-        char temp = arr[a];
-        arr[a] = arr[b];
-        arr[b] = temp;
-    }
+  
 
 }
