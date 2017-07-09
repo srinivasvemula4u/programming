@@ -24,13 +24,14 @@ public class PrintMatrixInSpiralOrder {
                 System.out.print(matrix[i][j] + " ");
             }
             colEnd--;
-            for (j = colEnd, i--; j >= colStart + 1; j--) {
+            for (j = colEnd, i--; j >= colStart; j--) {
                 System.out.print(matrix[i][j] + " ");
             }
             rowEnd--;
-            for (i = rowEnd,j++; i >= rowStart + 1; i--) {
+            for (i = rowEnd,j++; i >= rowStart; i--) {
                 System.out.print(matrix[i][j] + " ");
             }
+            colStart++;
         }
     }
 
