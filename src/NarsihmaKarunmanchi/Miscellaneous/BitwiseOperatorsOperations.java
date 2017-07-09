@@ -42,8 +42,15 @@ public class BitwiseOperatorsOperations {
     }
     public static void multiplyingNumberByPowerof2(int num, int k) {
         //Math.lo
-        num = num >> k;
+        num = num << k;
     } 
+    public static void divideNumberByPowerof2(int num, int k) {
+        if(num < 0) {
+            num = num >>> k;
+        } else {
+            num = num >> k;
+        }
+    }
     public static void main(String[] args) {
         System.out.println(checkKthBitSetOrNot(4, 2));
         isolateRightMost1Bit(11);
