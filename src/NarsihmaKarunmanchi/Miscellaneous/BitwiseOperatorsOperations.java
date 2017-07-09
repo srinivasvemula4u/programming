@@ -40,6 +40,10 @@ public class BitwiseOperatorsOperations {
     public static boolean checkNumberPowerofTwoorNot(int n) {
         return (n & n-1) == 0 ? true : false;
     }
+    public static void multiplyingNumberByPowerof2(int num, int k) {
+        //Math.lo
+        num = num >> k;
+    } 
     public static void main(String[] args) {
         System.out.println(checkKthBitSetOrNot(4, 2));
         isolateRightMost1Bit(11);
