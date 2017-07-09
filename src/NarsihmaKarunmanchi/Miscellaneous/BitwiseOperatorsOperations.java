@@ -84,7 +84,7 @@ public class BitwiseOperatorsOperations {
     public static int countNumberOf1s(int num) {
         int count = 0;
         while(num > 0) {
-            count = count +  num & 1;
+            count = count +  (num & 1);
             num >>= 1;
         }
         return count;
@@ -105,11 +105,24 @@ public class BitwiseOperatorsOperations {
         }
         return count;
     }
+    public static int countNumberOf1s_4(int num) {
+        int count = 0;
+        int[] table = {0,1,1,2,1,2,2,3,1,2,2,3,2,3,3,4};
+        while(num > 0) {
+            count = count + table[num & 0xF];
+            num = num >> 4;
+        }
+        return count;
+    }
     public static void main(String[] args) {
         System.out.println(checkKthBitSetOrNot(4, 2));
         isolateRightMost1Bit(11);
         System.out.println(checkNumberPowerofTwoorNot(3));
         System.out.println(findModuloOfNumber(16, 8));
         System.out.println(reverseOfBinayNumber(4));
+        System.out.println(countNumberOf1s(6));
+        System.out.println(countNumberOf1s_2(6));
+        System.out.println(countNumberOf1s_3(6));
+        System.out.println(countNumberOf1s_4(6));
     }
 }
