@@ -114,6 +114,14 @@ public class BitwiseOperatorsOperations {
         }
         return count;
     }
+    // Swap all odd  and even bits ex: 5 : 0101 => 1010
+    public static int swapEvenAndOddBits(int num) {
+        int evenN = num & 0xAA;
+        int oddN = num & 0x55;
+        evenN >>= 1;
+        oddN <<= 1;
+        return (evenN | oddN);
+    }
     public static void main(String[] args) {
         System.out.println(checkKthBitSetOrNot(4, 2));
         isolateRightMost1Bit(11);
@@ -124,5 +132,6 @@ public class BitwiseOperatorsOperations {
         System.out.println(countNumberOf1s_2(6));
         System.out.println(countNumberOf1s_3(6));
         System.out.println(countNumberOf1s_4(6));
+        System.out.println(swapEvenAndOddBits(3));
     }
 }
