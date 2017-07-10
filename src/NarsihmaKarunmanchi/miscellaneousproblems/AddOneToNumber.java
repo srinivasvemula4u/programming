@@ -16,10 +16,14 @@ public class AddOneToNumber {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        int[] arr = {9,9,9,9,9,9,9,9,9,9};
+        arr = addOneToNumber(arr);
+        for(int i =0; i < arr.length; i++)
+            System.out.print(arr[i]+ " ");
 
     }
 
-    public int[] addOneToNumber(int[] digits) {
+    public static int[] addOneToNumber(int[] digits) {
         int[] result = new int[digits.length];
         int one = 1;
         for (int i = digits.length - 1; i >= 0; i--) {
