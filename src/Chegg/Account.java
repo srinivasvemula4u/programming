@@ -7,7 +7,7 @@ package Chegg;
 
 /**
  *
- * @author srivemul
+ * 
  */
 public class Account {
     private String type;
