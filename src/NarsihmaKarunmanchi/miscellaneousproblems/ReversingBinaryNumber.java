@@ -21,6 +21,6 @@ public class ReversingBinaryNumber {
         System.out.println(rev);
     }
     public static void main(String args[]) {
-        reverse(new Byte("7"));
+        reverse(new Byte("7"));//
     }
 }
