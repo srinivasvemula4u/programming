@@ -7,7 +7,7 @@ package Chegg;
 
 /**
  *
- * @author srivemul
+ * 
  */
 public class Business {
     private String name;
