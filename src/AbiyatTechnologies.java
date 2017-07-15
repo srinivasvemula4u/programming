@@ -12,7 +12,7 @@ import java.util.Set;
 
 /**
  *
- * @author Srinivas
+ * 
  */
 /*
 A -> B, C
