@@ -114,7 +114,7 @@ public class SamsungTest {
     }
 
     boolean isEnclosedHelper(Tuple temp, Tuple t) {
-        if (temp.start >= t.start && temp.end >= t.end) {
+        if (temp.start >= t.start && temp.end <= t.end) {
             return true;
         } else {
             return false;
