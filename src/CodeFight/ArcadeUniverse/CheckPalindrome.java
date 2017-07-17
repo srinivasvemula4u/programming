@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 /**
  *
- * @author srivemul
+ *
  */
 /*
 Given the string, check if it is a palindrome.
