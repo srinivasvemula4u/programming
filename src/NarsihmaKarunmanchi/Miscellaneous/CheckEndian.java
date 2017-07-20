@@ -7,7 +7,7 @@ package NarsihmaKarunmanchi.Miscellaneous;
 import java.nio.ByteOrder;
 /**
  *
- * @author sv186040
+ * 
  */
 public class CheckEndian {
 
