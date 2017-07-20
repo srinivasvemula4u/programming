@@ -7,7 +7,9 @@ package NarsihmaKarunmanchi.Miscellaneous;
 
 /**
  *
- * @author sv186040 Roatate(arr,d, n); Reverse(arr,1,d); Reverse(arr,d+1,n);
+ *  Roatate(arr,d, n); 
+ * Reverse(arr,1,d); 
+ * Reverse(arr,d+1,n);
  *
  */
 public class ReverseArrayByNRoatations {
