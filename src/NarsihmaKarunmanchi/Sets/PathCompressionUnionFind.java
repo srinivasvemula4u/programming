@@ -7,7 +7,7 @@ package NarsihmaKarunmanchi.Sets;
 
 /**
  *
- * @author srivemul
+ * 
  */
 public class PathCompressionUnionFind {
     private int[] data;
