@@ -7,7 +7,7 @@ package NarsihmaKarunmanchi.Sets;
 
 /**
  *
- * @author srivemul
+ * 
  */
 public class UnionFind {
 
