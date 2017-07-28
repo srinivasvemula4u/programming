@@ -7,7 +7,7 @@ package GeeksForGeeks.Arrays;
 
 /**
  *
- * @author srivemul
+ *
  */
 /*
 Block swap algorithm for array rotation
