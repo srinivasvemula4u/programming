@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author srivemul
+ * 
  */
 public class CrossAndNaughts {
 
