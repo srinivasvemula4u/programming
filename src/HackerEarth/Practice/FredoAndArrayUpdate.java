@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author srivemul
+ *
  */
 /*
 Fredo is assigned a new task today. He is given an array 
