@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author srivemul
+ * 
  */
 public class CircularArrayRotation {
       public static void main(String[] args) {
