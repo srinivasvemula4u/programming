@@ -7,7 +7,7 @@ package HackerRank.Practice;
 
 /**
  *
- * @author srivemul
+ * 
  */
 import java.io.*;
 import java.util.*;
