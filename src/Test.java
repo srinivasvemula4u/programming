@@ -116,7 +116,7 @@ import java.util.Set;
 //     import java.util.*;
     public class Test {
         public static void main(String[] args) {
-            Scanner in = new Scanner(System.in);
+          /*  Scanner in = new Scanner(System.in);
             Deque<Integer> deque = new ArrayDeque<>();
             int n = in.nextInt();
             int m = in.nextInt();
@@ -126,7 +126,8 @@ import java.util.Set;
                 int num = in.nextInt();
                 deque.offerLast(num);
             }
-            System.out.println(calUnique(deque,set,max,m));
+            System.out.println(calUnique(deque,set,max,m));*/
+            System.out.println(Math.log(0.25));
             
         }
         private static int calUnique(Deque<Integer> deque, Set<Integer> set, int max,int m) {
@@ -157,6 +158,9 @@ import java.util.Set;
                 
             }
             return max;
+            
         }
+        
+        
     }
 
