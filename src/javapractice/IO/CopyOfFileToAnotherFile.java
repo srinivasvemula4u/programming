@@ -21,7 +21,7 @@ import java.io.ObjectInputStream;
 
 /**
  *
- * @author srivemul
+ * 
  */
 public class CopyOfFileToAnotherFile {
     public static void main(String args[]) throws IOException {
