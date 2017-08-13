@@ -7,7 +7,7 @@ package javapractice.IO.NIO;
 
 /**
  *
- * @author srivemul
+ * 
  */
 public class NIOPractice {
     
