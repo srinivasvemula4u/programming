@@ -9,7 +9,7 @@ import NarsihmaKarunmanchi.LinkedLists.LinkedListNode;
 
 /**
  *
- * @author Srinivas
+ *
  */
 /*
 Rotate a Linked List
