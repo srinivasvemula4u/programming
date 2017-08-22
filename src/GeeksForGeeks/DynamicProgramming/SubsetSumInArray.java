@@ -7,7 +7,7 @@ package GeeksForGeeks.DynamicProgramming;
 
 /**
  *
- * @author srivemul
+ * 
  */
 /*
 Let isSubSetSum(int set[], int n, int sum) be the function to find whether there is a subset of set[] with sum equal to sum. n is the number of elements in set[].
