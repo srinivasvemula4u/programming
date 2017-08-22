@@ -7,7 +7,7 @@ package GeeksForGeeks.Arrays;
 
 /**
  *
- * @author srivemul METHOD 1 (Simple) For each element, count number of elements
+ *  METHOD 1 (Simple) For each element, count number of elements
  * which are on right side of it and are smaller than it.
  */
 /*Inversion Count for an array indicates – how far (or close) the array is from being sorted. 
