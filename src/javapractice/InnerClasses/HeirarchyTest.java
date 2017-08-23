@@ -7,7 +7,7 @@ package javapractice.InnerClasses;
 
 /**
  *
- * @author srivemul
+ * 
  */
 public class HeirarchyTest {
     
