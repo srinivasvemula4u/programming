@@ -13,7 +13,7 @@ import java.util.function.Predicate;
 
 /**
  *
- * @author srivemul
+ * 
  */
 class Person {
 
