@@ -7,7 +7,7 @@ package JournalDev.Threads.WaitNotifyNotifyAll;
 
 /**
  *
- * @author srivemul
+ * 
  */
 public class Message {
 
