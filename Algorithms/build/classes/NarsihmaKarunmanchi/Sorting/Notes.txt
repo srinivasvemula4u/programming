@@ -1,5 +1,0 @@
-Sorting algorithms are classified based on the number of comparisons. 
-For Comparison algorithms best case is O(nlogn) and worst case is O(n^2).These algorithms evaluate the elements of the list by key comparison
-
-
-Non comparison algorithms : Counting sort, Bucket sort  and Radix sort.
