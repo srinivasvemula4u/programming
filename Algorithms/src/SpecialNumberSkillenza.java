@@ -9,7 +9,7 @@
  * @author sv186040
  */
 /*
-****skillenza.com  a challenge****
+****skillenza.com  challenge****
 A special number is defined as a number where, in binary notation,
 
 a. has only set bits (OR)
