@@ -10,36 +10,36 @@ package NarsihmaKarunmanchi.LinkedLists;
  * @author srivemul
  */
 public class DoubleLinkedList {
-
+    
     public int getLength() {
         return length;
     }
-
+    
     public void setLength(int length) {
         this.length = length;
     }
-
+    
     public DoubleLinkedListNode getHead() {
         return head;
     }
-
+    
     public void setHead(DoubleLinkedListNode head) {
         this.head = head;
     }
-
+    
     private int length;
     private DoubleLinkedListNode head;
-
+    
     public DoubleLinkedList() {
         head = null;
         length = 0;
     }
-
+    
     private synchronized DoubleLinkedListNode createNode(int data) {
         DoubleLinkedListNode node = new DoubleLinkedListNode(data);
         return node;
     }
-
+    
     public synchronized void insertAtBegin(int newValue) {
         DoubleLinkedListNode node = createNode(newValue);
         if (head == null) {
@@ -53,7 +53,7 @@ public class DoubleLinkedList {
         head = node;
         length++;
     }
-
+    
     public synchronized void insertAtEnd(int newValue) {
         DoubleLinkedListNode node = createNode(newValue);
         if (head == null) {
@@ -70,7 +70,7 @@ public class DoubleLinkedList {
         currentNode.setNext(node);
         length++;
     }
-
+    
     public synchronized void insert(int data, int position) {
         if (position > length) {
             position = length;
@@ -85,19 +85,22 @@ public class DoubleLinkedList {
             insertAtEnd(data);
         } else if (position > 0 && position < length) {
             DoubleLinkedListNode currentNode = head;
-            DoubleLinkedListNode previousNode = null;
+            //DoubleLinkedListNode previousNode = null;
             for (int i = 0; i < position; i++) {
-                previousNode = currentNode;
+                // previousNode = currentNode;
                 currentNode = currentNode.getNext();
             }
-            node.setPrevious(previousNode);
+            // node.setPrevious(previousNode);
+            node.setPrevious(currentNode.getPrevious());
             node.setNext(currentNode);
-            previousNode.setNext(node);
+            //previousNode.setNext(node);
+            currentNode.getPrevious().setNext(node);
+            
             currentNode.setPrevious(node);
             length++;
         }
     }
-
+    
     public synchronized DoubleLinkedListNode removeFromBegin() {
         DoubleLinkedListNode currentNode = head;
         if (currentNode == null) {
@@ -109,7 +112,7 @@ public class DoubleLinkedList {
         length--;
         return currentNode;
     }
-
+    
     public synchronized DoubleLinkedListNode removeFromEnd() {
         DoubleLinkedListNode currentNode = head;
         DoubleLinkedListNode previousNode = null;
@@ -125,7 +128,7 @@ public class DoubleLinkedList {
         length--;
         return currentNode;
     }
-
+    
     public synchronized DoubleLinkedListNode remove(int position) {
         DoubleLinkedListNode currentNode = head;
         DoubleLinkedListNode previousNode = null;
@@ -151,7 +154,7 @@ public class DoubleLinkedList {
         }
         return currentNode;
     }
-
+    
     public synchronized void removeMatched(DoubleLinkedListNode node) {
         if (head == null) {
             return;
@@ -176,7 +179,7 @@ public class DoubleLinkedList {
             currentNode = currentNode.getNext();
         }
     }
-
+    
     public String toString() {
         String result = "[";
         if (head == null) {
@@ -190,11 +193,11 @@ public class DoubleLinkedList {
         result = result + " ]";
         return result;
     }
-
+    
     public int length() {
         return length;
     }
-
+    
     public synchronized int getPosition(int data) {
         int position = 0;
         if (head == null) {
@@ -210,12 +213,12 @@ public class DoubleLinkedList {
         }
         return position;
     }
-
+    
     public void clearList() {
         head = null;
         length = 0;
     }
-
+    
     public synchronized void reverseIterative() {
         DoubleLinkedListNode previous = null;
         DoubleLinkedListNode current = head;
@@ -228,11 +231,11 @@ public class DoubleLinkedList {
             head.setPrevious(current);
             previous = head;
             head = current;
-
+            
         }
         head = previous;
     }
-
+    
     public synchronized DoubleLinkedListNode reverseRecursive(DoubleLinkedListNode head) {
         DoubleLinkedListNode previous = null;
         if (head == null) {
@@ -252,9 +255,9 @@ public class DoubleLinkedList {
         }
         return head;
     }
-
+    
     public static void main(String[] args) {
-
+        
         DoubleLinkedList list = new DoubleLinkedList();
         list.insert(10, 0);
         list.insert(11, 1);
@@ -264,15 +267,15 @@ public class DoubleLinkedList {
         list.insert(15, 5);
         //  list.insert(16, 3);
         //   list.insert(17, 0);
-         list.insert(16, 6);
-        for(int i = 7; i < 10000; i++)
-        {
-            list.insert(i+10, i);
-        }
+        list.insert(16, 6);
+        list.insert(-1,3);
+//        for (int i = 7; i < 10000; i++) {
+//            list.insert(i + 10, i);
+//        }
         System.out.println(list);
-         list.reverseIterative();
-       // DoubleLinkedListNode node = list.getHead();
-      //  list.reverseRecursive(node);
+        list.reverseIterative();
+        // DoubleLinkedListNode node = list.getHead();
+        //  list.reverseRecursive(node);
         // list.remove(3);
         // list.remove(0);
         System.out.println(list);
