@@ -40,4 +40,7 @@ public class RearrangeListBasedonKValue {
       head = frontList;
       return head;
   }
+  public static void main(String[] args) {
+      
+  }
 }

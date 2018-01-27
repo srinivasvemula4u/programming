@@ -58,7 +58,7 @@ public class LinkedList {
             length++;
         }
     }
-
+    // Inserting node at given position
     public synchronized void insert(int data, int position) {
         if (position < 0) {
             position = 0;
