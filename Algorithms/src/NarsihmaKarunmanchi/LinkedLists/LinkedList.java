@@ -214,7 +214,7 @@ public class LinkedList {
         }
         head = previous;
     }
-
+    // Recursive approach
     public synchronized LinkedListNode reverseRecursive(LinkedListNode head) {
         LinkedListNode previous = null;
         if (head == null) {
