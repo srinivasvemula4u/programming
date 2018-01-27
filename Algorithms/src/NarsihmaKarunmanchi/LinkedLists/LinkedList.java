@@ -199,6 +199,7 @@ public class LinkedList {
         length = 0;
     }
 
+    // Iterative version
     public synchronized void reverseIterative() {
         LinkedListNode current = head;
         LinkedListNode previous = null;
