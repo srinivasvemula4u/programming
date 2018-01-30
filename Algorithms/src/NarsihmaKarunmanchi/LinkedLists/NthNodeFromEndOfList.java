@@ -11,7 +11,7 @@ package NarsihmaKarunmanchi.LinkedLists;
  */
 public class NthNodeFromEndOfList {
 
-    public LinkedListNode nthNodeFromEndOfList(LinkedListNode head, int N) {
+    public static LinkedListNode nthNodeFromEndOfList(LinkedListNode head, int N) {
         LinkedListNode pTemp = head, pNthNode = null;
         for (int i = 1; i < N; i++) {
             if (pTemp != null) {
@@ -30,5 +30,16 @@ public class NthNodeFromEndOfList {
             return pNthNode;
         }
         return null;
+    }
+    public static void main(String[] agrs) {
+        LinkedList list = new LinkedList();
+        list.insert(10, 0);
+        list.insert(11, 1);
+        list.insert(12, 2);
+        list.insert(13, 3);
+        list.insert(14, 4);
+        list.insert(15, 5);
+        LinkedListNode node = nthNodeFromEndOfList(list.getHead(), 1);
+        System.out.println(node.getData());
     }
 }
