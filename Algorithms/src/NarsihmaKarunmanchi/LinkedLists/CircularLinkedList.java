@@ -11,7 +11,7 @@ package NarsihmaKarunmanchi.LinkedLists;
  */
 public class CircularLinkedList {
     
-    public synchronized int CirCularLinkedList(LinkedListNode head)
+    public synchronized int NumofNodes(LinkedListNode head)
     {
         LinkedListNode current = head;
         int length = 0;
