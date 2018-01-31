@@ -11,6 +11,27 @@ package NarsihmaKarunmanchi.LinkedLists;
  */
 public class FindLengthOfLoopInList {
     public int findLengthOfLoopInList(LinkedListNode head) {
-        
+        if (head == null) {
+            return -1;
+        }
+        int count = 0;
+        LinkedListNode fastPtr = head, slowPtr = head;
+        boolean isLoopExists = false;
+        while (fastPtr.getNext() != null && fastPtr.getNext().getNext() != null) {
+            fastPtr = fastPtr.getNext().getNext();
+            slowPtr = slowPtr.getNext();
+            if (fastPtr == slowPtr) {
+                isLoopExists = true;
+                break;
+            }
+        }
+        if(isLoopExists) {
+            do {
+            slowPtr = slowPtr.getNext();
+            count++;
+            } while(slowPtr != fastPtr);
+            return count;
+        }
+        return -1;
     }
 }
