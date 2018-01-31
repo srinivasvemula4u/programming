@@ -10,5 +10,7 @@ package NarsihmaKarunmanchi.LinkedLists;
  * @author sv186040
  */
 public class FindLengthOfLoopInList {
-    
+    public int findLengthOfLoopInList(LinkedListNode head) {
+        
+    }
 }
