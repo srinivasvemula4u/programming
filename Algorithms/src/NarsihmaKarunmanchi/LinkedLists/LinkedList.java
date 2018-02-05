@@ -263,7 +263,8 @@ public class LinkedList {
         //  list.remove(3);
         // list.remove(0);
         LinkedListNode node = list.getHead();
-        list.reverseRecursive(node);
+       // list.reverseRecursive(node);
+       list.reverseRecursiveInKarumanchiWay(node);
         System.out.println(list);
         System.out.println(list.length());
         //   list.remove(list.length());
