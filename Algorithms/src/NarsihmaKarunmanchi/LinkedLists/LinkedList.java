@@ -232,6 +232,19 @@ public class LinkedList {
         }
         return head;
     }
+    
+    public synchronized void reverseRecursiveInKarumanchiWay(LinkedListNode head) {
+        if(head == null)
+            return;
+        LinkedListNode next = head.getNext();
+          if(next == null) {
+              this.head = head;
+              return;
+          }
+          reverseRecursiveInKarumanchiWay(next);
+          next.setNext(head);
+          head.setNext(null);      
+    }
 
     public static void main(String args[]) {
         LinkedList list = new LinkedList();
