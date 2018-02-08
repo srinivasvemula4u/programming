@@ -29,6 +29,22 @@ public class MergeTwoSortedLinkedLists {
     }
 
     public static void main(String[] args) {
+        LinkedList list1 = new LinkedList();
+        list1.insert(10, 0);
+        list1.insert(11, 2);
+        list1.insert(12, 4);
+        list1.insert(13, 6);
+        list1.insert(14, 8);
+        list1.insert(15, 20);
+        
+         LinkedList list2 = new LinkedList();
+        list2.insert(10, 1);
+        list2.insert(11, 3);
+        list2.insert(12, 5);
+        list2.insert(13, 7);
+        list2.insert(14, 9);
+        list2.insert(15, 11);
+        System.out.println(mergeTwoSortedLinkedList(list1.getHead(), list2.getHead()));
 
     }
 }
