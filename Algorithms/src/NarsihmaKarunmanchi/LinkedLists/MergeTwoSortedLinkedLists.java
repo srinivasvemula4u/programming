@@ -11,6 +11,42 @@ package NarsihmaKarunmanchi.LinkedLists;
  */
 public class MergeTwoSortedLinkedLists {
 
+    public static LinkedListNode mergeTwoSortedLinkedListNonRecusion(
+            LinkedListNode head1, LinkedListNode head2) {
+        LinkedListNode current = null;
+        while (head1 != null && head2 != null) {
+            if (head1.getData() < head2.getData()) {
+                if (current == null) {
+                    current = head1;
+                } else {
+                    current.setNext(head1);
+                }
+                head1 = head1.getNext();
+            } else {
+                if (current == null) {
+                    current = head2;
+                } else {
+                    current.setNext(head2);
+                }
+                head2 = head2.getNext();
+            }
+        }
+        if (head1 == null) {
+            if (current != null) {
+                current.setNext(head2);
+            } else {
+                current = head2;
+            }
+        } else if (head2 == null) {
+            if (current != null) {
+                current.setNext(head1);
+            } else {
+                current = head1;
+            }
+        }
+        return current;
+    }
+
     public static LinkedListNode mergeTwoSortedLinkedList(LinkedListNode head1, LinkedListNode head2) {
         if (head1 == null) {
             return head1;
@@ -36,8 +72,8 @@ public class MergeTwoSortedLinkedLists {
         list1.insert(13, 6);
         list1.insert(14, 8);
         list1.insert(15, 20);
-        
-         LinkedList list2 = new LinkedList();
+
+        LinkedList list2 = new LinkedList();
         list2.insert(10, 1);
         list2.insert(11, 3);
         list2.insert(12, 5);
