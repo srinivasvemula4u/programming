@@ -12,7 +12,13 @@ package NarsihmaKarunmanchi.LinkedLists;
 public class ReversePairsInList {
 
     public static void main(String[] args) {
-
+        LinkedList list = new LinkedList();
+        list.insert(10, 0);
+        list.insert(11, 1);
+        list.insert(12, 2);
+        list.insert(13, 3);
+        list.insert(14, 4);
+        list.insert(15, 5);
     }
 
     public static LinkedListNode reversePairsInListRecursive(LinkedListNode head) {
