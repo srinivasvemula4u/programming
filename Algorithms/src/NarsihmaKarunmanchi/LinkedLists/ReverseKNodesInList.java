@@ -10,7 +10,18 @@ package NarsihmaKarunmanchi.LinkedLists;
  * @author sv186040
  */
 public class ReverseKNodesInList {
-    public static LinkedListNode reverseKNodesInList(LinkedListNode head) {
-        
+
+    public static LinkedListNode reverseKNodesInList(LinkedListNode head, int k) {
+        LinkedListNode current = head, prev = null, next = null;
+        int count = k;
+        while (current != null && count > 0) {
+            next = current.getNext();
+            current.setNext(prev);
+            prev = current;
+            current = next;
+            count--;
+        }
+        current.setNext(reverseKNodesInList(next, k));
+        return prev;
     }
 }
