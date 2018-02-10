@@ -7,7 +7,7 @@ package NarsihmaKarunmanchi.LinkedLists;
 
 /**
  *
- *  Working correctly
+ * Working correctly
  */
 public class ReversePairsInList {
 
