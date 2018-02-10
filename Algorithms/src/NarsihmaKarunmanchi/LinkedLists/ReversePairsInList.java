@@ -27,4 +27,10 @@ public class ReversePairsInList {
         head.getNext().setNext(reversePairsInListRecursive(head.getNext().getNext()));
         return head;
     }
+
+    public static LinkedListNode reversePairsInList(LinkedListNode head) {
+        LinkedListNode temp1 = null, temp2 = null;
+        
+
+    }
 }
