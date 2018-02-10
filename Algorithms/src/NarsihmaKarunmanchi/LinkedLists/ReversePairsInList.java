@@ -30,7 +30,15 @@ public class ReversePairsInList {
 
     public static LinkedListNode reversePairsInList(LinkedListNode head) {
         LinkedListNode temp1 = null, temp2 = null;
-        
-
+        while (head != null && head.getNext() != null) {
+            temp1 = head.getNext();
+            head.setNext(temp1.getNext());
+            temp1.setNext(head);
+            if (temp2 == null) {
+                temp2 = temp1;
+            }
+            head = head.getNext();
+        }
+        return temp2;
     }
 }
