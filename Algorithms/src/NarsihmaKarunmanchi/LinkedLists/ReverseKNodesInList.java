@@ -21,7 +21,9 @@ public class ReverseKNodesInList {
             current = next;
             count--;
         }
-        current.setNext(reverseKNodesInList(next, k));
+        if (next != null) {
+            current.setNext(reverseKNodesInList(next, k));
+        }
         return prev;
     }
 }
