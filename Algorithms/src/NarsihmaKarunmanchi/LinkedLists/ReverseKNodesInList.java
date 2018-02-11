@@ -26,4 +26,8 @@ public class ReverseKNodesInList {
         }
         return prev;
     }
+
+    public static LinkedListNode reverseKNodesInListIterative(LinkedListNode head, int k) {
+         return null;
+    }
 }
