@@ -28,12 +28,32 @@ public class ReorderList {
             stack.push(head2);
             head2 = head2.getNext();
         }
+        LinkedListNode current = head;
         while (!stack.isEmpty()) {
             LinkedListNode temp = stack.pop();
-            temp.setNext(head.getNext());
-            head.setNext(temp);
-            head = temp.getNext();
+            temp.setNext(current.getNext());
+            current.setNext(temp);
+            current = temp.getNext();
         }
+
+    }
+
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.insert(11, 1);
+        list.insert(12, 2);
+        list.insert(13, 3);
+        list.insert(14, 4);
+        list.insert(15, 5);
+        list.insert(16, 6);
+        list.insert(17, 7);
+        reorderList(list.getHead());
+        LinkedListNode head = list.getHead();
+         while (head != null) {
+            System.out.println(head.getData());
+            head = head.getNext();
+        }
+        //System.out.println(list.toString());
 
     }
 }
