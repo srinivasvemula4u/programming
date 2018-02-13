@@ -23,6 +23,7 @@ public class ReorderList {
             slowPtr = slowPtr.getNext();
         }
         LinkedListNode head2 = slowPtr.getNext();
+        slowPtr.setNext(null);
         Stack<LinkedListNode> stack = new Stack<>();
         while (head2 != null) {
             stack.push(head2);
@@ -35,6 +36,7 @@ public class ReorderList {
             current.setNext(temp);
             current = temp.getNext();
         }
+        current.setNext(null);
 
     }
 
@@ -49,7 +51,7 @@ public class ReorderList {
         list.insert(17, 7);
         reorderList(list.getHead());
         LinkedListNode head = list.getHead();
-         while (head != null) {
+        while (head != null) {
             System.out.println(head.getData());
             head = head.getNext();
         }
