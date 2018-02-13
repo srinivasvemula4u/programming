@@ -13,7 +13,11 @@ package NarsihmaKarunmanchi.LinkedLists;
  * should Preserve the original relative order of the nodes in each of the two
  * partitions. For example, given 1->4->3->2->5->2 and K =3 return
  * 1->2->2->4->3->5
+ * 
+ * It is same as RearrangeListBasedOnKValue.java
  */
 public class PartitionOfList {
-
+   public static void partionofList(LinkedListNode head, int k) {
+       
+   }
 }
