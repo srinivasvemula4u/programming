@@ -58,7 +58,7 @@ public class RearrangeListBasedonKValue {
         list.insert(2, 3);
         list.insert(5, 4);
         list.insert(2, 5);
-        LinkedListNode head = rearrangeListBasedonKValue(list.getHead(), 3);
+        LinkedListNode head = rearrangeListBasedonKValue(list.getHead(), 4);
         while (head != null) {
             System.out.println(head.getData());
             head = head.getNext();
