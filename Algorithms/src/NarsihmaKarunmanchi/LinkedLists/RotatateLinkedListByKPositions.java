@@ -13,13 +13,9 @@ package NarsihmaKarunmanchi.LinkedLists;
  */
 public class RotatateLinkedListByKPositions {
 
-    public static LinkedListsNode rotateLinkedListByKPositions(LinkedListNode head, K) {
-        LinkedListNode nthNodeFromEnd = NthNodeFromEndOfList(head, k);
-        LinkedListNode current = nthNodeFromEnd;
-        while (current.getNext() != null) {
-            current = current.getNext();
-        }
+    public static LinkedListNode rotateLinkedListByKPositions(LinkedListNode head, int K) {
 
-        return nthNodeFromEnd;
+        return null;
+        // return nthNodeFromEnd;
     }
 }
