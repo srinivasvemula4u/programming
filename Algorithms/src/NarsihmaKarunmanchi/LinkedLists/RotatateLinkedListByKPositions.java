@@ -15,7 +15,29 @@ public class RotatateLinkedListByKPositions {
 
     public static LinkedListNode rotateLinkedListByKPositions(LinkedListNode head, int K) {
 
-        return null;
+        if (head == null || head.getNext() == null) {
+            return null;
+        }
+        LinkedListNode rotateStart = head, rotateEnd = head;
+        while (K-- > 0) {
+            rotateEnd = rotateEnd.getNext();
+            if (rotateEnd == null) {
+                rotateEnd = head;
+            }
+        }
+        if (rotateStart == rotateEnd) {
+            return head;
+        }
+        while (rotateEnd.getNext() != null) {
+            rotateStart = rotateStart.getNext();
+            rotateEnd = rotateEnd.getNext();
+        }
+
+        LinkedListNode temp = rotateStart.getNext();
+        rotateEnd.setNext(head);
+        rotateStart.setNext(null);
+        head = temp;
+        return head;
         // return nthNodeFromEnd;
     }
 }
