@@ -10,12 +10,15 @@ package NarsihmaKarunmanchi.LinkedLists;
  * @author sv186040
  */
 public class DisplayListFromEnd {
+
     public static void displayListFromEnd(LinkedListNode head) {
-        if(head == null)
+        if (head == null) {
             return;
+        }
         displayListFromEnd(head.getNext());
         System.out.println(head.getData());
     }
+
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.insert(10, 0);
