@@ -74,7 +74,7 @@ public class LinkedListStack {
         }
         System.out.println(stack);
         try {
-            stack.pop(); 
+            stack.pop();
             stack.pop();
         } catch (Exception ex) {
             Logger.getLogger(LinkedListStack.class.getName()).log(Level.SEVERE, null, ex);
