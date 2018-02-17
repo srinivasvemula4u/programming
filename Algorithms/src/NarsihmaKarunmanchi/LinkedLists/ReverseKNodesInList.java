@@ -62,8 +62,8 @@ public class ReverseKNodesInList {
         list.insert(14, 4);
         list.insert(15, 5);
         list.insert(16,6);
-        //LinkedListNode head = reverseKNodesInList(list.getHead(), 3);
-        LinkedListNode head = reverseKNodesInListIterative(list.getHead(), 3);
+        LinkedListNode head = reverseKNodesInList(list.getHead(), 3);
+        //LinkedListNode head = reverseKNodesInListIterative(list.getHead(), 3);
          while (head != null) {
             System.out.println(head.getData());
             head = head.getNext();
