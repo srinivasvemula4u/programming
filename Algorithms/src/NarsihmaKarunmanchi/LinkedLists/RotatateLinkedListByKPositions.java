@@ -9,7 +9,7 @@ package NarsihmaKarunmanchi.LinkedLists;
  *
  * @author sv186040 Given a list rotate the list to the right by K places. Where
  * K is non negative For example: Given 1->2->3->4->5 and k = 2 return
- * 4->5->3->NULL;
+ * 4->5->1->2->3->NULL;
  */
 public class RotatateLinkedListByKPositions {
 
