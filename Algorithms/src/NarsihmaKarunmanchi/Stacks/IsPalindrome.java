@@ -10,7 +10,17 @@ package NarsihmaKarunmanchi.Stacks;
  * @author sv186040
  */
 public class IsPalindrome {
+
     public static boolean isPalindrome(String str) {
-        
+        int i = 0, j = str.length() - 1;
+        while ((i < j) || (str.charAt(i) != 'x') || (str.charAt(i) != 'x')) {
+            if (str.charAt(i) == str.charAt(i)) {
+                i++;
+                j--;
+            } else {
+                return false;
+            }
+        }
+        return true;
     }
 }
