@@ -21,10 +21,6 @@ public class ReverseStack {
         reverseStack(stack);
         insertAtBottom(stack, temp);
     }
-//    public void reverseNonRecursive()
-//    {
-//        for(int i= 0; i < stack.size())
-//    }
 
     public void insertAtBottom(Stack<Integer> stack, int data) {
         if (stack.isEmpty()) {
@@ -47,6 +43,6 @@ public class ReverseStack {
         System.out.println("Stack data after reverse : " + stack);
         obj.insertAtBottom(stack, 6);
         System.out.println("Stack data after insert at bottom : " + stack);
-       
+
     }
 }
