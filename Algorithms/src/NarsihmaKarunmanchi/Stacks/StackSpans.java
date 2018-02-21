@@ -34,29 +34,30 @@ public class StackSpans {
         LinkedListStack stack = new LinkedListStack();
         int span = 0;
         for (int i = 0; i < data.length; i++) {
-            while(!stack.isEmpty()&&(data[i] > data[stack.getTop().getData()]))
-            {
+            while (!stack.isEmpty() && (data[i] > data[stack.getTop().getData()])) {
                 try {
                     stack.pop();
                 } catch (Exception ex) {
                     Logger.getLogger(StackSpans.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } 
-          //   System.out.println(stack);
-            if(stack.isEmpty())
-                span = -1;  
-            else span = stack.getTop().getData();
-            spans[i] = i-span;
+            }
+            //   System.out.println(stack);
+            if (stack.isEmpty()) {
+                span = -1;
+            } else {
+                span = stack.getTop().getData();
+            }
+            spans[i] = i - span;
             stack.push(i);
         }
-       return spans;
+        return spans;
     }
 
     public static void main(String args[]) {
         StackSpans stackSpans = new StackSpans();
         int[] result = stackSpans.getSpanMatrixOptimized(new int[]{6, 3, 4, 5, 2});
         for (int val : result) {
-            System.out.print(" " + val +" ");
+            System.out.print(" " + val + " ");
         }
     }
 
