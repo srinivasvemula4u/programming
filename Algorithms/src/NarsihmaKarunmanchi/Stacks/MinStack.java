@@ -37,9 +37,10 @@ public class MinStack {
 
     public void push2(int data) {
         elemStack.push(data);
-        if (minStack.isEmpty() || minStack.peek() >= data) {
+        if (minStack.isEmpty() || minStack.peek() > data) {
             minStack.push(data);
         }
+        //System.out.println(minStack.size());
     }
 
     public int pop2() {
@@ -51,6 +52,7 @@ public class MinStack {
         }
         return elemStack.pop();
     }
+    //public int ()
 
     public int getMinimum() {
         return minStack.peek();
@@ -72,6 +74,7 @@ public class MinStack {
 //        stack.push(4);
 //        stack.push(1);
 //        stack.push(5);
+        stack.push2(2);
         stack.push2(2);
         stack.push2(6);
         stack.push2(4);
