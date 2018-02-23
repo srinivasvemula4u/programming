@@ -34,6 +34,6 @@ package NarsihmaKarunmanchi.Stacks;
  */
 public class LargestRectangularAreaInHistogram {
        public static int largestRectangularAreaInHistogram(int[] hist) {
-          return 0;
+          return 0 ;
        }
 }
