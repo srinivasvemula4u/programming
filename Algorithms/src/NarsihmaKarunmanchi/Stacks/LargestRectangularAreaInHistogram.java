@@ -44,7 +44,7 @@ public class LargestRectangularAreaInHistogram {
                 stack.push(i++);
             } else {
                 int top = stack.pop();
-                topArea = hist[top] * (stack.isEmpty() ? i : (i - hist[stack.peek()] - 1));
+                topArea = hist[top] * (stack.isEmpty() ? i : (i - stack.peek() - 1));
                 if (maxArea < topArea) {
                     maxArea = topArea;
                 }
@@ -52,14 +52,16 @@ public class LargestRectangularAreaInHistogram {
         }
         while (!stack.isEmpty()) {
             int top = stack.pop();
-            topArea = hist[top] * (stack.isEmpty() ? i : (i - hist[stack.peek()] - 1));
+            topArea = hist[top] * (stack.isEmpty() ? i : (i - stack.peek() - 1));
             if (maxArea < topArea) {
                 maxArea = topArea;
             }
         }
         return maxArea;
     }
+
     public static void main(String[] args) {
-        
+        int[] hist = {6, 2, 4,5, 4, 5, 1, 6};
+        System.out.println("Maximum area is " + largestRectangularAreaInHistogram(hist));
     }
 }
