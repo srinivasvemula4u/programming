@@ -33,5 +33,7 @@ package NarsihmaKarunmanchi.Stacks;
  * do step 2.b for every removed bar.
  */
 public class LargestRectangularAreaInHistogram {
-
+       public static int largestRectangularAreaInHistogram(int[] hist) {
+          return 0;
+       }
 }
