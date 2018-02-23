@@ -57,6 +57,6 @@ public class LargestRectangularAreaInHistogram {
                 maxArea = topArea;
             }
         }
-        return maxArea;
+        return maxArea;;
     }
 }
