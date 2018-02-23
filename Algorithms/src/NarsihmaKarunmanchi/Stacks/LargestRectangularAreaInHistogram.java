@@ -5,6 +5,8 @@
  */
 package NarsihmaKarunmanchi.Stacks;
 
+import java.util.Stack;
+
 /**
  *
  * For every bar ‘x’, we calculate the area with ‘x’ as the smallest bar in the
@@ -18,8 +20,7 @@ package NarsihmaKarunmanchi.Stacks;
  * bar is popped, we calculate the area with the popped bar as smallest bar. How
  * do we get left and right indexes of the popped bar – the current index tells
  * us the ‘right index’ and index of previous item in stack is the ‘left index’.
- * Following is the complete algorithm. 
- * 1) Create an empty stack.
+ * Following is the complete algorithm. 1) Create an empty stack.
  *
  * 2) Start from first bar, and do following for every bar ‘hist[i]’ where ‘i’
  * varies from 0 to n-1. ……a) If stack is empty or hist[i] is higher than the
@@ -33,7 +34,29 @@ package NarsihmaKarunmanchi.Stacks;
  * do step 2.b for every removed bar.
  */
 public class LargestRectangularAreaInHistogram {
-       public static int largestRectangularAreaInHistogram(int[] hist) {
-          return 0 ;
-       }
+
+    public static int largestRectangularAreaInHistogram(int[] hist) {
+        Stack<Integer> stack = new Stack<>();
+        int maxArea = 0, topArea = 0;
+        int i = 0;
+        while (i < hist.length) {
+            if (stack.isEmpty() || hist[stack.peek()] <= hist[i]) {
+                stack.push(i++);
+            } else {
+                int top = stack.pop();
+                topArea = hist[top] * (stack.isEmpty() ? i : (i - hist[stack.peek()] - 1));
+                if (maxArea < topArea) {
+                    maxArea = topArea;
+                }
+            }
+        }
+        while (!stack.isEmpty()) {
+            int top = stack.pop();
+            topArea = hist[top] * (stack.isEmpty() ? i : (i - hist[stack.peek()] - 1));
+            if (maxArea < topArea) {
+                maxArea = topArea;
+            }
+        }
+        return maxArea;
+    }
 }
