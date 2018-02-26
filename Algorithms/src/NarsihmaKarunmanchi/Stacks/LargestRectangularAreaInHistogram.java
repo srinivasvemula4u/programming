@@ -61,7 +61,7 @@ public class LargestRectangularAreaInHistogram {
     }
 
     public static void main(String[] args) {
-        int[] hist = {6, 2, 4,5, 4, 5, 1, 6};
+        int[] hist = {6, 2, 4, 5, 4, 5, 1, 6};
         System.out.println("Maximum area is " + largestRectangularAreaInHistogram(hist));
     }
 }
