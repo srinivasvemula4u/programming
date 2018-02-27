@@ -56,7 +56,8 @@ class StackForStackSets {
 public class StackSets {
 
     private int threshold;
-    private ArrayList<StackForStackSets> listofstackSets = new ArrayList<StackForStackSets>();
+    private ArrayList<StackForStackSets> listofstackSets
+            = new ArrayList<StackForStackSets>();
 
     public StackSets(int threshold) {
         this.threshold = threshold;
@@ -116,25 +117,30 @@ public class StackSets {
         }
         return value;
     }
-    public String toString()
-    {
-        String str="";
+
+    public String toString() {
+        String str = "";
         StackForStackSets stack = null;
-        for(int i = 0; i < listofstackSets.size(); i++)
-        {
+        for (int i = 0; i < listofstackSets.size(); i++) {
             stack = listofstackSets.get(i);
-            str += "Stack "+(i+1) +" has "+ stack.toString() + "\n";
+            str += "Stack " + (i + 1) + " has " + stack.toString() + "\n";
         }
         return str;
     }
-    public static void main(String args[])
-    {
-        StackSets stacks = new  StackSets(3);
-        stacks.push(10); stacks.push(9); stacks.push(8); stacks.push(7);
-         stacks.push(6); stacks.push(5); stacks.push(4); stacks.push(3);
-          stacks.push(2);
-          System.out.println(stacks);
-         
+
+    public static void main(String args[]) {
+        StackSets stacks = new StackSets(3);
+        stacks.push(10);
+        stacks.push(9);
+        stacks.push(8);
+        stacks.push(7);
+        stacks.push(6);
+        stacks.push(5);
+        stacks.push(4);
+        stacks.push(3);
+        stacks.push(2);
+        System.out.println(stacks);
+
     }
 
 }
