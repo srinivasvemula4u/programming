@@ -7,7 +7,10 @@ package NarsihmaKarunmanchi.Stacks;
 
 /**
  *
- * @author srivemul
+ * This solution runs with the concept of in-place stack. When element on stack
+ * doesn't match to the current number, we add it to stack. when it matches to
+ * stack top,we skip numbers until the element match the top of stack and remove
+ * the element from stack
  */
 public class RemoveAdjancentDuplicates {
 
@@ -26,7 +29,7 @@ public class RemoveAdjancentDuplicates {
                 stkPtr--;
             }
         }
-         return stkPtr;
+        return stkPtr;
     }
 
     public static void main(String args[]) {
