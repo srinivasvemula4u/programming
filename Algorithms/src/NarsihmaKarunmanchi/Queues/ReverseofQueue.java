@@ -33,7 +33,7 @@ public class ReverseofQueue {
         queue.add(6);
         queue.add(4);
         queue.add(2);
-        Queue<Integer> result  = reverseQueue(queue);
+        Queue<Integer> result = reverseQueue(queue);
         System.out.println(result);
     }
 }
