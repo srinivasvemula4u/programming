@@ -48,9 +48,10 @@ public class OneStackWithTwoQueues {
         OneStackWithTwoQueues obj = new OneStackWithTwoQueues();
         obj.push(10);
         obj.push(6);
+          System.out.println(obj.pop());
         obj.push(4);
         obj.push(2);
-        System.out.println(obj.pop());
+        //System.out.println(obj.pop());
         System.out.println(obj.pop());
         System.out.println(obj.pop());
         System.out.println(obj.pop());
