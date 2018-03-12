@@ -85,52 +85,48 @@ public class TreeTravels {
                 currentNode = currentNode.getRight();
             }
         }
-         for (int value : list) {
+        for (int value : list) {
             System.out.print(" " + value);
         }
         System.out.println();
     }
-    public static void postOrderTraversalIterative(BinaryTreeNode root)
-    {
+
+    public static void postOrderTraversalIterative(BinaryTreeNode root) {
         ArrayList<Integer> list = new ArrayList<>();
-        if(root == null)
+        if (root == null) {
             return;
+        }
         Stack<BinaryTreeNode> stack = new Stack<>();
         stack.push(root);
         BinaryTreeNode previousNode = null;
-        while(!stack.isEmpty())
-        {
+        while (!stack.isEmpty()) {
             BinaryTreeNode currentNode = stack.peek();
-            if(previousNode == null || previousNode.getLeft() == currentNode || previousNode.getRight() == currentNode)
-            {
-                if(currentNode.getLeft() != null)
+            if (previousNode == null || previousNode.getLeft() == currentNode || previousNode.getRight() == currentNode) {
+                if (currentNode.getLeft() != null) {
                     stack.push(currentNode.getLeft());
-                else if(currentNode.getRight() != null)
-                    stack.push(currentNode.getRight());
-            }
-            else if(currentNode.getLeft() == previousNode)
-            {
-                if(currentNode.getRight() != null)
-                {
+                } else if (currentNode.getRight() != null) {
                     stack.push(currentNode.getRight());
                 }
-            }
-            else {
+            } else if (currentNode.getLeft() == previousNode) {
+                if (currentNode.getRight() != null) {
+                    stack.push(currentNode.getRight());
+                }
+            } else {
                 list.add(currentNode.getData());
                 stack.pop();
             }
             previousNode = currentNode;
         }
-          for (int value : list) {
+        for (int value : list) {
             System.out.print(" " + value);
         }
         System.out.println();
-        
+
     }
-    public static void levelOrderTraversal(BinaryTreeNode root)
-    {
+
+    public static void levelOrderTraversal(BinaryTreeNode root) {
         if (root == null) {
-          //  root = temp;
+            //  root = temp;
             return;
         }
         Queue<BinaryTreeNode> queue = new LinkedList<>();
@@ -141,16 +137,16 @@ public class TreeTravels {
             list.add(current.getData());
             if (current.getLeft() != null) {
                 queue.offer(current.getLeft());
-            } 
+            }
             if (current.getRight() != null) {
                 queue.offer(current.getRight());
-            } 
+            }
         }
-         for (int value : list) {
+        for (int value : list) {
             System.out.print(" " + value);
         }
         System.out.println();
-        
+
     }
 
     public static void main(String args[]) {
@@ -163,7 +159,7 @@ public class TreeTravels {
         tree.insert(6);
         tree.insert(7);
         postOrderTraversal(tree.getRoot());
-         System.out.println();
+        System.out.println();
         postOrderTraversalIterative(tree.getRoot());
         levelOrderTraversal(tree.getRoot());
     }
