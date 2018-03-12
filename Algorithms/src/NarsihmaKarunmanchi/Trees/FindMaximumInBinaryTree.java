@@ -42,9 +42,9 @@ public class FindMaximumInBinaryTree {
                     maxValue = current.getData();
                 }
                 if (current.getLeft() != null) {
-                    queue.offer(current.getLeft());         
+                    queue.offer(current.getLeft());
                 }
-                if(current.getRight() != null) {
+                if (current.getRight() != null) {
                     queue.offer(current.getRight());
                 }
             }
@@ -62,6 +62,6 @@ public class FindMaximumInBinaryTree {
         tree.insert(6);
         tree.insert(7);
         System.out.println("Maximum value in the tree is " + findMaximumBinaryTreeRecursion(tree.getRoot()));
-         System.out.println("Maximum value in the tree is " + findMaximumBinaryTreeIterative(tree.getRoot()));
+        System.out.println("Maximum value in the tree is " + findMaximumBinaryTreeIterative(tree.getRoot()));
     }
 }
