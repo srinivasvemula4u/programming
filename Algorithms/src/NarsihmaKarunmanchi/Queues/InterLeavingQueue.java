@@ -14,6 +14,8 @@ import java.util.logging.Logger;
 /**
  *
  * @author srivemul
+ *  Given a queue of integers,rearrange the elements by interleaving the first 
+ *  half of the list with second half of the list.
  */
 public class InterLeavingQueue {
 

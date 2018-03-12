@@ -21,20 +21,21 @@ public class ReverseQueueWithFirstKElements {
             stack.push(queue.remove());
         }
         while (!stack.isEmpty()) {
-             queue.add(stack.pop());
+            queue.add(stack.pop());
         }
-        for(int i = 0; i < queue.size()-k; i++)
-        {
+        for (int i = 0; i < queue.size() - k; i++) {
             queue.add(queue.remove());
         }
-        
+
     }
-     public static void main(String args[]) {
+
+    public static void main(String args[]) {
         Queue<Integer> queue = new LinkedList<>();
-        for(int i=11; i<= 20; i++)
+        for (int i = 11; i <= 20; i++) {
             queue.add(i);
+        }
         System.out.println(queue);
-       revereseQueueWithFirstKElements(queue,4);
+        revereseQueueWithFirstKElements(queue, 4);
         System.out.println(queue);
     }
 }
