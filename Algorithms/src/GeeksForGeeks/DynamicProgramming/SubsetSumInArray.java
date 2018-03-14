@@ -7,7 +7,7 @@ package GeeksForGeeks.DynamicProgramming;
 
 /**
  *
- * 
+ *
  */
 /*
 Let isSubSetSum(int set[], int n, int sum) be the function to find whether there is a subset of set[] with sum equal to sum. n is the number of elements in set[].
@@ -72,13 +72,13 @@ We can solve the problem in Pseudo-polynomial time using Dynamic programming.
                 }
             }
         }
-         // uncomment this code to print table
-     for (int i = 0; i <= sum; i++)
-     {
-       for (int j = 0; j <= n; j++)
-          System.out.print(" "+subset[i][j]);
-       System.out.printf("\n");
-     } 
+        // uncomment this code to print table
+        for (int i = 0; i <= sum; i++) {
+            for (int j = 0; j <= n; j++) {
+                System.out.print(" " + subset[i][j]);
+            }
+            System.out.printf("\n");
+        }
         return subset[sum][n];
     }
 
