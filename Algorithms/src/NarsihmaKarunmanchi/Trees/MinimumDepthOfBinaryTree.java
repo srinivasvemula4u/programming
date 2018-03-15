@@ -25,6 +25,7 @@ public class MinimumDepthOfBinaryTree {
         int minRight = minimumDepthOfBinaryTreeRecursive(root.getRight());
         return 1 + Math.min(minLeft, minRight);
     }
+
     // In progress.
     public static int minimumDepthOfBinaryTreeIterative(BinaryTreeNode root) {
         if (root == null) {
@@ -41,29 +42,28 @@ public class MinimumDepthOfBinaryTree {
                     treeStack.push(currentNode.getLeft());
                 } else if (currentNode.getRight() != null) {
                     treeStack.push(currentNode.getRight());
+                } else {
+                    minHeight = treeStack.size();
                 }
-                else
-                        {
-                            minHeight = treeStack.size();
-                        }
             } else if (currentNode.getLeft() == previousNode) {
                 if (currentNode.getRight() != null) {
                     treeStack.push(currentNode.getRight());
                 }
             } else {
                 treeStack.pop();
-              //  if( root.getData() == )
-               //  if(minHeight > treeStack.size())
-               // minHeight = treeStack.size();
-               // break;
+                //  if( root.getData() == )
+                //  if(minHeight > treeStack.size())
+                // minHeight = treeStack.size();
+                // break;
             }
             previousNode = currentNode;
-        //   if(minHeight > treeStack.size())
-          //     minHeight = treeStack.size();
+            //   if(minHeight > treeStack.size())
+            //     minHeight = treeStack.size();
         }
         return minHeight;
 
     }
+
     public static int findingHeightOfTreeWithQueue(BinaryTreeNode root) {
         if (root == null) {
             return 0;
@@ -75,9 +75,9 @@ public class MinimumDepthOfBinaryTree {
         while (!queue.isEmpty()) {
             BinaryTreeNode currentNode = queue.poll();
             if (currentNode != null) {
-             if (currentNode.getLeft() == null && currentNode.getRight() == null) {
+                if (currentNode.getLeft() == null && currentNode.getRight() == null) {
                     return count;
-               }
+                }
                 if (currentNode.getLeft() != null) {
                     queue.offer(currentNode.getLeft());
                 }
@@ -93,12 +93,13 @@ public class MinimumDepthOfBinaryTree {
         }
         return count;
     }
+
     public static void main(String args[]) {
-      BinaryTree tree = new BinaryTree();
+        BinaryTree tree = new BinaryTree();
         tree.insert(1);
         tree.insert(2);
-        
-      //  tree.insert(15);
+
+        //  tree.insert(15);
         System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeIterative(tree.getRoot()));
         System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
         System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
