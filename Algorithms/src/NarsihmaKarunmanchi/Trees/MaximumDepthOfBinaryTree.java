@@ -5,6 +5,8 @@
  */
 package NarsihmaKarunmanchi.Trees;
 
+import java.util.Stack;
+
 /**
  *
  * @author srivemul
@@ -28,7 +30,33 @@ public class MaximumDepthOfBinaryTree {
             return 0;
         }
         //Stack<BinaryTreeNode>  
-        return 1;
+        Stack<BinaryTreeNode> stack = new Stack<>();
+        stack.push(root);
+        int maxDepth = 0;
+        BinaryTreeNode prev = null;
+        while (!stack.isEmpty()) {
+            BinaryTreeNode current = stack.peek();
+            if (prev == null || prev.getLeft() == current
+                    || prev.getRight() == current) {
+                if (current.getLeft() != null) {
+                    stack.push(current.getLeft());
+                } else if (current.getRight() != null) {
+                    stack.push(current.getRight());
+                }
+            } else if (current.getLeft() == prev) {
+                if (current.getRight() != null) {
+                    stack.push(current.getRight());
+                }
+            } else {
+                stack.pop();
+            }
+            prev = current;
+            if (stack.size() > maxDepth) {
+                maxDepth = stack.size();
+            }
+        }
+        return maxDepth;
+
     }
 
     public static void main(String[] args) {
