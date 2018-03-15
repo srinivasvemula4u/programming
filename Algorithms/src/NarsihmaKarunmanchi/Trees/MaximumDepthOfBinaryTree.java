@@ -5,6 +5,8 @@
  */
 package NarsihmaKarunmanchi.Trees;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -57,6 +59,19 @@ public class MaximumDepthOfBinaryTree {
         }
         return maxDepth;
 
+    }
+
+    public static int maximumDepthOfBinaryTreeWithQueue(BinaryTreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        Queue<BinaryTreeNode> queue = new LinkedList<>();
+        int maxDepth = 0;
+        queue.offer(root);
+        queue.offer(null);
+        while (!queue.isEmpty()) {
+
+        }
     }
 
     public static void main(String[] args) {
