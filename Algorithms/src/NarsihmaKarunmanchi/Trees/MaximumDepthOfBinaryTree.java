@@ -73,10 +73,10 @@ public class MaximumDepthOfBinaryTree {
             BinaryTreeNode current = queue.poll();
             if (current != null) {
                 if (current.getLeft() != null) {
-                    queue.offer(root.getLeft());
+                    queue.offer(current.getLeft());
                 }
                 if (current.getRight() != null) {
-                    queue.offer(root.getRight());
+                    queue.offer(current.getRight());
                 }
             } else {
                 if (!queue.isEmpty()) {
@@ -107,7 +107,7 @@ public class MaximumDepthOfBinaryTree {
         //  tree.insert(15);
         System.out.println("Height of the tree is " + maximumDepthOfBinaryTree(tree.getRoot()));
         System.out.println("Height of the tree is " + maximumDepthOfBinaryTreeWithStack(tree.getRoot()));
-        //  System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
+        System.out.println("Height of the tree is " + maximumDepthOfBinaryTreeWithQueue(tree.getRoot()));
     }
 
 }
