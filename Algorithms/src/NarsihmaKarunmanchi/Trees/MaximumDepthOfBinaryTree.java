@@ -66,12 +66,26 @@ public class MaximumDepthOfBinaryTree {
             return 0;
         }
         Queue<BinaryTreeNode> queue = new LinkedList<>();
-        int maxDepth = 0;
+        int maxDepth = 1;
         queue.offer(root);
         queue.offer(null);
         while (!queue.isEmpty()) {
-
+            BinaryTreeNode current = queue.poll();
+            if (current != null) {
+                if (current.getLeft() != null) {
+                    queue.offer(root.getLeft());
+                }
+                if (current.getRight() != null) {
+                    queue.offer(root.getRight());
+                }
+            } else {
+                if (!queue.isEmpty()) {
+                    maxDepth++;
+                    queue.offer(null);
+                }
+            }
         }
+        return maxDepth;
     }
 
     public static void main(String[] args) {
