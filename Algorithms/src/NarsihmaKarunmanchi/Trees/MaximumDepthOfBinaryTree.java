@@ -23,6 +23,14 @@ public class MaximumDepthOfBinaryTree {
         return 1 + Math.max(maxLeft, maxRight);
     }
 
+    public static int maximumDepthOfBinaryTreeWithStack(BinaryTreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        //Stack<BinaryTreeNode>  
+        return 1;
+    }
+
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
         tree.insert(1);
