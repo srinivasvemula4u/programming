@@ -77,7 +77,7 @@ public class MaximumDepthOfBinaryTree {
         tree.insert(14);
         //  tree.insert(15);
         System.out.println("Height of the tree is " + maximumDepthOfBinaryTree(tree.getRoot()));
-        //   System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
+        System.out.println("Height of the tree is " + maximumDepthOfBinaryTreeWithStack(tree.getRoot()));
         //  System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
     }
 
