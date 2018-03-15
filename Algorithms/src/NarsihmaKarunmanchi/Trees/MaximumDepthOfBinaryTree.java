@@ -15,14 +15,16 @@ public class MaximumDepthOfBinaryTree {
      * @param args the command line arguments
      */
     public static int maximumDepthOfBinaryTree(BinaryTreeNode root) {
-        if(root == null)
+        if (root == null) {
             return 0;
+        }
         int maxLeft = maximumDepthOfBinaryTree(root.getLeft());
         int maxRight = maximumDepthOfBinaryTree(root.getRight());
-        return 1+Math.max(maxLeft, maxRight);
+        return 1 + Math.max(maxLeft, maxRight);
     }
+
     public static void main(String[] args) {
-       BinaryTree tree = new BinaryTree();
+        BinaryTree tree = new BinaryTree();
         tree.insert(1);
         tree.insert(2);
         tree.insert(3);
@@ -37,10 +39,10 @@ public class MaximumDepthOfBinaryTree {
         tree.insert(12);
         tree.insert(13);
         tree.insert(14);
-      //  tree.insert(15);
+        //  tree.insert(15);
         System.out.println("Height of the tree is " + maximumDepthOfBinaryTree(tree.getRoot()));
-     //   System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
-      //  System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
+        //   System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
+        //  System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
     }
-    
+
 }
