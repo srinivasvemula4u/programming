@@ -18,7 +18,8 @@ public class checkStructurallySameTree {
         if (root1 == null || root2 == null) {
             return false;
         }
-        return checkStructuallySameTree(root1.getLeft(), root2.getLeft()) && checkStructuallySameTree(root1.getRight(), root2.getRight());
+        return checkStructuallySameTree(root1.getLeft(), root2.getLeft())
+                && checkStructuallySameTree(root1.getRight(), root2.getRight());
     }
 
     public static void main(String args[]) {
