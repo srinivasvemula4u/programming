@@ -13,16 +13,17 @@ import java.util.Queue;
  * @author srivemul
  */
 public class NumberOfHalfNodesInBinaryTree {
-   public static int numberOfHalfNodesInBinaryTree(BinaryTreeNode root)
-   {
-           Queue<BinaryTreeNode> queue = new LinkedList<>();
+
+    public static int numberOfHalfNodesInBinaryTree(BinaryTreeNode root) {
+        Queue<BinaryTreeNode> queue = new LinkedList<>();
         queue.offer(root);
         //   queue.offer(null);
         int count = 0;
         while (!queue.isEmpty()) {
             BinaryTreeNode currentNode = queue.poll();
 
-            if ((currentNode.getLeft() != null && currentNode.getRight() == null)|| (currentNode.getLeft() == null && currentNode.getRight() != null)) {
+            if ((currentNode.getLeft() != null && currentNode.getRight() == null) || 
+                      (currentNode.getLeft() == null && currentNode.getRight() != null)) {
                 count++;
             }
             if (currentNode.getLeft() != null) {
@@ -33,7 +34,8 @@ public class NumberOfHalfNodesInBinaryTree {
             }
         }
         return count;
-   }
+    }
+
     public static void main(String args[]) {
         BinaryTree tree = new BinaryTree();
         tree.insert(1);
@@ -50,7 +52,7 @@ public class NumberOfHalfNodesInBinaryTree {
         tree.insert(12);
         tree.insert(13);
         //tree.insert(14);
-          //tree.insert(15);
+        //tree.insert(15);
         System.out.println("Number of LeafNodes in a tree is " + numberOfHalfNodesInBinaryTree(tree.getRoot()));
         //  System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
         // System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
