@@ -22,8 +22,8 @@ public class NumberOfHalfNodesInBinaryTree {
         while (!queue.isEmpty()) {
             BinaryTreeNode currentNode = queue.poll();
 
-            if ((currentNode.getLeft() != null && currentNode.getRight() == null) || 
-                      (currentNode.getLeft() == null && currentNode.getRight() != null)) {
+            if ((currentNode.getLeft() != null && currentNode.getRight() == null)
+                    || (currentNode.getLeft() == null && currentNode.getRight() != null)) {
                 count++;
             }
             if (currentNode.getLeft() != null) {
