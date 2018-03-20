@@ -10,15 +10,18 @@ package NarsihmaKarunmanchi.Trees;
  * @author srivemul
  */
 public class checkTwoTreesAreReflections {
-    public static boolean checkTwoTreesAreReflections(BinaryTreeNode root1,BinaryTreeNode root2)
-    {
-        if(root1 == null && root2 == null)
+
+    public static boolean checkTwoTreesAreReflections(BinaryTreeNode root1, BinaryTreeNode root2) {
+        if (root1 == null && root2 == null) {
             return true;
-        if(root1 == null || root2 == null)
+        }
+        if (root1 == null || root2 == null) {
             return false;
-        return checkTwoTreesAreReflections(root1.getLeft(),root2.getRight()) && checkTwoTreesAreReflections(root1.getRight(), root2.getLeft());
+        }
+        return checkTwoTreesAreReflections(root1.getLeft(), root2.getRight()) && checkTwoTreesAreReflections(root1.getRight(), root2.getLeft());
     }
-     public static void main(String args[]) {
+
+    public static void main(String args[]) {
         BinaryTree tree1 = new BinaryTree();
         BinaryTree tree2 = new BinaryTree();
         tree1.insert(1);
