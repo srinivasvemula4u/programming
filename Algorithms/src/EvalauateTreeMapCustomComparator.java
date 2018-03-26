@@ -29,10 +29,11 @@ public class EvalauateTreeMapCustomComparator {
         map.put(0.1, new ArrayList<String>());
         map.put(0.2, new ArrayList<String>());
         map.put(0.3, new ArrayList<String>());
-           // using for-each loop for iteration over Map.entrySet()
-        for (Map.Entry<Double,List<String> >entry : map.entrySet()) 
-            System.out.println("Key = " + entry.getKey() +
-                             ", Value = " + entry.getValue());
-            
+        // using for-each loop for iteration over Map.entrySet()
+        for (Map.Entry<Double, List<String>> entry : map.entrySet()) {
+            System.out.println("Key = " + entry.getKey()
+                    + ", Value = " + entry.getValue());
+        }
+
     }
 }
