@@ -51,7 +51,7 @@ public class NumberOfLeafNodesInBinaryTree {
         tree.insert(12);
         tree.insert(13);
         tree.insert(14);
-          tree.insert(15);
+        tree.insert(15);
         System.out.println("Number of LeafNodes in a tree is " + numberOfLeafNodesInBinaryTree(tree.getRoot()));
         //  System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
         // System.out.println("Height of the tree is " + minimumDepthOfBinaryTreeRecursive(tree.getRoot()));
