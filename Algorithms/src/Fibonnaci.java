@@ -20,8 +20,8 @@ public class Fibonnaci {
             return n;
         } else {
             return FibonnaciNaive(n - 1) + FibonnaciNaive(n - 2);
-         
-    }
+
+        }
     }
 
     public static long FibonnaciFast(int n) {
@@ -55,45 +55,47 @@ public class Fibonnaci {
         fiboArray[0] = BigInteger.valueOf(0);
         fiboArray[1] = BigInteger.valueOf(1);
         for (int i = 2; i <= n; i++) {
-           fiboArray[i] = fiboArray[i - 1].add(fiboArray[i - 2]);
-           //  fiboArray[i] = (fiboArray[i - 1].add(fiboArray[i - 2])).mod(BigInteger.TEN);
+            fiboArray[i] = fiboArray[i - 1].add(fiboArray[i - 2]);
+            //  fiboArray[i] = (fiboArray[i - 1].add(fiboArray[i - 2])).mod(BigInteger.TEN);
         }
         return fiboArray[n];
     }
+
     public static BigInteger FibonaaciBigFastLastDigit(int n) {
-         if (n <= 1) {
+        if (n <= 1) {
             return BigInteger.valueOf(n);
         }
-          BigInteger[] fiboArray = new BigInteger[n + 1];
-           fiboArray[0] = BigInteger.valueOf(0);
-           fiboArray[1] = BigInteger.valueOf(1);
-           for(int i = 2; i <=n; i++) {
-               fiboArray[i] = fiboArray[i-1].remainder(BigInteger.TEN).add(fiboArray[i-2].remainder(BigInteger.TEN)).remainder(BigInteger.TEN);
-           }
-            return fiboArray[n];
+        BigInteger[] fiboArray = new BigInteger[n + 1];
+        fiboArray[0] = BigInteger.valueOf(0);
+        fiboArray[1] = BigInteger.valueOf(1);
+        for (int i = 2; i <= n; i++) {
+            fiboArray[i] = fiboArray[i - 1].remainder(BigInteger.TEN).add(fiboArray[i - 2].remainder(BigInteger.TEN)).remainder(BigInteger.TEN);
+        }
+        return fiboArray[n];
     }
-    
-  private static long calc_fib_lin(int n) {
-      if (n <= 1)
-        return n;
 
-      int i = 1;
-      long a = 0, b = 1, c = a+b;
-      
-      while(i < n) {
-          c = ((a%10)+(b%10))%10;
-          a = b;
-          b = c;
-          i++;
-      }
-      
-      return c;
+    private static long calc_fib_lin(int n) {
+        if (n <= 1) {
+            return n;
+        }
+
+        int i = 1;
+        long a = 0, b = 1, c = a + b;
+
+        while (i < n) {
+            c = ((a % 10) + (b % 10)) % 10;
+            a = b;
+            b = c;
+            i++;
+        }
+
+        return c;
     }
-   public static int FibonaaciBigFastLastDigitMod10WithPiasnoPeriod(int n)
-   {
-       String str = "011235831459437077415617853819099875279651673033695493257291";
-       return Character.getNumericValue(str.charAt(n%str.length()));
-   }
+
+    public static int FibonaaciBigFastLastDigitMod10WithPiasnoPeriod(int n) {
+        String str = "011235831459437077415617853819099875279651673033695493257291";
+        return Character.getNumericValue(str.charAt(n % str.length()));
+    }
 
     public static void main(String args[]) {
         /*  Test Generator for long 
@@ -118,7 +120,7 @@ public class Fibonnaci {
          
     }*/
         // Test Generator for big numbers
-      /*  while (true) {
+        /*  while (true) {
             Random rGenerator = new Random();
             int randomInt = rGenerator.nextInt(40);
             System.out.println("Number is  " + randomInt);
@@ -133,26 +135,23 @@ public class Fibonnaci {
             }
 
         }*/
-                
-        
-        
-       Scanner in = new Scanner(System.in);
-     //   int num = in.nextInt();
-        
-       Random ran = new Random();
-       int num = ran.nextInt(10000000);
-      // BigInteger BI = new BigInteger(num,ran);
+
+        Scanner in = new Scanner(System.in);
+        //   int num = in.nextInt();
+
+        Random ran = new Random();
+        int num = ran.nextInt(10000000);
+        // BigInteger BI = new BigInteger(num,ran);
         System.out.println(num);
         //System.out.println(Integer.numberOfLeadingZeros(2));
         // System.out.println(Integer.numberOfTrailingZeros(2));
-        System.out.println(calc_fib_lin(num) );
-     //   System.out.println(FibonaaciBigFastLastDigit(num));
+        System.out.println(calc_fib_lin(num));
+        //   System.out.println(FibonaaciBigFastLastDigit(num));
         System.out.println(FibonaaciBigFastLastDigitMod10WithPiasnoPeriod(num));
-       //  System.out.println( FibonnaciFast(num));
-      //  System.out.println(FibonnaciNaive(num));
-     //System.out.println( FibonnaciNaive(10));
-   //  System.out.printl3n( FibonnaciFast(3));
-      
-      
+        //  System.out.println( FibonnaciFast(num));
+        //  System.out.println(FibonnaciNaive(num));
+        //System.out.println( FibonnaciNaive(10));
+        //  System.out.printl3n( FibonnaciFast(3));
+
     }
 }
