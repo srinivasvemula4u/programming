@@ -33,9 +33,9 @@ public class BuildBinaryTreeFromInOrderAndPreOrder {
         current.setRight(buildBinaryTree(preOrder,preStart+offSet-inStart+1,preEnd,inOrder,offSet+1,inEnd));
         return current;
     }
-    public static void  main(String args[]) {
-        int[] preOrder = {1,2,4,5,3};
-        int[] inOrder = {4,2,5,1,3};
+    public static void main(String args[]) {
+        int[] preOrder = {1, 2, 4, 5, 3};
+        int[] inOrder = {4, 2, 5, 1, 3};
         BinaryTreeNode root = buildBinaryTree(preOrder, inOrder);
         postOrderTraversal(root);
     }
