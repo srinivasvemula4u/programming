@@ -5,6 +5,8 @@
  */
 package NarsihmaKarunmanchi.Trees;
 
+import java.util.Stack;
+
 /**
  *
  * @author sv186040
@@ -29,4 +31,41 @@ package NarsihmaKarunmanchi.Trees;
  */
 public class ZigZagTraversalInGeeksForGeeksWay {
 
+    public static void zigZagTraversal(BinaryTreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<BinaryTreeNode> currentLevel = new Stack<>();
+        Stack<BinaryTreeNode> nextLevel = new Stack<>();
+        currentLevel.push(root);
+        boolean leftToRight = true;
+        while (!currentLevel.isEmpty()) {
+            BinaryTreeNode current = currentLevel.pop();
+            System.out.println(current.getData());
+            if (leftToRight) {
+                if (current.getLeft() != null) {
+                    nextLevel.push(current.getLeft());
+                }
+                if (current.getRight() != null) {
+                    nextLevel.push(current.getRight());
+                }
+            } else {
+                if (current.getRight() != null) {
+                    nextLevel.push(current.getRight());
+                }
+                if (current.getLeft() != null) {
+                    nextLevel.push(current.getLeft());
+                }
+            }
+            if (currentLevel.isEmpty()) {
+                leftToRight = !leftToRight;
+                Stack<BinaryTreeNode> temp = currentLevel;
+                currentLevel = nextLevel;
+                nextLevel = temp;
+            }
+        }
+    }
+    public static void main(String[] args) {
+        
+    }
 }
