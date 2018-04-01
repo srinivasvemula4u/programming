@@ -61,8 +61,8 @@ public class SiblingBinaryTreeNode {
     public void setNextSibiling(SiblingBinaryTreeNode nextSibiling) {
         this.nextSibiling = nextSibiling;
     }
-    public boolean isLeaf()
-    {
+
+    public boolean isLeaf() {
         return (getLeft() == null) && (getRight() == null);
     }
 
