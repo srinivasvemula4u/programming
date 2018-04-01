@@ -37,18 +37,20 @@ public class FillNextSibilingsInSibilingBinaryTree {
 
         }
     }
-    public void fillNextSibilingsRecursive(SiblingBinaryTreeNode root)
-    {
-        if(root == null)
+
+    public void fillNextSibilingsRecursive(SiblingBinaryTreeNode root) {
+        if (root == null) {
             return;
-        if(root.getLeft() != null)
+        }
+        if (root.getLeft() != null) {
             root.getLeft().setNextSibiling(root.getRight());
-        if(root.getRight() != null)
-        {
-            if(root.getNextSibiling() != null)
-               root.getRight().setNextSibiling(root.getNextSibiling().getLeft());
-            else 
+        }
+        if (root.getRight() != null) {
+            if (root.getNextSibiling() != null) {
+                root.getRight().setNextSibiling(root.getNextSibiling().getLeft());
+            } else {
                 root.getRight().setNextSibiling(null);
+            }
         }
         fillNextSibilings(root.getLeft());
         fillNextSibilings(root.getRight());
