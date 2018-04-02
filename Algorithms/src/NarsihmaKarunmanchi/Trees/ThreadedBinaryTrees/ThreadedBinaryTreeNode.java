@@ -23,19 +23,20 @@ empty tree. Note that right tag of dummy node is 1 and its right child points to
 
 left tag will be 0 if the tree is empty and its left pointer points to itself.
 left tag will be 1 if the tree is not empty and its left pointer points to tree.
-*/
-public class ThreadedBinaryTreeNode { 
+ */
+public class ThreadedBinaryTreeNode {
+
     private int LTag;
     private int data;
     private int RTag;
     private ThreadedBinaryTreeNode left;
     private ThreadedBinaryTreeNode right;
 
-    public ThreadedBinaryTreeNode(int data)
-    {
+    public ThreadedBinaryTreeNode(int data) {
         this.data = data;
-        
+
     }
+
     public int getLTag() {
         return LTag;
     }
@@ -75,5 +76,5 @@ public class ThreadedBinaryTreeNode {
     public void setRight(ThreadedBinaryTreeNode right) {
         this.right = right;
     }
-    
+
 }
