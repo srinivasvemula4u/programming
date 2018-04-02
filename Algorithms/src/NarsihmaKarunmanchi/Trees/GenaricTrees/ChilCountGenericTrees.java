@@ -10,12 +10,11 @@ package NarsihmaKarunmanchi.Trees.GenaricTrees;
  * @author srivemul
  */
 public class ChilCountGenericTrees {
-    public static int childCount(ChildFirstSiblingNextTreeNode root)
-    {
+
+    public static int childCount(ChildFirstSiblingNextTreeNode root) {
         int count = 0;
         ChildFirstSiblingNextTreeNode childNode = root.getFirstChild();
-        while(childNode != null)
-        {
+        while (childNode != null) {
             count++;
             childNode = childNode.getNextSibiling();
         }
