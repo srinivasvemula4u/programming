@@ -23,13 +23,14 @@ public class FindDepthInGenericTress {
                 currentDepth++;
                 j = P[j];
             }
-           if(maxDepth < currentDepth)
-               maxDepth = currentDepth;
+            if (maxDepth < currentDepth) {
+                maxDepth = currentDepth;
+            }
         }
         return maxDepth;
     }
-    public static void main(String args[])
-    {
-        System.out.println(findDepthInGenericTrees(new int[]{-1,0,1,6,6,0,0,2,7}));
+
+    public static void main(String args[]) {
+        System.out.println(findDepthInGenericTrees(new int[]{-1, 0, 1, 6, 6, 0, 0, 2, 7}));
     }
 }
