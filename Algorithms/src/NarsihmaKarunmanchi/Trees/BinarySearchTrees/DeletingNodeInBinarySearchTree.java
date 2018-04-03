@@ -25,7 +25,7 @@ public class DeletingNodeInBinarySearchTree {
             delete(root.getRight(), previous, data);
         } else if (root.getData() == data) {
             if (root.getLeft() != null && root.getRight() != null) {
-               // previous = root;
+                // previous = root;
                 BinarySearchTreeNode temp = FindingMaximumElementInBST.maximum(root.getLeft());
                 root.setData(temp.getData());
                 previous = root;
@@ -51,7 +51,8 @@ public class DeletingNodeInBinarySearchTree {
             }
         }
     }
-      public static void main(String args[]) {
+
+    public static void main(String args[]) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(3);
         tree.insert(1);
@@ -60,14 +61,13 @@ public class DeletingNodeInBinarySearchTree {
         tree.insert(5);
         tree.insert(4);
         tree.insert(6);
-           inOrderTraversal(tree.getRoot());
-           System.out.println();
-           delete(tree.getRoot(),null,3);
-              inOrderTraversal(tree.getRoot());
-              System.out.println();
-         
-      //  postOrderTraversalIterative(tree.getRoot());
-       // levelOrderTraversal(tree.getRoot());
+        inOrderTraversal(tree.getRoot());
+        System.out.println();
+        delete(tree.getRoot(), null, 3);
+        inOrderTraversal(tree.getRoot());
+        System.out.println();
+
+        //  postOrderTraversalIterative(tree.getRoot());
+        // levelOrderTraversal(tree.getRoot());
     }
 }
-
