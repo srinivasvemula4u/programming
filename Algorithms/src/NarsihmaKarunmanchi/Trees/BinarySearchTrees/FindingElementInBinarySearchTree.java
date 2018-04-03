@@ -39,7 +39,8 @@ public class FindingElementInBinarySearchTree {
         }
         return null;
     }
-      public static void main(String args[]) {
+
+    public static void main(String args[]) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(3);
         tree.insert(1);
@@ -48,8 +49,8 @@ public class FindingElementInBinarySearchTree {
         tree.insert(5);
         tree.insert(4);
         tree.insert(6);
-        BinarySearchTreeNode node = find(tree.getRoot(),7);
+        BinarySearchTreeNode node = find(tree.getRoot(), 7);
         System.out.println(node != null ? node.getData() : node);
-     
+
     }
 }
