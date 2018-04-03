@@ -10,23 +10,28 @@ package NarsihmaKarunmanchi.Trees.BinarySearchTrees;
  * @author srivemul
  */
 public class FindingMaximumElementInBST {
-    public static BinarySearchTreeNode maximum(BinarySearchTreeNode root)
-    {
-        if(root == null)
+
+    public static BinarySearchTreeNode maximum(BinarySearchTreeNode root) {
+        if (root == null) {
             return null;
-        if( root.getRight() == null)
+        }
+        if (root.getRight() == null) {
             return root;
+        }
         return maximum(root.getRight());
     }
-    public static BinarySearchTreeNode maximumIterative(BinarySearchTreeNode root)
-    {
-        if(root == null)
+
+    public static BinarySearchTreeNode maximumIterative(BinarySearchTreeNode root) {
+        if (root == null) {
             return null;
-        while(root.getRight() != null)
+        }
+        while (root.getRight() != null) {
             root = root.getRight();
+        }
         return root;
     }
-     public static void main(String args[]) {
+
+    public static void main(String args[]) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(3);
         tree.insert(1);
@@ -37,6 +42,6 @@ public class FindingMaximumElementInBST {
         tree.insert(6);
         BinarySearchTreeNode node = maximumIterative(tree.getRoot());
         System.out.println(node != null ? node.getData() : node);
-      
+
     }
 }
