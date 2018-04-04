@@ -19,7 +19,11 @@ public class InOrderSuccessorInBinarySearchTree {
 
         //return node;  
         if (findNode.getRight() == null) {
-            return stack.pop();
+            if (stack.isEmpty()) {
+                return null;
+            } else {
+                return stack.pop();
+            }
         } else if (findNode.getRight() != null) {
             BinarySearchTreeNode P = findNode.getRight();
             while (P.getLeft() != null) {
@@ -37,7 +41,6 @@ public class InOrderSuccessorInBinarySearchTree {
             return null;
         }
         if (root.getData() == findNode.getData()) {
-
             return root;
         } else if (root.getData() > findNode.getData()) {
             stack.push(root);
