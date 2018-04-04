@@ -91,7 +91,7 @@ public class FloorInBST {
         tree.insert(7);
         tree.insert(10);
         // BinarySearchTreeNode node = floorInBST(tree.getRoot(), 11);
-        BinarySearchTreeNode node = floorInBST2(tree.getRoot(), 11);
+        BinarySearchTreeNode node = floorInBST2(tree.getRoot(), 0);
         System.out.println(node != null ? node.getData() : node);
     }
 
