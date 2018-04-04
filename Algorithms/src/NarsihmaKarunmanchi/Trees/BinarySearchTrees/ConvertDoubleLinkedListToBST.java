@@ -14,36 +14,38 @@ import NarsihmaKarunmanchi.Trees.TreeTravels;
  * @author srivemul
  */
 public class ConvertDoubleLinkedListToBST {
+
     public static BinarySearchTreeNode sortedListToBST(DoubleLinkedListNode head) {
         int len = 0;
         DoubleLinkedListNode currentNode = head;
-        if(head == null)
+        if (head == null) {
             return null;
-        while(currentNode != null)
-        {
+        }
+        while (currentNode != null) {
             len++;
             currentNode = currentNode.getNext();
         }
-        return construct(head,0,len-1);
+        return construct(head, 0, len - 1);
     }
 
     private static BinarySearchTreeNode construct(DoubleLinkedListNode head, int start, int end) {
-        if(start > end)
+        if (start > end) {
             return null;
-        int mid = start + (end-start)/2;
-        BinarySearchTreeNode left = construct(head, start, mid-1);
+        }
+        int mid = start + (end - start) / 2;
+        BinarySearchTreeNode left = construct(head, start, mid - 1);
         BinarySearchTreeNode root = new BinarySearchTreeNode(head.getData());
         root.setLeft(left);
-        if(head.getNext() != null)
-        {
+        if (head.getNext() != null) {
             head.setData(head.getNext().getData());
             head.setNext(head.getNext().getNext());
         }
-       BinarySearchTreeNode right = construct(head, mid+1, end);
-       root.setRight(right);
-       return root;
+        BinarySearchTreeNode right = construct(head, mid + 1, end);
+        root.setRight(right);
+        return root;
     }
-     public static void main(String[] args) {
+
+    public static void main(String[] args) {
 
         DoubleLinkedList list = new DoubleLinkedList();
         list.insert(0, 0);
@@ -58,5 +60,5 @@ public class ConvertDoubleLinkedListToBST {
         BinarySearchTreeNode root = sortedListToBST(list.getHead());
         BinarySearchTree.inOrderTraversal(root);
         System.err.print("           ");
-     }
+    }
 }
