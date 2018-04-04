@@ -25,7 +25,7 @@ public class CeilingInBST {
             in the main function tree if data = -1 it should return 0. So we need to calculate minimum data in the tree.
          */
         BinarySearchTreeNode minimumDataNode = FindingMinimumElementInBST.minimum(root);
-        if (data < minimumDataNode.getData()) {
+        if (data <= minimumDataNode.getData()) {
             return minimumDataNode;
         }
         return ceilingInBSTUtils2(root, data);

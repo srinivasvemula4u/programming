@@ -24,7 +24,7 @@ public class FloorInBST {
             in the main function tree if data = 11 it should return 10. So we need to calculate maximum data in the tree.
          */
         BinarySearchTreeNode maximumDataNode = FindingMaximumElementInBST.maximum(root);  // If data is not in the range of tree nodes data
-        if (data > maximumDataNode.getData()) {
+        if (data >= maximumDataNode.getData()) {
             return maximumDataNode;
         }
         return floorInBSTUtil2(root, data);
