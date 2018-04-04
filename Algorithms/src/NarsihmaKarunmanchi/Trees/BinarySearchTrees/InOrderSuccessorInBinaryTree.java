@@ -23,7 +23,11 @@ public class InOrderSuccessorInBinaryTree {
             return null;
         }
         if (node.getRight() == null) {
-            return stack.pop();
+            if (!stack.isEmpty()) {
+                return stack.pop();
+            } else {
+                return null;
+            }
         } else if (node.getRight() != null) {
             BinaryTreeNode P = node.getRight();
             while (P.getLeft() != null) {
@@ -57,7 +61,7 @@ public class InOrderSuccessorInBinaryTree {
 
     public static void main(String args[]) {
         BinaryTree tree = new BinaryTree();
-        tree.insert(1);
+        /*  tree.insert(1);
         tree.insert(2);
         tree.insert(3);
         tree.insert(4);
@@ -69,8 +73,16 @@ public class InOrderSuccessorInBinaryTree {
         tree.insert(-1);
         tree.insert(-1);
         tree.insert(8);
-        tree.insert(9);
-        System.out.println(inorderSuccessorInBinaryTree(tree.getRoot(), tree.getRoot().getRight().getLeft()).getData());
+        tree.insert(9);*/
+        tree.insert(1);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(4);
+        tree.insert(5);
+        tree.insert(6);
+        tree.insert(7);
+        BinaryTreeNode node = inorderSuccessorInBinaryTree(tree.getRoot(), tree.getRoot().getRight().getRight());
+        System.out.println(node != null ? node.getData() : node);
     }
 
     private static void print(Stack<BinaryTreeNode> stack) {
