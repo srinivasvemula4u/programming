@@ -44,10 +44,10 @@ public class FloorInBST {
     reason is prevNode becoming null;   
      */
     private static BinarySearchTreeNode floorInBSTUtil(BinarySearchTreeNode root, BinarySearchTreeNode prevNode, int data) {
-        if (root == null ) {
+        if (root == null) {
             return null;
         }
-    
+
         BinarySearchTreeNode left = floorInBSTUtil(root.getLeft(), prevNode, data);
         if (left != null) {
             return left;
