@@ -13,35 +13,44 @@ import java.util.Queue;
  * @author srivemul
  */
 public class RangePrinterInBST {
-    public static void rangePrinterInBST(BinarySearchTreeNode root,int k1,int k2) {
-        if(root == null)
+
+    public static void rangePrinterInBST(BinarySearchTreeNode root, int k1, int k2) {
+        if (root == null) {
             return;
-        if(root.getData() >= k1) 
+        }
+        if (root.getData() >= k1) {
             rangePrinterInBST(root.getLeft(), k1, k2);
-        if(k1 <= root.getData() && k2 >= root.getData())
+        }
+        if (k1 <= root.getData() && k2 >= root.getData()) {
             System.out.println(root.getData());
-        if(root.getData() <= k2)
+        }
+        if (root.getData() <= k2) {
             rangePrinterInBST(root.getRight(), k1, k2);
-    }
-    public static void rangePrinterUsingLevelOrder(BinarySearchTreeNode root,int k1,int k2)
-    {
-        if(root == null)
-            return;
-        Queue<BinarySearchTreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        while(!queue.isEmpty())
-        {
-            BinarySearchTreeNode currentNode = queue.poll();
-            if(k1 <= currentNode.getData() && k2 >= currentNode.getData())
-                System.out.println(currentNode.getData());
-           // if(currentNode.getLeft() != null)
-           if(currentNode.getLeft() != null && currentNode.getData() >= k1)
-                queue.offer(currentNode.getLeft());
-            //if(currentNode.getRight() != null)
-              if(currentNode.getRight() != null && currentNode.getData() <= k2)
-                queue.offer(currentNode.getRight());
         }
     }
+
+    public static void rangePrinterUsingLevelOrder(BinarySearchTreeNode root, int k1, int k2) {
+        if (root == null) {
+            return;
+        }
+        Queue<BinarySearchTreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            BinarySearchTreeNode currentNode = queue.poll();
+            if (k1 <= currentNode.getData() && k2 >= currentNode.getData()) {
+                System.out.println(currentNode.getData());
+            }
+            // if(currentNode.getLeft() != null)
+            if (currentNode.getLeft() != null && currentNode.getData() >= k1) {
+                queue.offer(currentNode.getLeft());
+            }
+            //if(currentNode.getRight() != null)
+            if (currentNode.getRight() != null && currentNode.getData() <= k2) {
+                queue.offer(currentNode.getRight());
+            }
+        }
+    }
+
     public static void main(String args[]) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(8);
@@ -54,8 +63,8 @@ public class RangePrinterInBST {
         rangePrinterInBST(tree.getRoot(), 6, 11);
         //rangePrinterUsingLevelOrder(tree.getRoot(), 6, 11);
         //  BinarySearchTreeNode node = floorInBST(tree.getRoot(), 11);
-       // BinarySearchTreeNode node = floorInBST2(tree.getRoot(), 100);
+        // BinarySearchTreeNode node = floorInBST2(tree.getRoot(), 100);
         //System.out.println(node != null ? node.getData() : node);
     }
-    
+
 }
