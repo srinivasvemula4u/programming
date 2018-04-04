@@ -19,6 +19,13 @@ public class LCA {
         if (root.getData() == a.getData() || root.getData() == b.getData()) {
             return root;
         }
+        if (Math.max(a.getData(), b.getData()) < root.getData()) {
+            return lca(root.getLeft(), a, b);
+        } else if (Math.min(a.getData(), b.getData()) > root.getData()) {
+            return lca(root.getRight(), a, b);
+        } else {
+            return root;
+        }
 
     }
 }
