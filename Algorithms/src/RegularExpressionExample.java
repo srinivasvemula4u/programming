@@ -20,7 +20,7 @@ public class RegularExpressionExample {
     public static final String EXAMPLE_TEST = "https12e345d";
 
     public static void main(String[] args) throws java.lang.Exception {
-        Pattern pattern = Pattern.compile("^(?:http|https)([A-Fa-f0-9].*)$");
+        Pattern pattern = Pattern.compile("^(http|https)([A-Fa-f0-9].*)$");
         Pattern pattern1 = Pattern.compile("^(?:http|https)([A-Fa-f0-9]+)$");
         Matcher matcher = pattern.matcher(EXAMPLE_TEST);
         Matcher matcher1 = pattern1.matcher(EXAMPLE_TEST);
@@ -31,7 +31,7 @@ public class RegularExpressionExample {
             System.out.print("Start index: " + matcher.start());
             System.out.print(" End index: " + matcher.end() + " ");
             System.out.println(matcher.group());
-            System.out.println(matcher.group(0)+" "+matcher.group(1));
+            System.out.println(matcher.group(0)+" "+matcher.group(1) + " "+matcher.group(2));
         }
         
         

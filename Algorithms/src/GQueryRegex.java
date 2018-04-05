@@ -1,4 +1,5 @@
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /*
@@ -12,14 +13,21 @@ import java.util.regex.Pattern;
  */
 public class GQueryRegex {
 
-    public static final Pattern pat = Pattern.compile("\"([&#]?)([^&#]+)\"");
+    public static final Pattern pat = Pattern.compile("([&#]?)([^&#]+)");
 
     static final String parse(String str) {
+        Matcher match = pat.matcher(str);
+        while (match.find()) {
+            String d = match.group(1);
+            String st = match.group(2);
+            System.out.println("d = "+ d + " " +"st = "+ st);
+
+        }
         return null;
     }
 
     public static void main(String[] args) {
-
+         parse("#http:// &www.google.com/search?hl=en&q=%22Aster+Data+Systems%22");
     }
 
 }
