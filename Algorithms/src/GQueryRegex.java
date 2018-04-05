@@ -20,14 +20,14 @@ public class GQueryRegex {
         while (match.find()) {
             String d = match.group(1);
             String st = match.group(2);
-            System.out.println("d = "+ d + " " +"st = "+ st);
+            System.out.println("d = " + d + " " + "st = " + st);
 
         }
         return null;
     }
 
     public static void main(String[] args) {
-         parse("#http:// &www.google.com/search?hl=en&q=%22Aster+Data+Systems%22");
+        parse("#&http:// &www.google.com/search?hl=en&q=%22Aster+Data+Systems%22");
     }
 
 }
