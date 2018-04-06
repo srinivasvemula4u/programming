@@ -5,9 +5,6 @@
  */
 package NarsihmaKarunmanchi.Trees.AVLTrees;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  * AVLTreeNode
  *
@@ -15,7 +12,6 @@ import java.util.Queue;
  */
 public class AVLTree {
 
-   
     private AVLTreeNode root;
     // private AVLTreeNode parent;
 
@@ -80,14 +76,14 @@ public class AVLTree {
         return root;
 
     }
-     public static void inOrderTraversal(AVLTreeNode root) {
+
+    public static void inOrderTraversal(AVLTreeNode root) {
         if (root != null) {
             inOrderTraversal(root.getLeft());
             System.out.print(root.getData());
             inOrderTraversal(root.getRight());
         }
     }
-
 
     public static void main(String args[]) {
         AVLTree tree = new AVLTree();
@@ -98,7 +94,7 @@ public class AVLTree {
 //        tree.insert(0);
 //        tree.insert(-1);
 //        tree.insert(-2);
-       tree.insert(5);
+        tree.insert(5);
         tree.insert(4);
         tree.insert(2);
         inOrderTraversal(tree.getRoot());
@@ -106,8 +102,8 @@ public class AVLTree {
         System.out.println(tree.getRoot().getData());
         System.out.println(tree.getRoot().getLeft().getData());
         System.out.println(tree.getRoot().getLeft().getRight().getData());
-         System.out.println(tree.getRoot().getRight().getData());
-       // System.out.println(tree.getRoot().getRight().getRight().getLeft().getData());
+        System.out.println(tree.getRoot().getRight().getData());
+        // System.out.println(tree.getRoot().getRight().getRight().getLeft().getData());
         //  postOrderTraversalIterative(tree.getRoot());
         // levelOrderTraversal(tree.getRoot());
     }
