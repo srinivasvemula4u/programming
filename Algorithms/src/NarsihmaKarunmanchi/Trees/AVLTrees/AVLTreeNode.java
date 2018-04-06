@@ -10,10 +10,11 @@ package NarsihmaKarunmanchi.Trees.AVLTrees;
  * @author srivemul
  */
 public class AVLTreeNode {
-    private int data,height;
-    private AVLTreeNode left,right;
-    public AVLTreeNode(int data) 
-    {
+
+    private int data, height;
+    private AVLTreeNode left, right;
+
+    public AVLTreeNode(int data) {
         this.data = data;
         left = null;
         right = null;
@@ -51,5 +52,5 @@ public class AVLTreeNode {
     public void setRight(AVLTreeNode right) {
         this.right = right;
     }
-    
+
 }
