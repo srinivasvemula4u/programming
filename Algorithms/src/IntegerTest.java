@@ -8,7 +8,6 @@
  *
  * @author sv186040
  */
-
 public class IntegerTest {
 
     public static void main(String[] args) {
