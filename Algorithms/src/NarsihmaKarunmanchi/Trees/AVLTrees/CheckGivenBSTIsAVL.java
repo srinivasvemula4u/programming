@@ -29,13 +29,15 @@ public class CheckGivenBSTIsAVL {
         } else {
             left = getHeight(root.getLeft());
             right = getHeight(root.getRight());
-            if(left > right) 
-                return left+1;
-            else 
-                return right+1;
+            if (left > right) {
+                return left + 1;
+            } else {
+                return right + 1;
+            }
         }
     }
-      public static void main(String args[]) {
+
+    public static void main(String args[]) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(3);
         tree.insert(1);
@@ -44,7 +46,7 @@ public class CheckGivenBSTIsAVL {
         tree.insert(5);
         tree.insert(4);
         tree.insert(6);
-       // inOrderTraversal(tree.getRoot());
+        // inOrderTraversal(tree.getRoot());
         System.out.println(isAVL(tree.getRoot()));
         //  postOrderTraversalIterative(tree.getRoot());
         // levelOrderTraversal(tree.getRoot());
