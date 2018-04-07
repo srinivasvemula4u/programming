@@ -64,17 +64,23 @@ Method 2 (Use Self-Balancing BST)
 …..b) Search for arr[i] in the BST and delete it from the BST.
 …..c) Insert arr[i+k] into the BST.
 
-Time Complexity: Time Complexity of step 1 is O(kLogk). Time Complexity of steps 2(a), 2(b) and 2(c) is O(Logk).
-    Since steps 2(a), 2(b) and 2(c) are in a loop that runs n-k+1 times, time complexity of the complete algorithm is 
+Time Complexity: Time Complexity of step 1 is O(kLogk). Time Complexity of 
+    steps 2(a), 2(b) and 2(c) is O(Logk).
+    Since steps 2(a), 2(b) and 2(c) are in a loop that runs n-k+1 times, time 
+    complexity of the complete algorithm is 
     O(kLogk + (n-k+1)*Logk) which can also be written as O(nLogk).
      */
 
  /*
     Method 3 (A O(n) method: use Dequeue)
-We create a Dequeue, Qi of capacity k, that stores only useful elements of current window of k elements. 
-    An element is useful if it is in current window and is greater than all other elements on left side of it in 
-    current window. We process all array elements one by one and maintain Qi to contain useful elements of current 
-    window and these useful elements are maintained in sorted order. The element at front of the Qi is the largest and 
+    We create a Dequeue, Qi of capacity k, that stores only useful 
+    elements of current window of k elements. 
+    An element is useful if it is in current window and is greater than 
+    all other elements on left side of it in 
+    current window. We process all array elements one by one and maintain Qi 
+    to contain useful elements of current 
+    window and these useful elements are maintained in sorted order. 
+    The element at front of the Qi is the largest and 
     element at rear of Qi is the smallest of current window. 
      */
     private static void slidingWindowMaximum2(int[] arr, int k) {
