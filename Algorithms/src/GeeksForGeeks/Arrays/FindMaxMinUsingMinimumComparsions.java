@@ -81,13 +81,6 @@ public class FindMaxMinUsingMinimumComparsions {
         } else {
             minMax.min = mmr.min;
         }
-
-        /* compare maximums of two parts*/
-        if (mml.max > mmr.max) {
-            minMax.max = mml.max;
-        } else {
-            minMax.max = mmr.max;
-        }
         return minMax;
     }
 
