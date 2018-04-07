@@ -12,6 +12,13 @@ import java.util.regex.Pattern;
  *
  * @author sv186040
  */
+/* %([2-7][0-9a-fA-F])
+|%([cdCD][0-9a-fA-F])%([89abAB][0-9a-fA-F])
+|%([eE][0-9a-fA-F])%([89abAB][0-9a-fA-F])%([89abAB][0-9a-fA-F])
+|%([fF][0-7])%([89abAB][0-9a-fA-F])%([89abAB][0-9a-fA-F])%([89abAB][0-9a-fA-F])
+|%([fF][8aAbB])%([89abAB][0-9a-fA-F])%([89abAB][0-9a-fA-F])%([89abAB][0-9a-fA-F])%([89abAB][0-9a-fA-F])
+|%([fF][cCdD])%([89abAB][0-9a-fA-F])%([89abAB][0-9a-fA-F])%([89abAB][0-9a-fA-F])%([89abAB][0-9a-fA-F])%([89abAB][0-9a-fA-F])
+|%(09) */
 public class RegularExpression {
 
     public static void main(String[] args) {
