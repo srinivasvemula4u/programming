@@ -116,11 +116,11 @@ public class FindMaxMinUsingMinimumComparsions {
                     min = arr[i + 1];
                 }
             } else {
-                 if (arr[i + 1] > max) {
-                max = arr[i + 1];
-               } else if (arr[i] < min) {
-                min = arr[i];
-            }
+                if (arr[i + 1] > max) {
+                    max = arr[i + 1];
+                } else if (arr[i] < min) {
+                    min = arr[i];
+                }
             }
             i += 2;
         }
