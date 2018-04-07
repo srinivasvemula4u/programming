@@ -106,7 +106,6 @@ We create a Dequeue, Qi of capacity k, that stores only useful elements of curre
     we can observe that every element of array is added and removed at most once. So there are total 2n operations.
 Auxiliary Space: O(k)
      */
-
     public static void main(String[] args) {
         int[] arr = {8, 5, 10, 7, 9, 4, 15, 12, 90, 13};
         slidingWindowMaximum(arr, 4);
