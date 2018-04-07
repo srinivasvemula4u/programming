@@ -10,14 +10,15 @@ package NarsihmaKarunmanchi.PriorityQueues;
  * @author srivemul
  */
 public class FindMaxMinHeap {
+
     public static int MaxInMinHeap(Heap heap) {
-          int max = Integer.MIN_VALUE;
-          for(int i= (heap.count /2 + 1); i < heap.count; i++) {
-              if(heap.array[i] > max)
-                  max = heap.array[i];
-          }
-          return max;
+        int max = Integer.MIN_VALUE;
+        for (int i = (heap.count / 2 + 1); i < heap.count; i++) {
+            if (heap.array[i] > max) {
+                max = heap.array[i];
+            }
+        }
+        return max;
     }
-  
-    
+
 }
