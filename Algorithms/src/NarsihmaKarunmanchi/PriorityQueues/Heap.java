@@ -22,7 +22,8 @@ public class Heap {
         array = new int[capacity];
         count = 0;
     }
-      public Heap(int capacity, int heap_type , int[] arr) {
+
+    public Heap(int capacity, int heap_type, int[] arr) {
         this.capacity = capacity;
         this.heap_type = heap_type;
         this.array = arr;
@@ -165,7 +166,7 @@ public class Heap {
         for (int i = 0; i < this.capacity; i++) {
             this.array[i] = array_old[i];
         }
-        
+
         array_old = null;
     }
 
@@ -183,17 +184,19 @@ public class Heap {
             this.array[i] = A[i];
         }
         this.count = A.length;
-        for (int i = (n-1) / 2; i >= 0; i--) {
+        for (int i = (n - 1) / 2; i >= 0; i--) {
             percolateDown(i);
         }
     }
-      public void buildHeap() {   
+
+    public void buildHeap() {
         this.count = array.length;
-        for (int i = (count-1) / 2; i >= 0; i--) {
+        for (int i = (count - 1) / 2; i >= 0; i--) {
             percolateDown(i);
         }
     }
-     public void buildHeapForMinHeap(int[] A, int n) {
+
+    public void buildHeapForMinHeap(int[] A, int n) {
 
         if (n > this.capacity) {
             resizeHeap();
@@ -202,7 +205,7 @@ public class Heap {
             this.array[i] = A[i];
         }
         this.count = A.length;
-        for (int i = (n-1) / 2; i >= 0; i--) {
+        for (int i = (n - 1) / 2; i >= 0; i--) {
             percolateDownForMinHeap(i);
         }
     }
@@ -210,14 +213,14 @@ public class Heap {
     public void heapSort(int[] A, int n) {
         //   Heap heap = new Heap(n, 0);
         int old_size, i, temp;
-       // buildHeap(A, n);
-       buildHeap();
+        // buildHeap(A, n);
+        buildHeap();
         old_size = this.count;
         for (i = n - 1; i >= 0; i--) {
             temp = this.array[0];
             this.array[0] = this.array[i]; // heap.array[0] = heap.arry[heap.count-1; heap.count--;
             this.array[i] = temp;
-            this.count --;
+            this.count--;
             percolateDown(0);
         }
         this.count = old_size;
@@ -225,9 +228,9 @@ public class Heap {
 
     public static void main(String args[]) {
         int[] arr = {2, 6, 4, 3, 1, 5};
-        Heap heap = new Heap(arr.length, 0,arr);
+        Heap heap = new Heap(arr.length, 0, arr);
         heap.heapSort(arr, arr.length);
-      //  System.out.println();
+        //  System.out.println();
         for (int val : arr) {
             System.out.print(" " + val);
         }
