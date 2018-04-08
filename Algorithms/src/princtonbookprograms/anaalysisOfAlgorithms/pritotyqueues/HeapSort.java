@@ -19,9 +19,8 @@ public class HeapSort {
             A[i+1] = a[i];
         }
        // int templen = N;
-        for(int k = N/2; k >=1; k--)
-        {
-            sink(A,k,N);
+        for (int k = N / 2; k >= 1; k--) {
+            sink(A, k, N);
         }
       // print(A);
         while( N > 1)
