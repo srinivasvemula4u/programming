@@ -110,10 +110,10 @@ class TopologicalGraph {
 }
 
 public class TopologicalSort {
- public static void main(String args[])
-    {
+
+    public static void main(String args[]) {
         // Create a graph given in the above diagram
-        TopologicalGraph g=new TopologicalGraph(6);
+        TopologicalGraph g = new TopologicalGraph(6);
         g.addEdge(5, 2);
         g.addEdge(5, 0);
         g.addEdge(4, 0);
@@ -122,6 +122,6 @@ public class TopologicalSort {
         g.addEdge(3, 1);
         System.out.println("Following is a Topological Sort");
         g.toplogicalSort();
- 
+
     }
 }
