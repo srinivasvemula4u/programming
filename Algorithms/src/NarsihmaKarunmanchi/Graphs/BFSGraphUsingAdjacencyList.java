@@ -45,7 +45,6 @@ class BfsGraph {
                     visited[n] = true;
                     queue.offer(n);
                 }
-
             }
         }
     }
