@@ -45,33 +45,33 @@ public class WightedQuickUnionQuickFind {
         }
         return p;
     }
-    public void union(int p,int q) {
+
+    public void union(int p, int q) {
         int pRoot = find(p);
         int qRoot = find(q);
-        if(pRoot == qRoot)
+        if (pRoot == qRoot) {
             return;
-        if(size[pRoot] < size[qRoot])
-        {
-            data[pRoot] = qRoot;
-            size[qRoot] += size[pRoot];  
         }
-        else
-        {
+        if (size[pRoot] < size[qRoot]) {
+            data[pRoot] = qRoot;
+            size[qRoot] += size[pRoot];
+        } else {
             data[qRoot] = pRoot;
             size[pRoot] += size[qRoot];
         }
         count--;
     }
+
     public static void main(String[] args) { // Solve dynamic connectivity problem on StdIn.
         int N = 10; // Read number of sites.
         WightedQuickUnionQuickFind wf = new WightedQuickUnionQuickFind(N); // Initialize N components.
         wf.union(2, 4);
-       wf.union(8, 0);
-       wf.union(2, 9);
+        wf.union(8, 0);
+        wf.union(2, 9);
 //        uf.union(0, 6);
 //        uf.union(8, 7);
 //        uf.union(3, 9);
-        System.out.println(wf.isConnected(0,1));
+        System.out.println(wf.isConnected(0, 1));
 
         //System.out.println(qfUF.isConnected(2, 3));
         wf.printComponents();
