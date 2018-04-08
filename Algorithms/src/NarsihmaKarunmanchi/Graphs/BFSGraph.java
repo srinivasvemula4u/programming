@@ -17,7 +17,7 @@ import java.util.Queue;
 2) Finding all nodes within one connected component
 3) Finding shortest path between two nodes
 4) Testing a graph for bipartiness
-*/
+ */
 class BFSVertex {
 
     private char label;
@@ -82,32 +82,35 @@ public class BFSGraph {
             System.out.println();
         }
     }
+
     public void bfsGraph() {
-         vertexList[0].setVisited(true);
+        vertexList[0].setVisited(true);
         displayVertex(vertexList[0]);
         queue.offer(0);
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             int v1 = queue.poll();
             int v2;
-            while((v2 = getAdjUnvisitedVertex(v1)) != -1) {
+            while ((v2 = getAdjUnvisitedVertex(v1)) != -1) {
                 vertexList[v2].setVisited(true);
                 displayVertex(vertexList[v2]);
                 queue.offer(v2);
-                
+
             }
-                    
+
         }
     }
 
     private int getAdjUnvisitedVertex(int v1) {
-      for(int i=0; i < vertexCount; i++) {
-          if(adjMatrix[v1][i] == 1 && vertexList[i].isVisited() == false)
-              return i;
-          
-      }
-      return -1;
+        for (int i = 0; i < vertexCount; i++) {
+            if (adjMatrix[v1][i] == 1 && vertexList[i].isVisited() == false) {
+                return i;
+            }
+
+        }
+        return -1;
     }
-     public static void main(String args[]) {
+
+    public static void main(String args[]) {
         BFSGraph graph = new BFSGraph();
         graph.addVertex('A');
         graph.addVertex('B');
