@@ -43,7 +43,8 @@ class DijkstraGraph {
     public void addEdge(int v, int w, int weight) {
         adjList[v].add(w);
         adjMatrix[v][w] = weight;
-    } 
+    }
+
     public void printAdjMatrix() {
         for (int i = 0; i < numVertices; i++) {
             for (int j = 0; j < numVertices; j++) {
@@ -102,13 +103,12 @@ public class DijkstraShortestPathAlgorithm {
 //        g.addEdge(2, 1, 2);
 //        g.addEdge(2, 3, 4);
 //        g.addEdge(3, 4, 4);
-       
+
         //g.DFS2();
 //        
 //                                  {{0, 4, 0, 0, 0, 0, 0, 8, 0},
 //                                  {4, 0, 8, 0, 0, 0, 0, 11, 0},
 //                                  {0, 8, 0, 7, 0, 4, 0, 0, 2},
-
 //                                  {0, 0, 7, 0, 9, 14, 0, 0, 0},
 //                                  {0, 0, 0, 9, 0, 10, 0, 0, 0},
 //                                  {0, 0, 4, 0, 10, 0, 2, 0, 0},
@@ -144,19 +144,17 @@ public class DijkstraShortestPathAlgorithm {
 //        g.addEdge(5, 2, 4);
 //        g.addEdge(5, 4, 10);
 //        g.addEdge(5, 6, 2);
-
-
         g.addEdge(0, 1, 10);
         g.addEdge(0, 3, 3);
         g.addEdge(1, 2, 2);
         g.addEdge(1, 4, -3);
         g.addEdge(2, 1, -1);
-         g.addEdge(3, 4, 3);
-          g.addEdge(4, 2, 4);
-           g.addEdge(4, 5, 1);
-            g.addEdge(5, 2, 4);
+        g.addEdge(3, 4, 3);
+        g.addEdge(4, 2, 4);
+        g.addEdge(4, 5, 1);
+        g.addEdge(5, 2, 4);
 
         g.printAdjMatrix();
-         new DijkstraShortestPathAlgorithm().weightedShortestPath(g, 0);
+        new DijkstraShortestPathAlgorithm().weightedShortestPath(g, 0);
     }
 }
