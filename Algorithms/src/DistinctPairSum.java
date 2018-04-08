@@ -22,7 +22,8 @@ public class DistinctPairSum {
                 map.put(arr[i], y);
             } else {
                 int z = map.get(y);
-                map.put(z, -1);
+                // map.put(z, -1);
+                map.remove(z);
                 if (y + z == k) {
                     count++;
                 }
@@ -32,6 +33,6 @@ public class DistinctPairSum {
     }
 
     public static void main(String[] args) {
-        System.out.println(getDistinctPairSum(new int[]{1, 46, 1, 21, 26, 21}, 47));
+        System.out.println(getDistinctPairSum(new int[]{1, 46, 1}, 47));
     }
 }
