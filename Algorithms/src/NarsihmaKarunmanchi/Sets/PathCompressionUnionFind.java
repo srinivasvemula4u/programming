@@ -69,9 +69,9 @@ public class PathCompressionUnionFind {
         pc.union(2, 4);
         pc.union(8, 0);
         pc.union(2, 9);
-//        uf.union(0, 6);
-//        uf.union(8, 7);
-//        uf.union(3, 9);
+//      uf.union(0, 6);
+//      uf.union(8, 7);
+//      uf.union(3, 9);
         //   System.out.println(pc.isConnected(0,1));
         System.out.println(pc.find(9));
         //System.out.println(qfUF.isConnected(2, 3));
