@@ -7,7 +7,7 @@ package NarsihmaKarunmanchi.Sets;
 
 /**
  *
- * 
+ *
  */
 public class QuickUnion {
 
@@ -37,36 +37,41 @@ public class QuickUnion {
     }
 
     public int find(int p) {
-       while(p != data[p])
-           p = data[p];
-       return p;
+        while (p != data[p]) {
+            p = data[p];
+        }
+        return p;
     }
-     public int fastfind(int p) {
-      if(p != data[p])
-         data[p] = fastfind(data[p]);
-       return data[p];
+
+    public int fastfind(int p) {
+        if (p != data[p]) {
+            data[p] = fastfind(data[p]);
+        }
+        return data[p];
     }
-    public void union(int p, int q)
-    {
+
+    public void union(int p, int q) {
         int pid = find(p);
         int qid = find(q);
-        if( pid == qid)
-            return ;
+        if (pid == qid) {
+            return;
+        }
         data[pid] = qid;
     }
-     public static void main(String[] args) { // Solve dynamic connectivity problem on StdIn.
+
+    public static void main(String[] args) { // Solve dynamic connectivity problem on StdIn.
         int N = 10; // Read number of sites.
         QuickUnion uf = new QuickUnion(N); // Initialize N components.
         uf.union(2, 4);
-     
-       uf.union(2, 9);
-       uf.union(9, 8);
-         uf.union(8, 0);
+
+        uf.union(2, 9);
+        uf.union(9, 8);
+        uf.union(8, 0);
 //        uf.union(0, 6);
 //        uf.union(8, 7);
 //        uf.union(3, 9);
-        System.out.println(uf.isConnected(0,1));
-      
+        System.out.println(uf.isConnected(0, 1));
+
         //System.out.println(qfUF.isConnected(2, 3));
         uf.printComponents();
         System.out.println(uf.fastfind(2));
@@ -74,5 +79,5 @@ public class QuickUnion {
 //        uf.union(0, 1);
 //         uf.printComponents();
     }
-     
+
 }
