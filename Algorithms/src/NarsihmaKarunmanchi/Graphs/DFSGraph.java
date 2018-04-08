@@ -19,8 +19,8 @@ Appliction of DFS
 3) Finding atriculation points(cut vertices) of the graph
 4) Finding strongly connected components
 5) Solving puzzles such as mazes
-*/
- class DFSVertex {
+ */
+class DFSVertex {
 
     private char label;
     private boolean visited;
