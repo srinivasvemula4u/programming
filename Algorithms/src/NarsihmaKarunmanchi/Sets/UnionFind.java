@@ -7,7 +7,7 @@ package NarsihmaKarunmanchi.Sets;
 
 /**
  *
- * 
+ *
  */
 public class UnionFind {
 
@@ -53,20 +53,21 @@ public class UnionFind {
             System.out.println("Object = " + i + "     " + "id =" + data[i]);
         }
     }
-     public static void main(String[] args) { // Solve dynamic connectivity problem on StdIn.
+
+    public static void main(String[] args) { // Solve dynamic connectivity problem on StdIn.
         int N = 10; // Read number of sites.
         UnionFind uf = new UnionFind(N); // Initialize N components.
         uf.union(2, 4);
-       uf.union(8, 0);
-      uf.union(2, 9);
+        uf.union(8, 0);
+        uf.union(2, 9);
 //        uf.union(0, 6);
 //        uf.union(8, 7);
 //        uf.union(3, 9);
-        System.out.println(uf.isConnected(0,1));
+        System.out.println(uf.isConnected(0, 1));
 
         //System.out.println(qfUF.isConnected(2, 3));
         uf.printComponents();
 //        uf.union(0, 1);
 //         uf.p
-}
+    }
 }
