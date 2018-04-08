@@ -120,6 +120,7 @@ public class TopologicalSort {
         g.addEdge(4, 1);
         g.addEdge(2, 3);
         g.addEdge(3, 1);
+
         System.out.println("Following is a Topological Sort");
         g.toplogicalSort();
 
