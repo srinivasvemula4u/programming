@@ -69,10 +69,6 @@ public class ObstaclesForTheQueen {
             String[] split = str.split(",");
             int r = Integer.parseInt(split[0].substring(1));
             int c = Integer.parseInt(split[1].substring(0, split[1].length() - 1));
-            //System.out.println(r + " " + c);
-            //System.out.println(str);
-            //int r = 0;
-            // int c =0;
             int totalQueenMoves = findTotalMoves(n, r, c);
             System.out.println((n * n) - totalQueenMoves);
         }
