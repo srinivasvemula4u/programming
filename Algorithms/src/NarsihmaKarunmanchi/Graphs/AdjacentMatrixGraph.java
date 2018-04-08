@@ -35,7 +35,7 @@ public class AdjacentMatrixGraph {
 
     public boolean isEdge(int i, int j) {
         if (i >= 0 && i < vertexCount && j >= 0 && j < vertexCount) {
-            if (adjMatrix[i][j] == 1) {
+            if ((adjMatrix[i][j] == 1) || (adjMatrix[j][i] == 1)) {
                 return true;
             } else {
                 return false;
