@@ -7,7 +7,8 @@ package NarsihmaKarunmanchi.Graphs;
 
 /**
  *
- * @author srivemul We have discussed Kruskal’s algorithm for Minimum Spanning
+ * @author srivemul 
+ * We have discussed Kruskal’s algorithm for Minimum Spanning
  * Tree. Like Kruskal’s algorithm, Prim’s algorithm is also a Greedy algorithm.
  * It starts with an empty spanning tree. The idea is to maintain two sets of
  * vertices. The first set contains the vertices already included in the MST,
