@@ -101,7 +101,7 @@ public class BellmanfordGeeksForGeeksAlgorithm {
 
     public static void main(String[] args) {
         int V = 5;  // Number of vertices in graph
-        int E = 9;  // Number of edges in graph
+        int E = 8;  // Number of edges in graph
 
         BellmanfordGeeksForGeeksAlgorithm graph = new BellmanfordGeeksForGeeksAlgorithm(V, E);
 
@@ -146,9 +146,9 @@ public class BellmanfordGeeksForGeeksAlgorithm {
         graph.edges[7].weight = -3;
 
         // Edge to cause cycle
-        graph.edges[8].src = 1;
-        graph.edges[8].dest = 0;
-        graph.edges[8].weight = 0;
+        //graph.edges[8].src = 1;
+        //graph.edges[8].dest = 0;
+       // graph.edges[8].weight = 0;
 
         graph.bellmanFordAlgo(0);
     }
