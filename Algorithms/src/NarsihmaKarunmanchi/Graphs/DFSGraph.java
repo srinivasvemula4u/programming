@@ -51,20 +51,20 @@ class DFSVertex {
 public class DFSGraph {
 
     private final int maxVertices = 20;
-    private DFSVertex[] vertexList;
+    private DFSVertex[] visitedVertexList;
     private int[][] adjMatrix;
     private int vertexCount;
     private Stack<Integer> stack;
 
     public DFSGraph() {
-        vertexList = new DFSVertex[maxVertices];
+        visitedVertexList = new DFSVertex[maxVertices];
         adjMatrix = new int[maxVertices][maxVertices];
         vertexCount = 0;
         stack = new Stack<>();
     }
 
     public void addVertex(char label) {
-        vertexList[vertexCount++] = new DFSVertex(label);
+        visitedVertexList[vertexCount++] = new DFSVertex(label);
     }
 
     public void addEdge(int i, int j) {
@@ -77,27 +77,27 @@ public class DFSGraph {
     }
 
     public void dfsGraph() {
-        vertexList[0].setVisited(true);
-        displayVertex(vertexList[0]);
+        visitedVertexList[0].setVisited(true);
+        displayVertex(visitedVertexList[0]);
         stack.push(0);
         while (!stack.isEmpty()) {
             int v = getAdjUnvisitedVertex(stack.peek());
             if (v == -1) {
                 stack.pop();
             } else {
-                vertexList[v].setVisited(true);
-                displayVertex(vertexList[v]);
+                visitedVertexList[v].setVisited(true);
+                displayVertex(visitedVertexList[v]);
                 stack.push(v);
             }
         }
         for (int j = 0; j < vertexCount; j++) {
-            vertexList[j].setVisited(false);
+            visitedVertexList[j].setVisited(false);
         }
     }
 
     private int getAdjUnvisitedVertex(int v) {
         for (int i = 0; i < vertexCount; i++) {
-            if (adjMatrix[v][i] == 1 && vertexList[i].isVisited() == false) {
+            if (adjMatrix[v][i] == 1 && visitedVertexList[i].isVisited() == false) {
                 return i;
             }
         }
