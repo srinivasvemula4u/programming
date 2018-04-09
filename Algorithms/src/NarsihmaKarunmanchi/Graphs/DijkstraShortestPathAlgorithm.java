@@ -87,7 +87,6 @@ public class DijkstraShortestPathAlgorithm {
                     queue.offer(nextNode);
                 }
             }
-
         }
         System.out.println("node" + " " + "distance" + " " + "path(From Prvious Node)");
         for (int i = 0; i < G.getNumVertices(); i++) {
