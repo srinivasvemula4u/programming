@@ -119,8 +119,8 @@ public class KruskalAlgorithm {
         while (e < V - 1) {
             // Step 2: Pick the smallest edge. And increment the index
             // for next iteration
-            Edge next_edge = new Edge();
-            next_edge = edge[i++];
+            //Edge next_edge = new Edge();
+            Edge next_edge = edge[i++];
 
             int x = find(subsets, next_edge.src);
             int y = find(subsets, next_edge.dest);
