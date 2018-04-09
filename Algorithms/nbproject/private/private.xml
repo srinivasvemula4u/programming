@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/NarsihmaKarunmanchi/Graphs/TopologicalSortUsingDFS.java</file>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/LeetCode/Problems/Easy/TwoSumIIInputArrayIsSorted.java</file>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/NarsihmaKarunmanchi/Graphs/DFSGraphUsingAdjacencyList.java</file>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/NarsihmaKarunmanchi/Graphs/UnWeightedShortestPathAlgorithm.java</file>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/NarsihmaKarunmanchi/Graphs/TopologicalSort.java</file>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/NarsihmaKarunmanchi/Graphs/DijkstraGeeksforGeeksSolution.java</file>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/LeetCode/Problems/Easy/ArrangingCoins.java</file>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/LeetCode/Problems/Easy/ArrayPartitionI.java</file>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/LeetCode/Problems/Easy/TwoSum.java</file>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/NarsihmaKarunmanchi/Graphs/BellmanfordGeeksForGeeksAlgorithm.java</file>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/NarsihmaKarunmanchi/Graphs/DijkstraShortestPathAlgorithm.java</file>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/NarsihmaKarunmanchi/Graphs/PrimsAlgorithm.java</file>
+            <file>file:/C:/My%20Work/prep/programming/Algorithms/src/NarsihmaKarunmanchi/Graphs/KruskalAlgorithm.java</file>
+        </group>
     </open-files>
 </project-private>

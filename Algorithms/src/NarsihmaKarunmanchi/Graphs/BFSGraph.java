@@ -49,20 +49,20 @@ class BFSVertex {
 public class BFSGraph {
 
     private final int maxVertices = 20;
-    private BFSVertex[] vertexList;
+    private BFSVertex[] visitedVertextList;
     private int[][] adjMatrix;
     private int vertexCount;
     private Queue<Integer> queue;
 
     public BFSGraph() {
-        vertexList = new BFSVertex[maxVertices];
+        visitedVertextList = new BFSVertex[maxVertices];
         adjMatrix = new int[maxVertices][maxVertices];
         vertexCount = 0;
         queue = new LinkedList<>();
     }
 
     public void addVertex(char label) {
-        vertexList[vertexCount++] = new BFSVertex(label);
+        visitedVertextList[vertexCount++] = new BFSVertex(label);
     }
 
     public void addEdge(int i, int j) {
@@ -84,15 +84,15 @@ public class BFSGraph {
     }
 
     public void bfsGraph() {
-        vertexList[0].setVisited(true);
-        displayVertex(vertexList[0]);
+        visitedVertextList[0].setVisited(true);
+        displayVertex(visitedVertextList[0]);
         queue.offer(0);
         while (!queue.isEmpty()) {
             int v1 = queue.poll();
             int v2;
             while ((v2 = getAdjUnvisitedVertex(v1)) != -1) {
-                vertexList[v2].setVisited(true);
-                displayVertex(vertexList[v2]);
+                visitedVertextList[v2].setVisited(true);
+                displayVertex(visitedVertextList[v2]);
                 queue.offer(v2);
 
             }
@@ -102,7 +102,7 @@ public class BFSGraph {
 
     private int getAdjUnvisitedVertex(int v1) {
         for (int i = 0; i < vertexCount; i++) {
-            if (adjMatrix[v1][i] == 1 && vertexList[i].isVisited() == false) {
+            if (adjMatrix[v1][i] == 1 && visitedVertextList[i].isVisited() == false) {
                 return i;
             }
 
@@ -125,5 +125,4 @@ public class BFSGraph {
         graph.printAdjMatrix();
         graph.bfsGraph();
     }
-
 }
