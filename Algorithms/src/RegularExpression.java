@@ -23,7 +23,7 @@ public class RegularExpression {
 
     public static void main(String[] args) {
         Pattern pattern = Pattern.compile("%([cdCD][0-9a-fA-F])%([89abAB][0-9a-fA-F])");
-        Matcher matcher = pattern.matcher("%c9%8A");
+        Matcher matcher = pattern.matcher("%C3%BF");
         // Pattern pattern = Pattern.compile("%([2-7][0-9a-fA-F])");
         //Matcher matcher = pattern.matcher("%22");
         while (matcher.find()) {
@@ -37,6 +37,8 @@ public class RegularExpression {
             }
             String str = new String(bytes, Charset.forName("UTF-8"));
             System.out.println(str);
+            String str1 = new String(new byte[]{(byte) Integer.parseInt("c9", 16)}, Charset.forName("UTF-8"));
+            System.out.println(str1);
             byte b = (byte) 129;
             System.out.println(b);
         }
