@@ -7,8 +7,7 @@ package NarsihmaKarunmanchi.Graphs;
 
 /**
  *
- * @author srivemul 
- * We have discussed Kruskal’s algorithm for Minimum Spanning
+ * @author srivemul We have discussed Kruskal’s algorithm for Minimum Spanning
  * Tree. Like Kruskal’s algorithm, Prim’s algorithm is also a Greedy algorithm.
  * It starts with an empty spanning tree. The idea is to maintain two sets of
  * vertices. The first set contains the vertices already included in the MST,
@@ -80,22 +79,23 @@ public class PrimsAlgorithm {
             mstSpaSet[i] = false;
         }
         key[start] = 0;
-        for(int count = 0; count < numVertices-1; count++) {
+        for (int count = 0; count < numVertices - 1; count++) {
             int src = getMinKey(key, mstSpaSet);
             mstSpaSet[src] = true;
-            for(int dest = 0; dest < numVertices; dest++) {
-               if(mstSpaSet[dest] == false && graph[src][dest] != 0 && graph[src][dest] < key[dest]) {
+            for (int dest = 0; dest < numVertices; dest++) {
+                if (mstSpaSet[dest] == false && graph[src][dest] != 0 && 
+                                                graph[src][dest] < key[dest]) {
                     key[dest] = graph[src][dest];
                     parent[dest] = src;
                 }
             }
-            
+
         }
-        printMST(parent,graph);
+        printMST(parent, graph);
 
     }
-      public static void main (String[] args)
-    {
+
+    public static void main(String[] args) {
         /* Let us create the following graph
            2    3
         (0)--(1)--(2)
@@ -105,14 +105,13 @@ public class PrimsAlgorithm {
         (3)-------(4)
              9          */
         PrimsAlgorithm t = new PrimsAlgorithm(5);
-        int graph[][] = new int[][] {{0, 2, 0, 6, 0},
-                                    {2, 0, 3, 8, 5},
-                                    {0, 3, 0, 0, 7},
-                                    {6, 8, 0, 0, 9},
-                                    {0, 5, 7, 9, 0},
-                                   };
- 
+        int graph[][] = new int[][]{{0, 2, 0, 6, 0},
+        {2, 0, 3, 8, 5},
+        {0, 3, 0, 0, 7},
+        {6, 8, 0, 0, 9},
+        {0, 5, 7, 9, 0},};
+
         // Print the solution
-        t.primsAlgorithm(graph,0);
+        t.primsAlgorithm(graph, 0);
     }
 }
