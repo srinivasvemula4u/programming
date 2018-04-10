@@ -10,19 +10,18 @@ package princtonbookprograms.anaalysisOfAlgorithms.sorting;
  * @author srivemul
  */
 public class SelectionSort {
-    
-    public static void sort(Comparable[] a)
-    {
+
+    public static void sort(Comparable[] a) {
         int min = 0;
         int N = a.length;
-        for(int i=0; i < a.length; i++)
-        {
+        for (int i = 0; i < a.length; i++) {
             min = i;
-            for(int j = i+1; j < N; j++)
-            {
-             if(less(a[j],a[min])) min = j; 
+            for (int j = i + 1; j < N; j++) {
+                if (less(a[j], a[min])) {
+                    min = j;
+                }
             }
-            exchange(a,i,min);
+            exchange(a, i, min);
         }
     }
 
@@ -33,5 +32,5 @@ public class SelectionSort {
     private static void exchange(Comparable[] a, int i, int min) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
