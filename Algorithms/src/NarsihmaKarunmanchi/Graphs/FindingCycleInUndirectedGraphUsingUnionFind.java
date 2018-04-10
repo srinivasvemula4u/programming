@@ -33,10 +33,16 @@ public class FindingCycleInUndirectedGraphUsingUnionFind {
     }
 
     int find(int parent[], int i) {
-        if (parent[i] == -1) {
+        /* if (parent[i] == -1) {
             return i;
         }
-        return find(parent, parent[i]);
+        return find(parent, parent[i]);*/
+
+        if ((parent[i]) != -1) {
+            parent[i] = find(parent, parent[i]);
+        }
+
+        return i;
     }
 
     void union(int[] parent, int x, int y) {
@@ -68,7 +74,7 @@ public class FindingCycleInUndirectedGraphUsingUnionFind {
         |  \
         |    \
         1-----2 */
-        int V = 3, E = 3;
+        int V = 3, E = 2;
         FindingCycleInUndirectedGraphUsingUnionFind graph = new FindingCycleInUndirectedGraphUsingUnionFind(V, E);
 
         // add edge 0-1
@@ -80,9 +86,8 @@ public class FindingCycleInUndirectedGraphUsingUnionFind {
         graph.edges[1].dest = 2;
 
         // add edge 0-2
-        graph.edges[2].src = 0;
-        graph.edges[2].dest = 2;
-
+        //graph.edges[2].src = 0;
+        //graph.edges[2].dest = 2;
         if (graph.isCycle() == true) {
             System.out.println("graph contains cycle");
         } else {
