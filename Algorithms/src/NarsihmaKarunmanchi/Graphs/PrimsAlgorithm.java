@@ -83,8 +83,8 @@ public class PrimsAlgorithm {
             int src = getMinKey(key, mstSpaSet);
             mstSpaSet[src] = true;
             for (int dest = 0; dest < numVertices; dest++) {
-                if (mstSpaSet[dest] == false && graph[src][dest] != 0 && 
-                                                graph[src][dest] < key[dest]) {
+                if (mstSpaSet[dest] == false && graph[src][dest] != 0
+                        && graph[src][dest] < key[dest]) {
                     key[dest] = graph[src][dest];
                     parent[dest] = src;
                 }
