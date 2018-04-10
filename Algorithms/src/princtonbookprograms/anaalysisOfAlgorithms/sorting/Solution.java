@@ -16,25 +16,24 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution {
-    
-    
 
-  public static void insertIntoSorted(int[] arr) {
+    public static void insertIntoSorted(int[] arr) {
         // Fill up this function  
-        int i= arr.length-1;
+        int i = arr.length - 1;
         int temp = arr[i];
         int j;
-        for(j=arr.length-1; j > 0 && temp < arr[j-1]; j--) {
-           // int temp = arr[j];
-            arr[j] = arr[j-1];
+        for (j = arr.length - 1; j > 0 && temp < arr[j - 1]; j--) {
+            // int temp = arr[j];
+            arr[j] = arr[j - 1];
             //arr[]
-           printArray(arr);
-           
+            printArray(arr);
+
         }
         arr[j] = temp;
-         printArray(arr);
-    } 
-/* Tail starts here */
+        printArray(arr);
+    }
+
+    /* Tail starts here */
 //     public static void main(String[] args) {
 //        Scanner in = new Scanner(System.in);
 //        int s = in.nextInt();
@@ -49,20 +48,20 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
         int tc = scanner.nextInt();
         int[] arr = new int[4];
-        for(int i=0; i < tc; i++) {
+        for (int i = 0; i < tc; i++) {
             arr[0] = scanner.nextInt();
-             arr[1] = scanner.nextInt();
-             arr[2] = scanner.nextInt();
-             arr[3] = scanner.nextInt();
-             int temp =0;
-            System.out.println((arr[0]+arr[2])+' '+arr[1]+arr[3]);
+            arr[1] = scanner.nextInt();
+            arr[2] = scanner.nextInt();
+            arr[3] = scanner.nextInt();
+            int temp = 0;
+            System.out.println((arr[0] + arr[2]) + ' ' + arr[1] + arr[3]);
         }
     }
-    
+
     private static void printArray(int[] ar) {
-      for(int n: ar){
-         System.out.print(n+" ");
-      }
+        for (int n : ar) {
+            System.out.print(n + " ");
+        }
         System.out.println("");
-   }  
+    }
 }
