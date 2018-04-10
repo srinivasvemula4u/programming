@@ -10,8 +10,8 @@ package NarsihmaKarunmanchi.Sorting;
  * @author srivemul
  */
 public class BubbleSortKarumanchiWay {
-    
-      public static void main(String[] args) {
+
+    public static void main(String[] args) {
         int arr[] = {3, 60, 35, 2, 45, 320, 5};
 
         System.out.println("Array Before Bubble Sort");
@@ -27,33 +27,34 @@ public class BubbleSortKarumanchiWay {
             System.out.print(arr[i] + " ");
         }
 
-}
+    }
 
     private static void bubbleSort(int[] arr) {
-        for(int pass = arr.length-1; pass >= 0; pass--) {
-            for(int j=0; j <= pass-1; j++) {
-                if(arr[j] > arr[j+1]) {
+        for (int pass = arr.length - 1; pass >= 0; pass--) {
+            for (int j = 0; j <= pass - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
             }
         }
     }
+
     // Flag is used to avoid comparsion if array is already sorted
     private static void bubbleSortOptimized(int[] arr) {
         boolean swapped = true;
-        for(int pass= arr.length-1; pass >= 0 && swapped; pass--) {
+        for (int pass = arr.length - 1; pass >= 0 && swapped; pass--) {
             swapped = false;
-            for(int i=0; i <= pass-1; i++) {
-                if(arr[i] > arr[i+1]) {
+            for (int i = 0; i <= pass - 1; i++) {
+                if (arr[i] > arr[i + 1]) {
                     int temp = arr[i];
-                    arr[i] = arr[i+1];
-                    arr[i+1] = temp;
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
                     swapped = true;
                 }
             }
-            
+
         }
     }
 }
