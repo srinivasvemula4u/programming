@@ -85,9 +85,9 @@ public class FindingCycleInUndirectedGraphUsingUnionFind {
         graph.edges[1].src = 1;
         graph.edges[1].dest = 2;
 
-        // add edge 0-2
-        //graph.edges[2].src = 0;
-        //graph.edges[2].dest = 2;
+        //add edge 0-2
+        graph.edges[2].src = 0;
+        graph.edges[2].dest = 2;
         if (graph.isCycle() == true) {
             System.out.println("graph contains cycle");
         } else {
