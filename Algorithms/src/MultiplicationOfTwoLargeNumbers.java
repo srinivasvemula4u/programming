@@ -16,5 +16,31 @@
  * int b[10] = {2,1,9,8,5,4,3,6,3};
  */
 public class MultiplicationOfTwoLargeNumbers {
-         
+
+    public static void main(String[] args) {
+        int[] a = {8, 9, 8, 8, 9, 2};
+        int[] b = {2, 1, 9, 8, 5, 4, 3, 6, 3};
+
+        // INPUT DISPLAY
+        for (int i = 9; i >= 0; i--) {
+            System.out.print(a[i]);
+        }
+        System.out.print("  x ");
+        for (int i = 9; i >= 0; i--) {
+            System.out.print(b[i]);
+        }
+        System.out.print(" = ");
+
+        int[] c = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+
+        for (int i = 0; i < 10; i++) {
+            int carry = 0;
+            for (int j = 0; j < 10; j++) {
+                int t = (a[j] * b[i]) + c[i + j] + carry;
+                carry = t / 10;
+                c[i + j] = t % 10;
+            }
+        }
+
+    }
 }
