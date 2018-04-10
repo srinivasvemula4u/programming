@@ -63,21 +63,22 @@ public class FindingCyceInDirectedGraph {
         recStack[i] = false;
         return false;
     }
-    public static void  main(String agrs[])
-{
-    // Create a graph given in the above diagram
-    FindingCyceInDirectedGraph g = new FindingCyceInDirectedGraph(4);
-    g.addEdge(0, 1);
-    g.addEdge(0, 2);
-    g.addEdge(1, 2);
-    g.addEdge(2, 0);
-    g.addEdge(2, 3);
-    g.addEdge(3, 3);
- 
-    if(g.isCycle())
-       System.out.println("Graph contains cycle");
-    else
-       System.out.println("Graph doesn't contain cycle");
-  //  return 0;
-}
+
+    public static void main(String agrs[]) {
+        // Create a graph given in the above diagram
+        FindingCyceInDirectedGraph g = new FindingCyceInDirectedGraph(4);
+        g.addEdge(0, 1);
+        g.addEdge(0, 2);
+        g.addEdge(1, 2);
+        g.addEdge(2, 0);
+        g.addEdge(2, 3);
+        g.addEdge(3, 3);
+
+        if (g.isCycle()) {
+            System.out.println("Graph contains cycle");
+        } else {
+            System.out.println("Graph doesn't contain cycle");
+        }
+        //  return 0;
+    }
 }
