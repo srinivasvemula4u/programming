@@ -24,11 +24,11 @@ public class RemoveDuplicatesInArray {
         }
         printArray(arr, index);
     }
-    
+
     public static void removeDuplicatesInArrayUsingHash(int[] arr) {
         int index = 0;
         arr[index++] = arr[0];
-       // Has
+        // Has
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] == arr[i + 1]) {
                 continue;
@@ -37,14 +37,15 @@ public class RemoveDuplicatesInArray {
         }
         printArray(arr, index);
     }
-    
+
     private static void printArray(int[] arr, int index) {
         for (int i = 0; i < index; i++) {
             System.out.print(arr[i] + " ");
         }
     }
+
     public static void main(String args[]) {
-        int[] arr = {1,3,3,2,4,4,5,6,2};
+        int[] arr = {1, 3, 3, 2, 4, 4, 5, 6, 2};
         Arrays.sort(arr);
         removeDuplicatesInArray(arr);
     }
