@@ -18,7 +18,7 @@ if(B[i][j]) {   L[i][j] = Math.min(Math.min(L[i-1][j], L[i][j-1]), L[i-1][j-1]) 
 }
 else 
 L[i][j] = 0;
-*/
+ */
 public class MaxSubSquareMatrixWith1s {
 
     public static int maxSubSquareMatrixWith1s(int[][] arr) {
@@ -31,26 +31,28 @@ public class MaxSubSquareMatrixWith1s {
         for (int i = 0; i < n; i++) {
             L[0][i] = arr[0][i];
         }
-        for(int i =1; i < m; i++) {
-            for(int j = 1; j < n; j++) {
-                if(arr[i][j] == 1) {
-                    L[i][j] = Math.min(Math.min(L[i-1][j], L[i][j-1]), L[i-1][j-1])+1;
-                }
-                else 
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                if (arr[i][j] == 1) {
+                    L[i][j] = Math.min(Math.min(L[i - 1][j], L[i][j - 1]), L[i - 1][j - 1]) + 1;
+                } else {
                     L[i][j] = 0;
+                }
             }
         }
         int max = Integer.MIN_VALUE;
-        for(int i = 0; i < m; i++) {
-            for(int j = 0; j < n; j++) {
-                if(L[i][j] > max)
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (L[i][j] > max) {
                     max = L[i][j];
+                }
             }
         }
         return max;
     }
+
     public static void main(String args[]) {
-        int[][] arr = {{0,1,1,0,1},{1,1,0,1,0},{0,1,1,1,0},{1,1,1,1,0},{1,1,1,1,1},{0,0,0,0,0}};
+        int[][] arr = {{0, 1, 1, 0, 1}, {1, 1, 0, 1, 0}, {0, 1, 1, 1, 0}, {1, 1, 1, 1, 0}, {1, 1, 1, 1, 1}, {0, 0, 0, 0, 0}};
         System.out.println(maxSubSquareMatrixWith1s(arr));
     }
 }
