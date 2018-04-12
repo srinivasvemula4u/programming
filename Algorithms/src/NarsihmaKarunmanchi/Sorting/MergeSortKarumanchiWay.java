@@ -65,7 +65,7 @@ public class MergeSortKarumanchiWay {
     }
 
     public static void main(String args[]) {
-        int[] a = {9, 1, 3, 4, 6, 5, 2, 7,8};
+        int[] a = {9, 1, 3, 4, 6, 5, 2, 7, 8};
         print(a);
         sort(a);
         System.out.println();
