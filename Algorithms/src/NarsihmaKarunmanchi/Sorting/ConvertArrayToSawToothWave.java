@@ -29,8 +29,8 @@ public class ConvertArrayToSawToothWave {
     2) If current element is smaller than next odd element swap next and current
      */
     public static void convertArrayToSawToothWaveOptimized(int[] A) {
-        for (int i = 0; i < A.length; i += 2) {
-            if (i > 0 && A[i] < A[i - 1]) {
+        for (int i = 1; i < A.length; i += 2) {
+            if (i > 0  && A[i] < A[i - 1]) {
                 swap(A, i, i - 1);
             }
             if (i < A.length - 1 && A[i] < A[i + 1]) {
