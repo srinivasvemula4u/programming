@@ -41,16 +41,16 @@ public class SumOfTwoSquaredElementsEqualToAnotherSqauredElementInArray {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = arr[i] * arr[i];
         }
-        HashMap<Integer,Integer> map = new HashMap<>();
-        for(int k=0; k < arr.length; k++) {
-            for(int i=0; i < arr.length; i++) {
-                if(map.containsKey(arr[i])) {
-                    System.out.println(" Found arr[i]= "+arr[i]+ " arr[j]="+map.get(arr[i])+" arr[k]="+ arr[k]);
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int k = 0; k < arr.length; k++) {
+            for (int i = 0; i < arr.length; i++) {
+                if (map.containsKey(arr[i])) {
+                    System.out.println(" Found arr[i]= " + arr[i] + " arr[j]=" + map.get(arr[i]) + " arr[k]=" + arr[k]);
                     return;
                 }
-                map.put(arr[k]-arr[i], arr[i]);
+                map.put(arr[k] - arr[i], arr[i]);
             }
-            
+
         }
         System.out.println("Not found");
 
