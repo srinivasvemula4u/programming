@@ -131,8 +131,7 @@ public class ArticulationPointGraphGeeksForGeekSolution {
                 }
             } // Update low value of u for parent function calls.
             else if (v != parent[u]) {
-               // low[u] = Math.min(low[u], disc[v]);
-               low[u] = Math.min(disc[u], disc[v]);   
+                low[u] = Math.min(low[u], disc[v]);
             }
         }
     }
