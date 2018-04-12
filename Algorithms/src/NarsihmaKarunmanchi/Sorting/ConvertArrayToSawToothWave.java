@@ -30,7 +30,7 @@ public class ConvertArrayToSawToothWave {
      */
     public static void convertArrayToSawToothWaveOptimized(int[] A) {
         for (int i = 1; i < A.length; i += 2) {
-            if (i > 0  && A[i] < A[i - 1]) {
+            if (i > 0 && A[i] < A[i - 1]) {
                 swap(A, i, i - 1);
             }
             if (i < A.length - 1 && A[i] < A[i + 1]) {
