@@ -71,7 +71,7 @@ public class TwoElementsWithMinSum {
         // twoSumK(Arr,6);
         //  twoSumKOptimized(Arr,20);
         //sumOfTwoSquaredElementsEqualToAnotherSqauredElementInArray(Arr);
-        //twoElementsWithMinSum(Arr);
+        twoElementsWithMinSum(Arr);
         twoElementsWithMinSumOptimized(Arr);
         // System.out.println(findOddNumberOfOccuringElementInArray(Arr)+" !!");
         //System.out.println(6 & ~5);
