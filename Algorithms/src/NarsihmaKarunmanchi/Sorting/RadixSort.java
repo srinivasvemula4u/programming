@@ -73,9 +73,9 @@ public class RadixSort {
     public static void main(String[] args) {
         int arr[] = {170, 45, 75, 90, 802, 24, 2, 66};
         int n = arr.length;
-         print(arr);
+        print(arr);
         sort(arr);
-       // print(arr);
+        // print(arr);
     }
 
     private static int getMax(int[] arr, int length) {
@@ -100,12 +100,10 @@ public class RadixSort {
         }
         for (int i = length - 1; i >= 0; i--) {
             output[count[(arr[i] / exp) % 10] - 1] = arr[i];
-            count[(arr[i] / exp) % 10] --;
+            count[(arr[i] / exp) % 10]--;
         }
         for (int i = 0; i < length; i++) {
             arr[i] = output[i];
         }
     }
 }
-
-
