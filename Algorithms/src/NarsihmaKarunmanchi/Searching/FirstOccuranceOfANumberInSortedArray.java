@@ -32,7 +32,7 @@ public class FirstOccuranceOfANumberInSortedArray {
 
     public static void main(String args[]) {
         int[] Arr = {1, 2, 3, 4, 4, 4, 5};
-        System.out.println(firstOccuranceOfANumberInSortedArray(Arr,0,Arr.length-1,4));
+        System.out.println(firstOccuranceOfANumberInSortedArray(Arr, 0, Arr.length - 1, 4));
     }
 
 }
