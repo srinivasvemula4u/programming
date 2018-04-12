@@ -29,7 +29,7 @@ public class ConvertArrayToSawToothWave {
     2) If current element is smaller than next odd element swap next and current
      */
     public static void convertArrayToSawToothWaveOptimized(int[] A) {
-        for (int i = 1; i < A.length; i += 2) {
+        for (int i = 0; i < A.length; i += 2) {
             if (i > 0 && A[i] < A[i - 1]) {
                 swap(A, i, i - 1);
             }
@@ -47,6 +47,10 @@ public class ConvertArrayToSawToothWave {
 
     public static void main(String args[]) {
         int[] A = {0, -6, 9, 13, 10, -1, 8, 12, 54, 14, -5};
+        for (int val : A) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
         Arrays.sort(A);
         //convertArrayToSawToothWave(A);
         convertArrayToSawToothWaveOptimized(A);
