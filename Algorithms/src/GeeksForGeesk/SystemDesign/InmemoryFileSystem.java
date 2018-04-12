@@ -23,6 +23,18 @@ import java.util.List;
  * Files and Directories share so many characteristics, we’ve implemented them
  * such that they inherit from the same class, Entry.
  *
+ *
+ * Alternatively, we could have implemented Directory such that it contains
+ * separate lists for files and subdirectories. This makes the nurnberOfFiles ()
+ * method a bit cleaner, since it doesn’t need to use the instanceof operator,
+ * but it does prohibit us from cleanly sorting files and directories by dates
+ * or names.
+ *
+ *
+ *
+ * For data block allocation, we can use bitmask vector and linear search (see
+ * “Practical File System Design”) or B+ trees (see Reference or Wikipedia).
+ *
  */
 abstract class Entry {
 
