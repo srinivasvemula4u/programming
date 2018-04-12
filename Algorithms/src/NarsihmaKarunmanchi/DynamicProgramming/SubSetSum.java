@@ -12,8 +12,8 @@ package NarsihmaKarunmanchi.DynamicProgramming;
 public class SubSetSum {
     public static int subSetSum(int[] arr,int T) {
         int n = arr.length;
-        int[][] M = new int[n+1][T+1];
-        M[0][0] = 0;
+        int[][] M = new int[T+1][n+1];
+       // M[0][0] = 0;
         for(int i = 1; i <= T; i++)
             M[0][i] = 0;
         for(int i = 1; i <= n; i++) {
