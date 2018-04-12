@@ -32,7 +32,7 @@ public class SumOfThreeElementsInArrayEqualToK {
     public static void sumOfThreeElementsInArrayEqualToKOptimized(int[] arr, int data) {
         Arrays.sort(arr);
         for (int k = 0; k < arr.length; k++) {
-            for (int i = k+1, j = arr.length - 1; i < j;) {
+            for (int i = k + 1, j = arr.length - 1; i < j;) {
                 if (arr[i] + arr[j] + arr[k] == data) {
                     System.out.println("Elements found");
                     return;
@@ -52,7 +52,7 @@ public class SumOfThreeElementsInArrayEqualToK {
         HashMap<Integer, Integer> map = new HashMap<>();
         int j = 0;
         for (int i = 0; i < arr.length; i++) {
-            for ( j = i+1; j < arr.length; j++) {
+            for (j = i + 1; j < arr.length; j++) {
                 map.put(arr[i] + arr[j], arr[i] + arr[j]);
             }
         }
@@ -61,7 +61,7 @@ public class SumOfThreeElementsInArrayEqualToK {
                 System.out.println("Items found");
                 return;
             }
-              System.out.println("Items not found");
+            System.out.println("Items not found");
         }
     }
 
