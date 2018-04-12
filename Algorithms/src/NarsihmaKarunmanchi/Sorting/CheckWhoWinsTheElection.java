@@ -14,10 +14,10 @@ import NarsihmaKarunmanchi.PriorityQueues.Heap;
 public class CheckWhoWinsTheElection {
 
     public static void main(String args[]) {
-        int arr[] = {1, 1, 1,3, 3, 3, 2, 1};
+        int arr[] = {1, 1, 1, 3, 3, 3, 2, 1};
         int n = arr.length;
         print(arr);
-        System.out.println("candidate with id number  "+checkWhoWinsTheElectionOptimized(arr) + " won in the election");
+        System.out.println("candidate with id number  " + checkWhoWinsTheElectionOptimized(arr) + " won in the election");
         // print(arr);
     }
 
@@ -46,30 +46,30 @@ public class CheckWhoWinsTheElection {
         }
         return candidate;
     }
-      public static int checkWhoWinsTheElectionOptimized(int[] arr) {
-           int candidate = -1, maxScore = Integer.MIN_VALUE, score = 0;
-           
-           Heap heap = new Heap(arr.length, 0,arr);
-            heap.heapSort(arr, arr.length);
-            int currentcandidate = arr[0];
-            print(arr);
-            for(int i=0; i < arr.length; i++)
-            {
-               if(currentcandidate == arr[i]) {
-                   score++;
-                   continue;
-               }
-               if(score > maxScore) {
-                   maxScore = score;
-                   candidate = currentcandidate;
-               }
-               currentcandidate = arr[i];
-               score = 1;
+
+    public static int checkWhoWinsTheElectionOptimized(int[] arr) {
+        int candidate = -1, maxScore = Integer.MIN_VALUE, score = 0;
+
+        Heap heap = new Heap(arr.length, 0, arr);
+        heap.heapSort(arr, arr.length);
+        int currentcandidate = arr[0];
+        print(arr);
+        for (int i = 0; i < arr.length; i++) {
+            if (currentcandidate == arr[i]) {
+                score++;
+                continue;
             }
-             if(score > maxScore) {
-                   maxScore = score;
-                   candidate = currentcandidate;
-               }
-            return candidate;
-      }
+            if (score > maxScore) {
+                maxScore = score;
+                candidate = currentcandidate;
+            }
+            currentcandidate = arr[i];
+            score = 1;
+        }
+        if (score > maxScore) {
+            maxScore = score;
+            candidate = currentcandidate;
+        }
+        return candidate;
+    }
 }
