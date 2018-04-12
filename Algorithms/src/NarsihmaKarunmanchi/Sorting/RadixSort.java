@@ -80,6 +80,7 @@ public class RadixSort {
 
         int max = getMax(arr, length);
         for (int exp = 1; max / exp > 0; exp *= 10) {
+            System.out.println(exp);
             countSort(arr, length, exp);
         }
         print(arr);
