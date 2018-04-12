@@ -51,9 +51,10 @@ public class MedianInTwoSortedArrays {
         }
         // return 1.0;
     }
+
     public static void main(String args[]) {
-        int[] A = {1,3,5,7};
-        int[] B = {2,4,6,8};
-        System.out.println(findMedianInTwoSortedArrays(A,B));
+        int[] A = {1, 3, 5, 7};
+        int[] B = {2, 4, 6, 8};
+        System.out.println(findMedianInTwoSortedArrays(A, B));
     }
 }
