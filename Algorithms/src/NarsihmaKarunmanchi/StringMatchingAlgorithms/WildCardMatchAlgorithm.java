@@ -66,13 +66,13 @@ public class WildCardMatchAlgorithm {
 
     public static void main(String args[]) {
         System.out.println(wildCardMatchAlgorithm("aa", "a"));
-         System.out.println(wildCardMatchAlgorithm("aa", "aa"));
-          System.out.println(wildCardMatchAlgorithm("aaa", "aa"));
-           System.out.println(wildCardMatchAlgorithm("aa", "*"));
-            System.out.println(wildCardMatchAlgorithm("aa", "a*"));
-            System.out.println(wildCardMatchAlgorithm("aa", "?*"));
-             System.out.println(wildCardMatchAlgorithm("aab", "c*a*b"));
-             System.out.println(wildCardMatchAlgorithm("aba", "ab?*"));
+        System.out.println(wildCardMatchAlgorithm("aa", "aa"));
+        System.out.println(wildCardMatchAlgorithm("aaa", "aa"));
+        System.out.println(wildCardMatchAlgorithm("aa", "*"));
+        System.out.println(wildCardMatchAlgorithm("aa", "a*"));
+        System.out.println(wildCardMatchAlgorithm("aa", "?*"));
+        System.out.println(wildCardMatchAlgorithm("aab", "c*a*b"));
+        System.out.println(wildCardMatchAlgorithm("aba", "ab?*"));
     }
 
 }
