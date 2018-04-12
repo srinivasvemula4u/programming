@@ -46,16 +46,17 @@ public class MinWindowSliding {
                     minWindowStart = begin;
                     minWindowEnd = end;
                 }
-                if(minWindowLength == charLength) {
-                     return input.substring(minWindowStart,minWindowEnd+1);
+                if (minWindowLength == charLength) {
+                    return input.substring(minWindowStart, minWindowEnd + 1);
                 }
-               
+
             }
         }
-        return input.substring(minWindowStart,minWindowEnd+1);
+        return input.substring(minWindowStart, minWindowEnd + 1);
     }
-      public static void main(String args[]) {
-       // String str = "ABCCBCBA";
-       System.out.println(minWindowSliding("ABBACBAA","AAB"));
+
+    public static void main(String args[]) {
+        // String str = "ABCCBCBA";
+        System.out.println(minWindowSliding("ABBACBAA", "AAB"));
     }
 }
