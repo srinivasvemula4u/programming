@@ -9,14 +9,15 @@ package JournalDev.Threads.ThreadSafety;
  *
  * @author srivemul
  */
-public class ProcessingThread implements Runnable{
+public class ProcessingThread implements Runnable {
+
     private int count;
-    
+
     @Override
     public void run() {
-        for(int i=1; i < 5; i++){
+        for (int i = 1; i < 5; i++) {
             processSomething(i);
-        	count++;
+            count++;
         }
     }
 
@@ -27,10 +28,10 @@ public class ProcessingThread implements Runnable{
     private void processSomething(int i) {
         // processing some job
         try {
-            Thread.sleep(i*1000);
+            Thread.sleep(i * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
-    
+
 }
