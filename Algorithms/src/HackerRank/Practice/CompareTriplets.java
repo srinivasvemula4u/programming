@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @author srivemul
  */
 public class CompareTriplets {
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int a0 = in.nextInt();
@@ -21,19 +22,22 @@ public class CompareTriplets {
         int b1 = in.nextInt();
         int b2 = in.nextInt();
         int aliceScore = 0, bobScore = 0;
-         if( a0 > b0)
+        if (a0 > b0) {
             aliceScore++;
-         else if( a0 < b0)
-             bobScore++;
-        if( a1 > b1)
+        } else if (a0 < b0) {
+            bobScore++;
+        }
+        if (a1 > b1) {
             aliceScore++;
-         else if( a1 < b1)
-             bobScore++;
-        if( a2 > b2)
+        } else if (a1 < b1) {
+            bobScore++;
+        }
+        if (a2 > b2) {
             aliceScore++;
-         else if( a2 < b2)
-             bobScore++;
-         System.out.println(aliceScore + " " + bobScore);
-    
+        } else if (a2 < b2) {
+            bobScore++;
+        }
+        System.out.println(aliceScore + " " + bobScore);
+
     }
 }
