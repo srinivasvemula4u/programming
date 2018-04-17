@@ -37,9 +37,10 @@ public class HashMapProcessor implements Runnable {
     /* private void addThreadName(int i, String name) {
         strArr[i] = strArr[i] + ":" + name;
     }*/
+   
     private Object lock = new Object();
-
     private void addThreadName(int i, String name) {
+       
         synchronized (lock) {
             strArr[i] = strArr[i] + ":" + name;
         }
