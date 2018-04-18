@@ -59,7 +59,7 @@ public class LongestCommonSequence {
 
     public static void main(String args[]) {
         System.out.println(longestCommonSequence("ABCBDAB", "BDCABA"));
-       // System.out.println(LCSLength("ABCBDAB", "BDCABA"));
+        System.out.println(LCSLength("ABCBDAB", "BDCABA"));
     }
 
     private static void printTable(int[][] Table) {
