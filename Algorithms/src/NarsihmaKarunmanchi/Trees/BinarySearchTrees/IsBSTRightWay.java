@@ -50,8 +50,6 @@ public class IsBSTRightWay {
         return isBSTUsingInorderHelper(root, prev);
     }
 
-    
-
     private static boolean isBSTUsingInorderHelper(BinarySearchTreeNode root, BinarySearchTreeNode prev) {
         if (root != null) {
             if (!isBST(root.getLeft())) {
@@ -67,7 +65,7 @@ public class IsBSTRightWay {
         }
         return true;
     }
-    
+
     public static void main(String args[]) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(3);
