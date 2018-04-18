@@ -55,10 +55,9 @@ class softwareInfo {
         this.version = version;
     }
 }
+ class Main {
 
-public class Main {
-
-    public static int processData(ArrayList<String> array) {
+    //public static int processData(ArrayList<String> array) {
         /* 
          * Modify this method to process `array` as indicated
          * in the question. At the end, return the appropriate value.
@@ -71,15 +70,15 @@ public class Main {
          * Submit this entire program (not just this method)
          * as your answer
          */
-        for (String line : array) {
+        /*for (String line : array) {
             String[] types = line.split(",");
 
         }
         return 0;
-    }
+    }*/
 
     public static void main(String[] args) {
-        ArrayList<String> inputData = new ArrayList<String>();
+     /*   ArrayList<String> inputData = new ArrayList<String>();
         try {
             Scanner in = new Scanner(new BufferedReader(new FileReader("input.txt")));
             while (in.hasNextLine()) {
@@ -96,5 +95,6 @@ public class Main {
         } catch (IOException e) {
             System.out.println("IO error in input.txt or output.txt");
         }
+    }*/
     }
 }
