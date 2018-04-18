@@ -26,13 +26,22 @@ public class IsBSTRightWay {
         }
         return true;
     }
-
-    public static boolean isBSTBestWay(BinarySearchTreeNode root, int min, int max) {
+    public static boolean isBSTBestWay(BinarySearchTreeNode root) {
+          if(root == null) {
+              return true;
+          }
+          return isBSTBestWayUtil(root,Integer.MIN_VALUE,Integer.MAX_VALUE);
+    }
+    public static boolean isBSTBestWayUtil(BinarySearchTreeNode root, int min, int max) {
         if (root == null) {
             return true;
         }
-        return (root.getData() > min && root.getData() < max) && isBSTBestWay(root.getLeft(), min, root.getData()) && isBSTBestWay(root.getRight(), root.getData(), max);
+        if(root.getData() < min || root.getData() > max)
+            return false;
+        return isBSTBestWayUtil(root.getLeft(),min,root.getData()-1)
+        && isBSTBestWayUtil(root.getRight(),root.getData()+1, max);
     }
+    
 
     public static void main(String args[]) {
         BinarySearchTree tree = new BinarySearchTree();
@@ -44,6 +53,7 @@ public class IsBSTRightWay {
         tree.insert(4);
         tree.insert(6);
         System.out.println(isBST(tree.getRoot()));
+        System.out.println(isBSTBestWay(tree.getRoot()));
     }
 
 }
