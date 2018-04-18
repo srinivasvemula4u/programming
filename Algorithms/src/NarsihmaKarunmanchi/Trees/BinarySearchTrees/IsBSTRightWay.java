@@ -26,23 +26,48 @@ public class IsBSTRightWay {
         }
         return true;
     }
+
     public static boolean isBSTBestWay(BinarySearchTreeNode root) {
-          if(root == null) {
-              return true;
-          }
-          return isBSTBestWayUtil(root,Integer.MIN_VALUE,Integer.MAX_VALUE);
+        if (root == null) {
+            return true;
+        }
+        return isBSTBestWayUtil(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
+
     public static boolean isBSTBestWayUtil(BinarySearchTreeNode root, int min, int max) {
         if (root == null) {
             return true;
         }
-        if(root.getData() < min || root.getData() > max)
+        if (root.getData() < min || root.getData() > max) {
             return false;
-        return isBSTBestWayUtil(root.getLeft(),min,root.getData()-1)
-        && isBSTBestWayUtil(root.getRight(),root.getData()+1, max);
+        }
+        return isBSTBestWayUtil(root.getLeft(), min, root.getData() - 1)
+                && isBSTBestWayUtil(root.getRight(), root.getData() + 1, max);
     }
+
+    public static boolean isBSTUsingInorder(BinarySearchTreeNode root) {
+        BinarySearchTreeNode prev = null;
+        return isBSTUsingInorderHelper(root, prev);
+    }
+
     
 
+    private static boolean isBSTUsingInorderHelper(BinarySearchTreeNode root, BinarySearchTreeNode prev) {
+        if (root != null) {
+            if (!isBST(root.getLeft())) {
+                return false;
+            }
+
+            // allows only distinct values node
+            if (prev != null && root.getData() <= prev.getData()) {
+                return false;
+            }
+            prev = root;
+            return isBST(root.getRight());
+        }
+        return true;
+    }
+    
     public static void main(String args[]) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(3);
@@ -54,6 +79,7 @@ public class IsBSTRightWay {
         tree.insert(6);
         System.out.println(isBST(tree.getRoot()));
         System.out.println(isBSTBestWay(tree.getRoot()));
+        System.out.println(isBSTUsingInorder(tree.getRoot()));
     }
 
 }
