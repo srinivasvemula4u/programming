@@ -85,4 +85,16 @@ class Outer {
         outer.getValue();
     }
  }
+
+/*
+Note :- A local class can access local variables and parameters of the enclosing block that are effectively final. For example, if you add the highlighted assignment statement in the Inner class constructor or in any method of Inner class in above example :
+
+public Inner()
+{
+       sum = 50;
+       divisor = 4;
+       remainder = sum%divisor;
+}
+Because of this assignment statement, the variable sum is not effectively final anymore. As a result, the Java compiler generates an error message similar to “local variables referenced from an inner class must be final or effectively final”.
+*/
  
