@@ -47,7 +47,6 @@ public class ImmutableClass {
         Student s = new Student("ABC", 101);
         System.out.println(s.name);
         System.out.println(s.regNo);
-
         // Uncommenting below line causes error
         // s.regNo = 102;
     }
