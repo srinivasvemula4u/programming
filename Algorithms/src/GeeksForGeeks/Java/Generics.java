@@ -78,20 +78,19 @@ public class Generics {
                 = new Test1("GfG", 15);
 
         obj.print();
-          // Calling generic method with Integer argument
+        // Calling generic method with Integer argument
         genericDisplay(11);
-  
+
         // Calling generic method with String argument
         genericDisplay("GeeksForGeeks");
-  
+
         // Calling generic method with double argument
         genericDisplay(1.0);
     }
-    
-      // A Generic method example
-    static <T> void genericDisplay (T element)
-    {
-        System.out.println(element.getClass().getName() +
-                           " = " + element);
+
+    // A Generic method example
+    static <T> void genericDisplay(T element) {
+        System.out.println(element.getClass().getName()
+                + " = " + element);
     }
 }
