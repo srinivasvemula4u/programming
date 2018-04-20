@@ -68,7 +68,6 @@ public class Generics {
         // instance of Integer type
         Test<Integer> iObj = new Test<Integer>(15);
         System.out.println(iObj.getObject());
-
         // instance of String type
         Test<String> sObj
                 = new Test<String>("GeeksForGeeks");
