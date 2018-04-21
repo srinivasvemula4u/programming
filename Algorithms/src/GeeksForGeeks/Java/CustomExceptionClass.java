@@ -14,6 +14,10 @@ class MyException extends Exception {
     public MyException(String str) {
         super(str);
     }
+    @Override
+    public String getMessage() {
+        return  "hello";
+    }
 }
 
 public class CustomExceptionClass {
@@ -27,6 +31,9 @@ public class CustomExceptionClass {
 
             // Print the message from MyException object
             System.out.println(ex.getMessage());
+        }
+        finally  {
+            System.out.println("My Exception class ends here");
         }
     }
 }
