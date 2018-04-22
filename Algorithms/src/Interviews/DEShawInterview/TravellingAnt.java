@@ -1,4 +1,4 @@
-package DEShawInterview;
+package Interviews.DEShawInterview;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

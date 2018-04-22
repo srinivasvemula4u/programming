@@ -1,3 +1,5 @@
+package Interviews.GoldmanSachsInterview;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -20,7 +22,7 @@ public class Truckerprofit {
         int[] profits = new int[cargoList.length];
         for (int i = 0; i < cargoList.length; i++) {
             weights[i] = cargoList[i][1];
-            profits[i] = cargoList[i][2];            
+            profits[i] = cargoList[i][2];
         }
         int n = cargoList.length;
         List<Integer> list = new java.util.ArrayList<>();
@@ -70,9 +72,11 @@ public class Truckerprofit {
         }
         //return val1;
     }
+
     public static void main(String[] agrs) {
-         int[] res = findTruckCargo(300, new int[][]{{38,130,500},{21,280,1800},{13,120,1500}});
-         for(int i : res)
-             System.out.println(i);
+        int[] res = findTruckCargo(300, new int[][]{{38, 130, 500}, {21, 280, 1800}, {13, 120, 1500}});
+        for (int i : res) {
+            System.out.println(i);
+        }
     }
 }
