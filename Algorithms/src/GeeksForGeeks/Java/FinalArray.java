@@ -26,5 +26,3 @@ public class FinalArray {
                 + str2.hashCode());
     }
 }
-
-
