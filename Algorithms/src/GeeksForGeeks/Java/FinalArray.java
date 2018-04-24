@@ -16,6 +16,15 @@ public class FinalArray {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = 10 * arr[i];
             System.out.println(arr[i]);
+
         }
+        String str1 = "Srinivas";
+        String str2 = new String("Srinivas");
+        System.out.println(str1 == str2);
+        System.out.println(str1.equals(str2));
+        System.out.println(str1.hashCode() + " "
+                + str2.hashCode());
     }
 }
+
+
