@@ -1,4 +1,15 @@
 
 Design a distributed key value caching system, like Memcached or Redis.
 
+1) Features
+This is the first part of any system design interview, coming up with the 
+features which the system should support. As an interviewee, you should try to 
+list down all the features you can think of which our system should support. 
+Try to spend around 2 minutes for this section in the interview. 
+You can use the notes section alongside to remember what you wrote. 
+
+Q) Q: What is the amount of data that we need to cache? 
+A: Let's assume we are looking to cache on the scale of Google or Twitter. 
+The total size of the cache would be a few TBs.
+
 
