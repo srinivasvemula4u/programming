@@ -49,3 +49,14 @@ with the estimated numbers of how scalable our system should be.
 Important parameters to remember for this section is the number of 
 queries per second and the data which the system will be required to handle.
 Try to spend around 5 minutes for this section in the interview. 
+
+Total cache size : Let's say 30TB as discussed earlier.
+
+Q: What is the kind of QPS we expect for the system?
+A: This estimation is important to understand the number of machines 
+we will need to answer the queries. For example, if our estimations state that a
+ single machine is going to handle 1M QPS, we run into a high risk of high latency / 
+the machine dying because of queries not being answered fast enough and hence 
+ending up in the backlog queue. 
+Again, let's assume the scale of Twitter / Google.
+ We can expect around 10M QPS if not more.
