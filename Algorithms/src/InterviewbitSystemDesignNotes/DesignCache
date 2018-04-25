@@ -42,3 +42,10 @@ But, as is the case with any non-persistent / in-memory write, we stand the
 risk of losing the data incase the caching layer dies. We can improve our odds
  by introducing having more than one replica acknowledging the write 
 ( so that we don’t lose data if just one of the replica dies ).
+
+2) Estimation:
+ This is usually the second part of a design interview, coming up 
+with the estimated numbers of how scalable our system should be. 
+Important parameters to remember for this section is the number of 
+queries per second and the data which the system will be required to handle.
+Try to spend around 5 minutes for this section in the interview. 
