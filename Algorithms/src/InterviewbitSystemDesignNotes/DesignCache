@@ -12,4 +12,7 @@ Q) Q: What is the amount of data that we need to cache?
 A: Let's assume we are looking to cache on the scale of Google or Twitter. 
 The total size of the cache would be a few TBs.
 
-
+Q: What should be the eviction strategy? 
+A: It is possible that we might get entries when we would not have space to 
+accommodate new entries. In such cases, 
+we would need to remove one or more entries to make space for the new entry.
