@@ -121,4 +121,27 @@ Head over to https://www.interviewbit.com/problems/least-recently-used-cache/ to
  write code and see if you completely got it.
 
 
+Since we only have one thread to work with, we cannot do things in parallel. 
+So we will take a simple approach and implement a LRU cache using a linked list 
+and a map. The Map stores the value to the corresponding linked list node and 
+is useful to move the recently accessed node to the front of the list. 
+Head over to https://www.interviewbit.com/problems/least-recently-used-cache/ 
+to write code and see if you completely got it.
+
+: How would a LRU cache work on a single machine which is multi threaded ?
+Q: How would you break down cache write and read into multiple instructions? 6
+A: 
+Read path : Read a value corresponding to a key. This requires :
+Operation 1 : A read from the HashMap and then,
+Operation 2 : An update in the doubly LinkedList
+
+Write path : Insert a new key-value entry to the LRU cache. This requires :
+If the cache is full, then
+Operation 3: Figure out the least recently used item from the linkedList
+Operation 4: Remove it from the hashMap
+Operation 5: Remove the entry from the linkedList.
+Operation 6: Insert the new item in the hashMap
+Operation 7: Insert the new item in the linkedList.
+
+
 
