@@ -214,4 +214,13 @@ A: Number of shards = 30 * 1000 / 16 = 1875
 This leads to a QPS of approximately 5500 per shard which should be reasonable ( Note that with lower main memory size, CPU cycles required for access lowers as well ).Now, we also need to decide the shard number for every key. A simple way to do it would be to shard based on hash(key) % TOTAL_SHARDS The hash function might differ based on expected properties of the key. If the key is an auto-incremental user_id, then hash(key) = key hashing might work well. 
 One downside to this is that if the total number of shard changes, all the currently cached data becomes invalid and all requests would have to hit the DB to warm up the cache. The other way to do it would be to use consistent hashing with multiple copies of every shard on the ring ( Read more about consistent hashing at https://en.wikipedia.org/wiki/Consistent_hashing ). This would perform well as new shards are added.
 
+Recall that the total data we have is 30TB and for every chunk of data, 
+we store a copy in the hashmap and we store an entry ( without the value ) 
+in a linkedList. Lets assume that the size of value is big enough to ignore 
+overheads like an entry in linkedList. We can accommodate 72G of data on every 
+single machine ( We have neglected process memory overheads for the time being ).
+ With that, we would need 420 machines which would lead to a QPS of 23000 which 
+is not easily feasible. So we rather create shards of 16GB, 
+1875 shards each supporting qps of 5500.
+
 
