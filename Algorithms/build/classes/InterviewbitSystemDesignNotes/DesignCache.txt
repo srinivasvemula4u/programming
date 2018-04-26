@@ -187,3 +187,26 @@ a read for row i and a write for row j would not affect each other if i != j.
 Note that we would try to keep N as 
 high as possible here to increase granularity.
 
+Now that we have sorted how things look on a single server, how do we shard?
+Q: What QPS would a machine have to handle if we shard in blocks of 72GB? 5
+A: In estimation section, we saw total data we would have to store is 30TB. 
+For every chunk of data, we store a copy in the hashmap and we store an entry 
+( without the value ) in a linkedList. Let's assume that the size of value is 
+big enough to ignore overheads like an entry in linkedList. 
+We can accommodate 72G of data on every single machine ( We have neglected 
+process memory overheads for the time being ). With that, we would need 420 
+machines. 
+With that config, every machine would handle around 23000 QPS.
+
+Q: Will our machines be able to handle qps of 23000? 8
+A: CPU time available for 23k queries : 1 second * 4 = 4 seconds 
+CPU time available per query = 4 * 1000 * 1000 / 23000 microseconds = 174us. 
+Can we handle entries into a hashmap of size 72G with a CPU time of 174us (
+ Do note that context switches has its own overhead. So, even with a perfectly 
+written asynchronous server, we would have much less than 174us on our hand ).
+ Make sure you know about the latency numbers from here : 
+https://gist.github.com/jboner/2841832. The actual answer depends on the 
+distribution of read vs write traffic, the size of the value being read, 
+the throughput capacity of our server.
+
+
