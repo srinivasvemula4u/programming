@@ -177,5 +177,13 @@ on a hashmap level, we can have it for every single row. This way,
 a read for row i and a write for row j would not affect each other if i != j. 
 Note that we would try to keep N as high as possible here to increase granularity.
 
-
+The key to understanding and optimizing concurrency problems lies in breaking 
+the problem down into as granular parts as possible. 
+As is the case with most concurrent systems, writes compete with reads and other
+ writes, which requires some form of locking when a write is in progress. 
+We can choose to have writes as granular as possible to help with performance. 
+Instead of having a lock on a hashmap level if we can have it for every single row, 
+a read for row i and a write for row j would not affect each other if i != j. 
+Note that we would try to keep N as 
+high as possible here to increase granularity.
 
