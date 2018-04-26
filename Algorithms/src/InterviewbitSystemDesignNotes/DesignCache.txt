@@ -80,3 +80,13 @@ Availability - Does this problem require 100% availability?
 There could be more goals depending on the problem. It's possible that 
 all parameters might be important, and some of them might conflict. 
 In that case, you’d need to prioritize one over the other. 
+
+Q: Is Latency a very important metric for us?
+A: Yes. The whole point of caching is low latency.
+
+Q: Consistency vs Availability?
+A: Unavailability in a caching system means that the caching machine goes down, which in turn means that we have a cache miss which leads to a high latency. 
+As said before, we are caching for a Twitter / Google like system. When fetching a timeline for a user, I would be okay if I miss on a few tweets which were very recently posted as long as I eventually see them in reasonable time. 
+Unavailability could lead to latency spikes and increased load on DB. Choosing from consistency and availability, we should prioritize for availability.
+
+
