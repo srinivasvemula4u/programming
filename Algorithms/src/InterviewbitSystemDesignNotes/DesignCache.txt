@@ -69,3 +69,14 @@ Assuming beefier cache machines, we have 72G of main memory for 1 machine.
 Min. number of machine required = 30 TB / 72G which is close to 420 machines. 
 Do know that this is the absolute minimum. Its possible we might need more 
 machines because the QPS per machine is higher than we want it to be.
+
+Design Goals:
+Latency - Is this problem very latency sensitive (Or in other words, 
+Are requests with high latency and a failing request, equally bad?). For example, 
+search typeahead suggestions are useless if they take more than a second.
+Consistency - Does this problem require tight consistency? Or is it okay 
+if things are eventually consistent?
+Availability - Does this problem require 100% availability?
+There could be more goals depending on the problem. It's possible that 
+all parameters might be important, and some of them might conflict. 
+In that case, you’d need to prioritize one over the other. 
