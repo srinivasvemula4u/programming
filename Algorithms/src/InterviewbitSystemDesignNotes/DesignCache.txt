@@ -143,5 +143,24 @@ Operation 5: Remove the entry from the linkedList.
 Operation 6: Insert the new item in the hashMap
 Operation 7: Insert the new item in the linkedList.
 
+Q: How would you prioritize above operations to keep latency to a minimum for
+ our system? 
+A: As is the case with most concurrent systems, writes compete with reads and 
+other writes. That requires some form of locking when a 
+write is in progress. We can choose to have writes as granular as possible to 
+help with performance. 
+Read path is going to be highly frequent. As latency is our design goal, 
+Operation 1 needs to be really fast and should require minimum locks. 
+Operation 2 can happen asynchronously. Similarly, all of the write path 
+can happen asynchronously and the client’s latency need not be affected by 
+anything other than Operation 1. Let's dig deeper into Operation 1. What are the 
+things that Hashmap is dealing with? 
+Hashmap deals with Operation 1, 4 and 6 with Operation 4 and 6 being write 
+operations. One simple, but not so efficient way of handling read/write would be
+ to acquire a higher level Read lock for Operation 1 and Write lock for Operation 
+4 and 6. 
+However, Operation 1 as stressed earlier is the most frequent ( by a huge margin 
+) operation and its performance is critical to how our caching system works.
+
 
 
