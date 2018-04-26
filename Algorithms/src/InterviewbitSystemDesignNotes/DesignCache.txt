@@ -60,3 +60,12 @@ the machine dying because of queries not being answered fast enough and hence
 ending up in the backlog queue. 
 Again, let's assume the scale of Twitter / Google.
  We can expect around 10M QPS if not more.
+
+Q: What is the number of machines required to cache?
+A: A cache has to be inherently of low latency. Which means all cache data has 
+to reside in main memory. 
+A production level caching machine would be 72G or 144G of RAM. 
+Assuming beefier cache machines, we have 72G of main memory for 1 machine. 
+Min. number of machine required = 30 TB / 72G which is close to 420 machines. 
+Do know that this is the absolute minimum. Its possible we might need more 
+machines because the QPS per machine is higher than we want it to be.
