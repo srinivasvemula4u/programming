@@ -223,4 +223,15 @@ single machine ( We have neglected process memory overheads for the time being )
 is not easily feasible. So we rather create shards of 16GB, 
 1875 shards each supporting qps of 5500.
 
+Q: What happens when a machine handling a shard goes down?
+A: If we only have one machine per shard, then if the machine goes down, all requests to that shard will start hitting the DB and hence there will be elevated latency. 
+As mentioned in the design goals, we would like to reduce high latency cases as much as possible. 
+If we have a lot of machines, one way to avoid these cases would be to have multiple machines per shard where they maintain exactly the same amount of data. 
+A read query for the shard could go to all the servers in the shard and we can use the data from the one that responds first. This takes care of one machine going down, but introduces a bunch of other complications. If occasional high latency is not a big issue wrt product, its better to stick to one server per shard ( Less maintenance overhead and a much simpler system). 
+Complications of multiple servers : Since we have multiple servers maintaining the same data, it is possible that the data is not in sync between the servers. This means that a few keys might be missing on some of the servers, and a few servers might have older values for the same keys ( Assuming we support updates as well ). 
+Imagine a case when one of the server goes down, misses a bunch of additions and updates, and then comes back up. 
+There are few ways we can approach this :
+Master slave technique : There is only one active server at a time in a shard and it has a follower which keeps getting the update. When the master server goes down, the slave server takes over as the master server. Master and slave can maintain a change log with version number to make sure they are caught up.
+If we are fine with all servers becoming eventually consistent, then we can have one master ( taking all the write traffic ) and many slaves where slaves can service the read traffic as well.
+
 
