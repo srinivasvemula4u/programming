@@ -112,9 +112,7 @@ public class InputArrayOperations {
     }
 
     public static void modifyArray(int[] arr, int mid) {
-        // int[] temp = new temp[arr.length*2];
         List<Integer> list = new LinkedList<>();
-        // int j = 0;
         boolean flag = false;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] != 0) {
@@ -122,11 +120,8 @@ public class InputArrayOperations {
             } else {
                 list.add(arr[i]);
                 list.add(mid);
-                // flag = true;
             }
-            //j++;
         }
-        //if (flag == true) {
         int count = 0;
         boolean negFlag = true;
         for (int i = 0; i < list.size();) {
@@ -146,7 +141,6 @@ public class InputArrayOperations {
             }
 
         }
-        //}
         Object[] res = list.toArray();
         for (int i = 0; i < res.length; i++) {
             System.out.print((Integer) res[i] + " ");
