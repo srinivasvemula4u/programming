@@ -5,11 +5,8 @@
  */
 package GeeksForGeeks.SystemDesign;
 
-import NarsihmaKarunmanchi.LinkedLists.DoubleLinkedList;
-import NarsihmaKarunmanchi.LinkedLists.DoubleLinkedListNode;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  *
@@ -17,9 +14,9 @@ import java.util.Map;
  */
 public class LeastRecentlyUsedCacheSystem {
 
-    private int c;
-    private HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
-    private ArrayList<Integer> l = new ArrayList<Integer>();
+    private final int c;
+    private HashMap<Integer, Integer> hm = new HashMap<>();
+    private ArrayList<Integer> l = new ArrayList<>();
     private int count = 0;
 
     public LeastRecentlyUsedCacheSystem(int capacity) {
