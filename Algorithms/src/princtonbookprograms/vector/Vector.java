@@ -20,14 +20,14 @@ public class Vector {
         //coords = a;
         System.arraycopy(a, 0, coords, 0, a.length);
     }
+
     @Override
-    public String toString()
-    {
-       return "Point is "+coords[0] + " "+ coords[1];
+    public String toString() {
+        return "Point is " + coords[0] + " " + coords[1];
     }
-    public static void main(String args[])
-    {
-        double[] a = {3.0,4.0};
+
+    public static void main(String args[]) {
+        double[] a = {3.0, 4.0};
         Vector vectorObj = new Vector(a);
         StdOut.println(vectorObj);
         a[0] = 1.0;
