@@ -59,7 +59,6 @@ public class StringOperations {
     public static void main(String args[]) {
         System.out.println(isPalindrome("liril"));
         extractFileNameAndExtension("StringOperations.java");
-        // printStringsInQueryFormInput("hello");
         splitStringFromInput("hello this is java program");
         String[] str = {"A", "D", "B", "C"};
         System.out.println(isStringSorted(str));
