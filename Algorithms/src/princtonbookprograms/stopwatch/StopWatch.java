@@ -10,16 +10,21 @@ package princtonbookprograms.stopwatch;
  * @author srivemul
  */
 public class StopWatch {
+
     private final long start;
 
     public StopWatch() {;
         this.start = System.currentTimeMillis();
     }
-    public double elapsedTime()
-    {
+
+    public double elapsedTime() {
         long now = System.currentTimeMillis();
-        double timeElapsed = (now - start)/1000.0;
+        double timeElapsed = (now - start) / 1000.0;
         return timeElapsed;
     }
-    
+
+    public static void main(String[] args) {
+
+    }
+
 }
