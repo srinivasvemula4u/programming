@@ -13,17 +13,16 @@ import edu.princeton.cs.algs4.Out;
  * @author srivemul
  */
 public class PrinctonInputOutput {
-    public static void main(String args[])
-    {
-        String[] arg = {"C:\\Users\\srivemul.ORADEV\\Desktop\\in1.txt","C:\\Users\\srivemul.ORADEV\\Desktop\\in2.txt","C:\\Users\\srivemul.ORADEV\\Desktop\\out.txt"}; 
-        Out out = new Out(arg[arg.length-1]);
-        for(int i =0; i < arg.length-1; i++)
-        {
+
+    public static void main(String args[]) {
+        String[] arg = {"C:\\Users\\srivemul.ORADEV\\Desktop\\in1.txt", "C:\\Users\\srivemul.ORADEV\\Desktop\\in2.txt", "C:\\Users\\srivemul.ORADEV\\Desktop\\out.txt"};
+        Out out = new Out(arg[arg.length - 1]);
+        for (int i = 0; i < arg.length - 1; i++) {
             In in = new In(arg[i]);
             String s = in.readAll();
             out.println(s);
             in.close();
         }
-       out.close();
+        out.close();
     }
 }
