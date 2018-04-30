@@ -5,6 +5,9 @@
  */
 package Interviews.Delhivery;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author sv186040
@@ -42,6 +45,47 @@ public class DistinctCharacters {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter wr = new PrintWriter(System.out);
+        int len = Integer.parseInt(br.readLine().trim());
+        String S = br.readLine();
+        int Q = Integer.parseInt(br.readLine().trim());
+        int N = 2;
+        int[][] arr = new int[Q][N];
+        for (int i_arr = 0; i_arr < Q; i_arr++) {
+            String[] arr_arr = br.readLine().split(" ");
+            for (int j_arr = 0; j_arr < arr_arr.length; j_arr++) {
+                arr[i_arr][j_arr] = Integer.parseInt(arr_arr[j_arr]);
+            }
+        }
+
+        int[] out_ = distinctCharacter(S, arr, len);
+        // System.out.print(out_[0]);
+        for (int i_out_ = 0; i_out_ < out_.length; i_out_++) {
+            System.out.println(out_[i_out_]);
+        }
+
+        wr.close();
+        br.close();
     }
 
+    static int[] distinctCharacter(String S, int[][] arr, int len) {
+        // write your code here
+        int[] res = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            Map<Character, Boolean> map = new HashMap<>();
+            int count = 0;
+            for (int j = arr[i][0]; j < arr[i][1]; j++) {
+                if (map.containsKey(S.charAt(j))) {
+                    continue;
+                } else {
+                    map.put(S.charAt(j), true);
+                    count++;
+                }
+            }
+            res[i] = count;
+        }
+
+        return res;
+    }
 }
