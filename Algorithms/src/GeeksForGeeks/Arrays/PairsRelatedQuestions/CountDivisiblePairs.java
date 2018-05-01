@@ -7,8 +7,7 @@ package GeeksForGeeks.Arrays.PairsRelatedQuestions;
 
 /**
  *
- * @author sv186040 
- * Given an array, count pairs in the array such that one
+ * @author sv186040 Given an array, count pairs in the array such that one
  * element of pair divides other.
  *
  * Examples:
@@ -22,8 +21,30 @@ public class CountDivisiblePairs {
     /**
      * @param args the command line arguments
      */
+    static int countDivisibles(int arr[],
+            int n) {
+        int res = 0;
+
+        // Iterate through all pairs
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) // Increment count if
+            // one divides other
+            {
+                if (arr[i] % arr[j] == 0
+                        || arr[j] % arr[i] == 0) {
+                    res++;
+                }
+            }
+        }
+
+        return res;
+    }
+
+// Driver Code
     public static void main(String[] args) {
-        // TODO code application logic here
+        int a[] = new int[]{1, 2, 3, 9};
+        int n = a.length;
+        System.out.println(countDivisibles(a, n));
     }
 
 }
