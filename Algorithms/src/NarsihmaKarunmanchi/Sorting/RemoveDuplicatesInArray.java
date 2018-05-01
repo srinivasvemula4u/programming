@@ -6,7 +6,6 @@
 package NarsihmaKarunmanchi.Sorting;
 
 /**
- *
  * @author srivemul
  */
 public class RemoveDuplicatesInArray {
