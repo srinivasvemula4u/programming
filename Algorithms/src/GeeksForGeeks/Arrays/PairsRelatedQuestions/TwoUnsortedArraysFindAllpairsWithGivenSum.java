@@ -5,6 +5,8 @@
  */
 package GeeksForGeeks.Arrays.PairsRelatedQuestions;
 
+import java.util.HashMap;
+
 /*
 https://www.geeksforgeeks.org/given-two-unsorted-arrays-find-pairs-whose-sum-x/
 Given two unsorted arrays of distinct elements, 
@@ -46,13 +48,34 @@ Auxiliary Space : O(1)
             }
         }
     }
+
     /*
     An Efficient solution of this problem is to hashing. Hash table is implemented 
     using unordered_set in C++. We store all first array elements in hash table
     . For elements of second array, we subtract every element from x and check 
     the result in hash table. If result is present, 
     we print the element and key in hash (which is an element of first array).
-    */
+     */
+    // Function to find all pairs in both arrays
+    // whose sum is equal to given value x
+    public static void findPairsOptimized(int arr1[], int arr2[],
+            int n, int m, int x) {
+        // Insert all elements of first array in a hash
+        HashMap<Integer, Integer> s = new HashMap<Integer, Integer>();
+
+        for (int i = 0; i < n; i++) {
+            s.put(arr1[i], 0);
+        }
+
+        // Subtract sum from second array elements one
+        // by one and check it's present in array first
+        // or not
+        for (int j = 0; j < m; j++) {
+            if (s.containsKey(x - arr2[j])) {
+                System.out.println(x - arr2[j] + " " + arr2[j]);
+            }
+        }
+    }
 
     // Driver code
     public static void main(String[] args) {
@@ -60,6 +83,6 @@ Auxiliary Space : O(1)
         int arr2[] = {0, 7, 4, 3, 2, 1};
         int x = 8;
         findPairs(arr1, arr2, arr1.length, arr2.length, x);
+        findPairsOptimized(arr1, arr2, arr1.length, arr2.length, x);
     }
-
 }
