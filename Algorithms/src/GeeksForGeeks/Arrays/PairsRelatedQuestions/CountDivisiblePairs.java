@@ -6,12 +6,13 @@
 package GeeksForGeeks.Arrays.PairsRelatedQuestions;
 
 /**
- *  https://www.geeksforgeeks.org/count-divisible-pairs-array/
+ * https://www.geeksforgeeks.org/count-divisible-pairs-array/
+ *
  * @author sv186040 Given an array, count pairs in the array such that one
  * element of pair divides other.
  *
  * Examples:
- *  
+ *
  * Input : arr[] = {1, 2, 3} Output : 2 The two pairs are (1, 2) and (1, 3)
  *
  * Input : arr[] = {2, 3, 5, 7} Output: 0
@@ -54,6 +55,6 @@ public class CountDivisiblePairs {
 Different cases like negative numbers and repetitions can also be handled here with slight modifications to the approach.
 
 
-    */
+     */
 
 }
