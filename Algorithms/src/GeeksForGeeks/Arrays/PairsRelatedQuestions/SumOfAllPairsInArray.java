@@ -22,8 +22,7 @@ package GeeksForGeeks.Arrays.PairsRelatedQuestions;
  * (6 - 6) + (4 - 6) + (4 - 6) + (4 - 6) + (4 - 6) + (4 - 4) + (4 - 4) = -8
  *
  * Input: 1 2 3 1 3 Output: 4 Explanation: the pairs that add up are: (3, 1),
- * (3, 1) to give 4, rest all pairs according to condition gives 0. Recommended:
- * Please try your
+ * (3, 1) to give 4, rest all pairs according to condition gives 0. 
  */
 public class SumOfAllPairsInArray {
 
