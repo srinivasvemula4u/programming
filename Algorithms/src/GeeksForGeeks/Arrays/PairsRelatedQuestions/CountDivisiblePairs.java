@@ -46,5 +46,14 @@ public class CountDivisiblePairs {
         int n = a.length;
         System.out.println(countDivisibles(a, n));
     }
+    /*
+    Efficient solution for small ranged numbers.
+1) Insert all elements of array in a hash table.
+2) Find maximum element in the array.
+3) For every array element, search multiples of it (till maximum) in the hash table. If found, increment result.
+Different cases like negative numbers and repetitions can also be handled here with slight modifications to the approach.
+
+
+    */
 
 }
