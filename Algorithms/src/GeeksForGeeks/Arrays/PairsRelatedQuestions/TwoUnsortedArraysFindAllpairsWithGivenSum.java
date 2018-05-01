@@ -6,6 +6,7 @@
 package GeeksForGeeks.Arrays.PairsRelatedQuestions;
 
 /*
+https://www.geeksforgeeks.org/given-two-unsorted-arrays-find-pairs-whose-sum-x/
 Given two unsorted arrays of distinct elements, 
 the task is to find all pairs from both arrays whose sum is equal to x.
 
@@ -29,6 +30,8 @@ public class TwoUnsortedArraysFindAllpairsWithGivenSum {
     /*
     A Naive approach is to simply run two loops and pick elements from both arrays. 
     One by one check that both elements sum is equal to given value x or not
+    Time Complexity : O(n^2)
+Auxiliary Space : O(1)
      */
     // Function to print all pairs in both arrays
     // whose sum is equal to given value x
@@ -43,6 +46,13 @@ public class TwoUnsortedArraysFindAllpairsWithGivenSum {
             }
         }
     }
+    /*
+    An Efficient solution of this problem is to hashing. Hash table is implemented 
+    using unordered_set in C++. We store all first array elements in hash table
+    . For elements of second array, we subtract every element from x and check 
+    the result in hash table. If result is present, 
+    we print the element and key in hash (which is an element of first array).
+    */
 
     // Driver code
     public static void main(String[] args) {
