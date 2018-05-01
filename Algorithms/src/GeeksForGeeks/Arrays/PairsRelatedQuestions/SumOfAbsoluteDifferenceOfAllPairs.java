@@ -61,4 +61,14 @@ public class SumOfAbsoluteDifferenceOfAllPairs {
 
         System.out.println(sumPairs(arr, n));
     }
+    /*
+    Time Complexity : O(n)
+Auxiliary space: O(1)e
+
+What if array is not sorted?
+The efficient solution is also better for the cases where array is not sorted. 
+    We can sort the array first in O(n Log n) time and then find the required 
+    value in O(n). So overall time complexity is O(n Log n) which is still 
+    better than O(n2)
+     */
 }
