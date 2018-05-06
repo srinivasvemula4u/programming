@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Interviews.MakeMyTrip;
+import java.util.Scanner;
 
 /**
  *
@@ -62,7 +63,44 @@ public class BobAndArrayQueries {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        //Scanner
+       Scanner s = new Scanner(System.in);
+        int N = s.nextInt();
+        int Q = s.nextInt();
+        s.nextLine();
+        int[] arr = new int[N];
+        for(int q = 0; q < Q; q++) {
+            String line = s.nextLine();
+            String[] ops = line.split(" ");
+            if("1".equals(ops[0])) {
+                int x = Integer.parseInt(ops[1]); 
+                arr[x-1] = 2*arr[x-1] + 1;
+            } else if("2".equals(ops[0])) {
+                int x = Integer.parseInt(ops[1]); 
+                arr[x-1] = (int)Math.floor(arr[x-1]/2);
+            } else if("3".equals(ops[0])) {
+                int x = Integer.parseInt(ops[1]);
+                int y = Integer.parseInt(ops[2]);
+                int count = 0;
+                for(int i = x; i <= y; i++) {
+                    count += countSetBits(arr[i-1]);
+                }
+                System.out.println(count);
+            }
+        }
+        // Write your code here
+
+    }
+     private static int countSetBits(int n)
+    {
+        int count = 0;
+        while (n > 0)
+        {
+            n &= (n - 1) ;
+            count++;
+        }
+        return count;
     }
     
 }

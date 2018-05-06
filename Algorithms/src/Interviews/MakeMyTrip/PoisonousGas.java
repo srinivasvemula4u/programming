@@ -5,6 +5,8 @@
  */
 package Interviews.MakeMyTrip;
 
+import java.util.Scanner;
+
 /**
  *
  * @author sv186040
@@ -55,8 +57,35 @@ public class PoisonousGas {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args)  {
+        //Scanner
+        Scanner s = new Scanner(System.in);
+        int T = s.nextInt();
+    
+        for(int t = 0; t < T; t++) {
+            int N = s.nextInt();
+            long maxSum = 0;
+            int[] arr = new int[N];
+            for(int i = 0; i < N; i++) {
+                arr[i] = s.nextInt();
+                if(arr[i] > 0) 
+                maxSum += arr[i];
+            }
+            while(maxSum > 0) {
+                if(maxSum == 1)  {
+                    System.out.println("Yes");
+                    break;
+                }
+                 if(maxSum % 2 == 0) {
+                  maxSum  = maxSum/2 ;
+                 }
+                  else {
+                    System.out.println("No");
+                    break;
+                  }
+            }
+        }
+
     }
     
 }
