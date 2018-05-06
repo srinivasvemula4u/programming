@@ -5,6 +5,8 @@
  */
 package Interviews.ThoughtWorks;
 
+import java.util.Scanner;
+
 /**
  *
  * @author sv186040
@@ -31,9 +33,24 @@ public class DigitsInANumber {
 
     /**
      * @param args the command line arguments
+     * @throws java.lang.Exception
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+     public static void main(String args[] ) throws Exception {
+        //Scanner
+        Scanner s = new Scanner(System.in);
+        int T = s.nextInt(); 
+        for(int i = 0; i < T; i++) {
+            long N = s.nextLong();
+            long count = 0;
+            long j = 1;
+            while(N > 0) {
+              N = N-(long)Math.pow(3,j);
+              count++;
+              j++;
+            }
+            System.out.println(count);
+        }
+
     }
     
 }

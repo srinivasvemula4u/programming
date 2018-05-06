@@ -5,6 +5,8 @@
  */
 package Interviews.ThoughtWorks;
 
+import java.util.Scanner;
+
 /**
  *
  * @author sv186040 ou have been given two strings, A and B (of length N each)
