@@ -44,7 +44,9 @@ public class CompareStrings {
         String B = s.nextLine();
         for (int i = 0; i < Q; i++) {
             int idx = s.nextInt();
-            B = B.replaceFirst(Character.toString(B.charAt(idx - 1)), "1");
+            if (B.charAt(idx - 1) != 1) {
+                B = B.replaceFirst(Character.toString(B.charAt(idx - 1)), "1");
+            }
             String t1 = A.substring(idx - 1);
             String t2 = B.substring(idx - 1);
             if (t1.compareTo(t2) <= 0) {
