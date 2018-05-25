@@ -1,6 +1,5 @@
 package Interviews.ZemosoInterview;
 
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Stack;
@@ -46,7 +45,7 @@ public class TestZemoso {
 //        }
 //        return maxLen + 1;
     //  }
-    public static  int solution(Point2D[] A) {
+    public static int solution(Point2D[] A) {
         // write your code in Java SE 8
         int n = A.length;
         int ymin = A[0].y, min = 0;
@@ -96,12 +95,11 @@ public class TestZemoso {
             }
             stack.push(A[i]);
         }
-    while (!stack.isEmpty())
-   {
-       Point2D p = stack.peek();
-      System.out.println(p.x + " " + p.y);
-       stack.pop();
-   }
+        while (!stack.isEmpty()) {
+            Point2D p = stack.peek();
+            System.out.println(p.x + " " + p.y);
+            stack.pop();
+        }
         return stack.size();
     }
 
@@ -139,7 +137,7 @@ public class TestZemoso {
         int x;
         int y;
 
-        public Point2D(int x,int y) {
+        public Point2D(int x, int y) {
             this.x = x;
             this.y = y;
         }
@@ -147,9 +145,9 @@ public class TestZemoso {
 
     public static void main(String[] args) {
         // TODO code application logic here
-       Point2D[] points = {new Point2D(0, 3), new Point2D(1, 1), new Point2D(2, 2), new Point2D(4, 4),
-                      new Point2D(0, 0), new Point2D(1, 2), new Point2D(3, 1), new Point2D(3, 3)};
-       System.out.println(solution(points));
+        Point2D[] points = {new Point2D(0, 3), new Point2D(1, 1), new Point2D(2, 2), new Point2D(4, 4),
+            new Point2D(0, 0), new Point2D(1, 2), new Point2D(3, 1), new Point2D(3, 3)};
+        System.out.println(solution(points));
     }
 
 }
