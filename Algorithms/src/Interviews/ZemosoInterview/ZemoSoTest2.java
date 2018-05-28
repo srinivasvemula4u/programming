@@ -1,6 +1,5 @@
 package Interviews.ZemosoInterview;
 
-
 import java.util.Arrays;
 
 /*
