@@ -270,45 +270,49 @@ class Solution {
 ////     i
 //
 //System.out.println(obj.inverseNumber(10));
-
 //           for(int a : result)
 //           {
 //               System.out.print(" "+a);
 //           }
-   // }
+    // }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int Tc = scan.nextInt();
         int[] arr;
-        for(int i=0; i < Tc; i++) {
-        int N = scan.nextInt();
+        for (int i = 0; i < Tc; i++) {
+            int N = scan.nextInt();
             arr = new int[N];
-            for(int j=0; j < N; i++) {
+            for (int j = 0; j < N; i++) {
                 arr[j] = scan.nextInt();
             }
-           System.out.println(findAnElementInArray(arr) ? "Yes" : "No");
+            System.out.println(findAnElementInArray(arr) ? "Yes" : "No");
         }
-        
+
     }
+
     private static boolean findAnElementInArray(int[] arr) {
-        int max = arr.length-2;
-        for(int i=1; i <=max; i++) {
-            int index = getIndex(arr,i,max);
-            if(index > 0)
+        int max = arr.length - 2;
+        for (int i = 1; i <= max; i++) {
+            int index = getIndex(arr, i, max);
+            if (index > 0) {
                 return true;
+            }
         }
         return false;
     }
-    private static int getIndex(int[] arr,int startindex,int endIndex)
-    {
+
+    private static int getIndex(int[] arr, int startindex, int endIndex) {
         long leftArraySum = 0, rightArraySum = 0;
-       //int i,j;
-        for(int i=0; i < startindex; i++) 
+        //int i,j;
+        for (int i = 0; i < startindex; i++) {
             leftArraySum += arr[i];
-        for(int i=startindex+1; i <= endIndex; i++)
+        }
+        for (int i = startindex + 1; i <= endIndex; i++) {
             rightArraySum += arr[i];
-        if(leftArraySum == rightArraySum)
+        }
+        if (leftArraySum == rightArraySum) {
             return startindex;
-         return -1;   
+        }
+        return -1;
     }
 }
